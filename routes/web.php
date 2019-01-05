@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 							'HomeController@index');
+
+Route::get('/subscribe/', 					'SubscribeController@index');
+Route::post('/subscribe/submit', 			'SubscribeController@subscribe');
+Route::post('/subscribe/delete', 			'SubscribeController@unsubscribe');
+Route::post('/subscribe/confirm-delete',	'SubscribeController@UnsubscribeConfirm');
+
+
+Auth::routes(['register' => false],['login' => false]);
