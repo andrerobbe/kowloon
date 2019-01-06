@@ -1,0 +1,92 @@
+@font-face {font-family: "Choplin Medium-DEMO";
+    src: url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.eot");
+    src: url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.svg#Choplin Medium-DEMO") format("svg");
+}
+
+$font1:				'Choplin Medium-DEMO';
+$font2:				'Arial', sans-serif;
+
+$txt-xxl:			'40px';
+$txt-xl:			'20px';
+$txt-l:				'20px';
+$txt-mxl:			'18.97px';
+$txt-ml:			'15px';
+$txt-m:				'14px';
+$txt-s:				'14px';
+
+
+
+.font1 { font-family:		$font1; }
+.font2 { font-family: 		$font2; }
+
+
+.weight-100 { font-weight: 	100; }
+.weight-200 { font-weight: 	200; }
+.weight-300 { font-weight: 	300; }
+.weight-400 { font-weight: 	400; }
+.weight-500 { font-weight: 	500; }
+.weight-600 { font-weight: 	600; }
+.weight-700 { font-weight: 	700; }
+.weight-700 { font-weight: 	700; }
+.weight-800 { font-weight: 	800; }
+
+.weight-n { font-weight: 	normal; }
+.weight-bold { font-weight: bold; }
+
+
+.txt-xxl { font-size: 		$txt-xxl; }
+.txt-xl { font-size: 		$txt-xl; }
+.txt-l { font-size: 		$txt-l; }
+.txt-mxl { font-size: 		$txt-mxl; }
+.txt-ml { font-size: 		$txt-ml; }
+.txt-m { font-size: 		$txt-m; }
+.txt-s { font-size: 		$txt-s; }
+
+
+
+body {
+	font-family:			$font2;
+	font-weight: 			normal;
+}
+
+
+
+
+/*
+
+breadcrumbs
+arial 14px
+
+h1 
+choplin 40px
+
+h2
+choplin 20px
+
+
+txt
+arial 14px
+
+
+
+field
+arial 20px
+placeholder - arial 16px
+
+
+send btn 237 x 42
+arial 18.97px BOLD
+
+
+more questions?
+choplin 15px
+underline
+right outline
+
+faq arial 20 bold
+arial 14
+*/

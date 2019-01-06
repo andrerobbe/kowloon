@@ -1,0 +1,33 @@
+$breakpoint1:    '768px';
+$breakpoint2:    '992px';
+$breakpoint3:    '1200px';
+
+
+.wrapper 
+{
+    margin: 0 auto;
+
+    // Phone
+    @media only screen and (max-width: $breakpoint1 ) 
+    {
+        width: 95%;
+    }
+
+    // Tablet
+    @media only screen and (min-width: $breakpoint1 ) 
+    {
+        width: 90%;
+    }
+
+    // Desktop
+    @media only screen and (min-width: $breakpoint2 ) 
+    {
+        width: breakpoint2;
+    }
+
+    // Large desktop
+    @media only screen and (min-width: $breakpoint3 ) 
+    {
+        width: $breakpoint3;
+    }
+}
