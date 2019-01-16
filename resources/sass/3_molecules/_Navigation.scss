@@ -10,8 +10,8 @@
 .sprite.hamster 	{ background-position: 0 -287px; } 
 
 $nav_width: 	60px;
-$img_width:		40px;
 $nav_extra: 	155px;
+$img_width:		40px;
 $duration: 		.2s;
 
 #mobile-menu { display: none; }
@@ -42,13 +42,15 @@ $duration: 		.2s;
 			width: 100%;
 			height: $img_width;
 			line-height: $img_width;
-			filter: brightness(10) saturate(0);
+			cursor: pointer;
 
 			a {
-				width: 100%;
+				display: block;
+				width: $nav_width + $nav_extra;
 				padding-left: $nav_width - 10px;
-				color: $white;
+				text-decoration: none;
 				font-size: $nav-m;
+				color: $grey2 !important;
 			}
 		}
 
@@ -56,8 +58,26 @@ $duration: 		.2s;
 			margin-top: 5px;
 			margin-bottom: 5px + 10px;
 		}
+		li#nav-search,
+		li#nav-faq {
+			&:hover{
+				filter: brightness(10) saturate(0);
+				a { color: $white !important; }
+			}
+		}
+		
+		/* filter animals */
+		.nav-animals {
+			li 			{ filter: brightness(10) saturate(0); } //white
+			li.active,
+			li:hover 	{ filter: none; }
 
-		li.active{ filter: none; }
+			li.dog a	{ color: $dog !important; }
+			li.cat a	{ color: $cat !important; }
+			li.fish a	{ color: $fish !important; }
+			li.bird a	{ color: $bird !important; }
+			li.hamster a{ color: $hamster !important; }
+		}
 	}
 
 /*
@@ -65,6 +85,7 @@ $duration: 		.2s;
  * Logo
  *
  */
+
 	ul#navbar-logo {
 		width: 100%;
 		position: fixed;
@@ -74,15 +95,21 @@ $duration: 		.2s;
 			filter: none;
 			margin-left: ($nav_width - 26px)/2;
 
-			img {
-				height: 26px;
+			a{
+				display: inline;
 				width: auto;
-				transition: $duration all;
-				opacity: 1;
+				padding: 0;
 
-			}
-			img.inactive{
-				opacity: 0;
+				img {
+					height: 26px;
+					width: auto;
+					transition: $duration all;
+					opacity: 1;
+
+				}
+				img.inactive{
+					opacity: 0;
+				}
 			}
 		}
 

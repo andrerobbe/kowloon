@@ -51,13 +51,14 @@
         gtag('config', 'UA-132426979-1');
     </script>
     <div id="app">
-        <div class="cookie">
-            @include('inc.cookie')
-        </div>
+        @include('inc.cookie')
         <div class="fade-out">
-            @include('inc.navbar')
-            
-            @yield('content')
+            <header>
+                @include('inc.navbar')
+            </header>
+            <main class="overflow">
+                @yield('content')
+            </main>
         </div>
     </div>
     <!-- Scripts -->

@@ -10790,6 +10790,7 @@ ul {
   width: 100%;
   display: block;
   padding: 0;
+  /* filter animals */
 }
 
 .navbar-vertical ul:before,
@@ -10802,15 +10803,16 @@ ul {
   width: 100%;
   height: 40px;
   line-height: 40px;
-  -webkit-filter: brightness(10) saturate(0);
-          filter: brightness(10) saturate(0);
+  cursor: pointer;
 }
 
 .navbar-vertical ul li a {
-  width: 100%;
+  display: block;
+  width: 215px;
   padding-left: 50px;
-  color: #fff;
+  text-decoration: none;
   font-size: 22px;
+  color: #828282 !important;
 }
 
 .navbar-vertical ul li#nav-burger {
@@ -10818,9 +10820,46 @@ ul {
   margin-bottom: 15px;
 }
 
-.navbar-vertical ul li.active {
+.navbar-vertical ul li#nav-search:hover,
+.navbar-vertical ul li#nav-faq:hover {
+  -webkit-filter: brightness(10) saturate(0);
+          filter: brightness(10) saturate(0);
+}
+
+.navbar-vertical ul li#nav-search:hover a,
+.navbar-vertical ul li#nav-faq:hover a {
+  color: #fff !important;
+}
+
+.navbar-vertical ul .nav-animals li {
+  -webkit-filter: brightness(10) saturate(0);
+          filter: brightness(10) saturate(0);
+}
+
+.navbar-vertical ul .nav-animals li.active,
+.navbar-vertical ul .nav-animals li:hover {
   -webkit-filter: none;
           filter: none;
+}
+
+.navbar-vertical ul .nav-animals li.dog a {
+  color: #ff709e !important;
+}
+
+.navbar-vertical ul .nav-animals li.cat a {
+  color: #8787ff !important;
+}
+
+.navbar-vertical ul .nav-animals li.fish a {
+  color: #ffb93f !important;
+}
+
+.navbar-vertical ul .nav-animals li.bird a {
+  color: #7aff82 !important;
+}
+
+.navbar-vertical ul .nav-animals li.hamster a {
+  color: #7ce3ff !important;
 }
 
 .navbar-vertical ul#navbar-logo {
@@ -10835,14 +10874,20 @@ ul {
   margin-left: 17px;
 }
 
-.navbar-vertical ul#navbar-logo li img {
+.navbar-vertical ul#navbar-logo li a {
+  display: inline;
+  width: auto;
+  padding: 0;
+}
+
+.navbar-vertical ul#navbar-logo li a img {
   height: 26px;
   width: auto;
   transition: 0.2s all;
   opacity: 1;
 }
 
-.navbar-vertical ul#navbar-logo li img.inactive {
+.navbar-vertical ul#navbar-logo li a img.inactive {
   opacity: 0;
 }
 
