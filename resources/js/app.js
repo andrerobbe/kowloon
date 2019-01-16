@@ -20,7 +20,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,3 +31,39 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+
+
+/**
+ * 
+ * Navigation
+ * 
+ */
+var currentLogo
+
+function hamburgerMenu(){
+	var navbar 			= document.getElementsByClassName('navbar-vertical')[0];
+	var navbarLogo 	 	= document.getElementById('navbar-logo').getElementsByTagName('img')[0];
+	var navbarLogoLong	= document.getElementById('logo-long').getElementsByTagName('img')[0];
+	
+	navbar.classList.toggle('active');
+	navbarLogo.classList.toggle('inactive');
+	navbarLogoLong.classList.toggle('inactive');
+
+	/*
+	if (navbar.classList.contains('active')){
+		currentLogo = navbarLogo.currentSrc;
+		navbarLogo.src = 'img/logo/kowloon2.png';
+	}
+	else{
+		navbarLogo.src = currentLogo;
+	}*/
+}
+
+
+function eventHandler(){
+	var navbar = document.getElementById('nav-burger');
+	navbar.addEventListener("click", hamburgerMenu);
+}
+
+eventHandler();

@@ -7,21 +7,34 @@
     url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.svg#Choplin Medium-DEMO") format("svg");
 }
 
-$font1:				'Choplin Medium-DEMO';
-$font2:				'Arial', sans-serif;
-
-$txt-xxl:			'40px';
-$txt-xl:			'20px';
-$txt-l:				'20px';
-$txt-mxl:			'18.97px';
-$txt-ml:			'15px';
-$txt-m:				'14px';
-$txt-s:				'14px';
-
-
+$font1:			'Choplin Medium-DEMO';
+$font2:			'Arial', sans-serif;
 
 .font1 { font-family:		$font1; }
 .font2 { font-family: 		$font2; }
+
+
+
+
+$heading-l:		40px;
+$heading-m:		20px;
+
+$nav-m:			22px;
+
+$btn-m:			18.97px;
+
+$txt-xl:		16px;
+$txt-l:			15px;
+$txt-m:			14px;
+
+
+.heading-l 	{ font-size: 	$heading-l; }
+.heading-m 	{ font-size: 	$heading-m; }
+.nav-m 		{ font-size: 	$nav-m; }
+.btn-m 		{ font-size: 	$btn-m; }
+.txt-xl 	{ font-size: 	$txt-xl; }
+.txt-l 		{ font-size: 	$txt-l; }
+.txt-m 		{ font-size: 	$txt-m; }
 
 
 .weight-100 { font-weight: 	100; }
@@ -33,19 +46,8 @@ $txt-s:				'14px';
 .weight-700 { font-weight: 	700; }
 .weight-700 { font-weight: 	700; }
 .weight-800 { font-weight: 	800; }
-
 .weight-n { font-weight: 	normal; }
 .weight-bold { font-weight: bold; }
-
-
-.txt-xxl { font-size: 		$txt-xxl; }
-.txt-xl { font-size: 		$txt-xl; }
-.txt-l { font-size: 		$txt-l; }
-.txt-mxl { font-size: 		$txt-mxl; }
-.txt-ml { font-size: 		$txt-ml; }
-.txt-m { font-size: 		$txt-m; }
-.txt-s { font-size: 		$txt-s; }
-
 
 
 body {

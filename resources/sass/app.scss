@@ -3,10 +3,10 @@
 @import url(//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO);
 
 // Bootstrap
-//@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
 /*
-@import '1_variables/_*.scss';
+@import '1_base/_*.scss';
 @import '2_atoms/_*.scss';
 @import '3_molecules/_*.scss';
 @import '4_organisms/_*.scss';
@@ -16,18 +16,19 @@
 
 
 //Base
+@import '1_base/_Reset.scss';
 @import '1_base/_Breakpoints.scss';
 @import '1_base/_Colors.scss';
-@import '1_base/_Fonts.scss';
-@import '1_base/_Reset.scss';
+@import '1_base/_Typography.scss';
 
 
 
 // Atoms
 @import '2_atoms/_Button.scss';
 @import '2_atoms/_Heading.scss';
+@import '2_atoms/_Lists.scss';
 @import '2_atoms/_Logo.scss';
-@import '2_atoms/_NavLink.scss';
+
 
 
 
@@ -38,6 +39,7 @@
 
 // Organisms
 @import '4_organisms/_Header.scss';
+
 
 
 // Pages
