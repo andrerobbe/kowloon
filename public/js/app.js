@@ -47776,13 +47776,56 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 var app = new Vue({
   el: '#app'
 });
-/**
- * 
- * Navigation
- * 
+var currentLogo = '';
+var slideIndex = 2; // Slide 1 is active on start
+
+var slideTimer = 500; // Time between slides in ms, ms so clicking feels responsive
+
+var seconds; // Global timer, reset on clicking another slide
+
+/*
+ * SlideShow
  */
 
-var currentLogo;
+function showNextSlide() {
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot"); //active class on slides and dots
+
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('active');
+    dots[i].classList.remove('active');
+  }
+
+  slides[slideIndex - 1].classList.add('active');
+  dots[slideIndex - 1].classList.add('active');
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+}
+
+function changeSlide(e) {
+  //change id and reset timer
+  slideIndex = this.id.substring(4);
+  seconds = 0;
+}
+
+function startSlideShow(n) {
+  seconds = slideTimer;
+  setInterval(function () {
+    seconds--;
+
+    if (seconds <= 0) {
+      showNextSlide();
+      seconds = slideTimer;
+    }
+  }, 10);
+}
+/*
+ * Navigation
+ */
+
 
 function hamburgerMenu() {
   var navbar = document.getElementsByClassName('navbar-vertical')[0];
@@ -47797,11 +47840,23 @@ function hamburgerMenu() {
 }
 
 function eventHandler() {
+  /*
+   * Navigation
+   */
   var navbar = document.getElementById('nav-burger');
-  navbar.addEventListener("click", hamburgerMenu); //mobile
-
+  navbar.addEventListener("click", hamburgerMenu);
   var mobileNav = document.getElementById('mobile-menu');
   mobileNav.addEventListener("click", hamburgerMenu);
+  /*
+   * slideShow
+   */
+
+  startSlideShow();
+  var dots = document.getElementsByClassName("dot");
+
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", changeSlide);
+  }
 }
 
 eventHandler();
