@@ -10788,7 +10788,7 @@ ul {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   height: 100%;
   width: 215px;
   overflow: hidden;
@@ -11028,7 +11028,7 @@ ul {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .slideshow-container .mySlides {
@@ -11045,6 +11045,28 @@ ul {
 
 .slideshow-container .mySlides img {
   width: 100%;
+}
+
+.slideshow-container .mySlides .slide-timer {
+  position: absolute;
+  bottom: -16px;
+  z-index: 5;
+  height: 3px;
+  width: 100%;
+  background-color: #828282;
+  content: "";
+  opacity: 0.4;
+}
+
+.slideshow-container .mySlides .slide-timer div {
+  z-index: 6;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #454545;
+  -web-kit-animation: slideShowTimer 5s linear;
+  -webkit-animation: slideShowTimer 5s linear;
+          animation: slideShowTimer 5s linear;
 }
 
 .slideshow-container .slide-controls {
@@ -11068,6 +11090,36 @@ ul {
   background-color: #323232;
 }
 
+@-web-kit-keyframes slideShowTimer {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slideShowTimer {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes slideShowTimer {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 /*
  *
  * Mobile
@@ -11075,6 +11127,10 @@ ul {
  */
 
 @media only screen and (max-width: 600px) {
+  .slide-timer {
+    bottom: 0 !important;
+  }
+
   .slide-controls {
     display: none;
   }
