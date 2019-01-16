@@ -50,20 +50,20 @@ function hamburgerMenu(){
 	navbarLogo.classList.toggle('inactive');
 	navbarLogoLong.classList.toggle('inactive');
 
-	/*
-	if (navbar.classList.contains('active')){
-		currentLogo = navbarLogo.currentSrc;
-		navbarLogo.src = 'img/logo/kowloon2.png';
-	}
-	else{
-		navbarLogo.src = currentLogo;
-	}*/
+	//mobile
+	var mobileNav		= document.getElementById('mobile-menu');
+	mobileNav.classList.toggle('active');
 }
 
 
 function eventHandler(){
 	var navbar = document.getElementById('nav-burger');
 	navbar.addEventListener("click", hamburgerMenu);
+
+	//mobile
+	var mobileNav		= document.getElementById('mobile-menu');
+	mobileNav.addEventListener("click", hamburgerMenu);
+
 }
 
 eventHandler();

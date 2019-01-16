@@ -14,6 +14,8 @@ $img_width:		40px;
 $nav_extra: 	155px;
 $duration: 		.2s;
 
+#mobile-menu { display: none; }
+
 .navbar-vertical {
 	position: fixed;
 	left: 0;
@@ -117,6 +119,8 @@ $duration: 		.2s;
  * Animation
  *
  */
+
+ /* black background */
 .navbar-vertical:before {
   -webkit-transition: -webkit-transform $duration;
      -moz-transition:    -moz-transform $duration;
@@ -132,7 +136,7 @@ $duration: 		.2s;
           transform: translateX(0px);
 }
 
-
+/* nav slider */
 .navbar-vertical {
   -webkit-transition: -webkit-transform $duration;
      -moz-transition:    -moz-transform $duration;
@@ -149,6 +153,7 @@ $duration: 		.2s;
           transform: translateX(0px);
 }
 
+/* ul slide opposite so it stays in place*/
 .navbar-vertical ul {
   -webkit-transition: -webkit-transform $duration;
      -moz-transition:    -moz-transform $duration;
@@ -163,4 +168,48 @@ $duration: 		.2s;
   -webkit-transform: translateX(0px);
      -moz-transform: translateX(0px);
           transform: translateX(0px);
+}
+
+
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	
+	.navbar-vertical:before {
+		display: none;
+	}
+
+ 	.navbar-vertical {
+		left: -$nav_width;
+		transition: $duration all;
+
+		ul {
+			li#nav-burger{
+				display: none;
+			}
+		}
+
+		&.active{
+			left: 0;
+		}
+	}
+
+	#mobile-menu {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 7px;
+		transition: $duration all;
+
+		&.active{
+			left: $nav_width + $nav_extra;
+		}
+	}
 }

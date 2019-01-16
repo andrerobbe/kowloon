@@ -10515,32 +10515,50 @@ body {
   transition: all 100ms ease-in-out;
 }
 
-.wrapper {
-  margin: 0 auto;
+/*
+ *
+ * Usage
+ *
+ *
+
+@media only screen and (max-width: bp('small')) {
+    div {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    width: 95%;
-  }
+
+ *
+ */
+
+/*
+ *
+ * Variables in queries, using @content
+ *
+ */
+
+/*
+ *
+ * Usage
+ *
+ *
+
+div {
+    width: 250px;
+    height: 100px;
+
+    @include respond-to(phone) { width: 100% ;}
+    @include respond-to(tablet-portrait) { width: 125px; }
+    @include respond-to(tablet-landscape) { width: 200px; }
+    @include respond-to(desktop) { height: auto; }
 }
 
-@media only screen and (min-width: 768px) {
-  .wrapper {
-    width: 90%;
-  }
-}
 
-@media only screen and (min-width: 992px) {
-  .wrapper {
-    width: breakpoint2;
-  }
-}
+*
+*/
 
-@media only screen and (min-width: 1200px) {
-  .wrapper {
-    width: "1200px";
-  }
+body {
+  background-color: #454545;
 }
 
 @font-face {
@@ -10702,6 +10720,10 @@ ul {
   padding: 0;
 }
 
+.overflow {
+  overflow-x: hidden;
+}
+
 /* sprite */
 
 .sprite {
@@ -10740,6 +10762,10 @@ ul {
 
 .sprite.hamster {
   background-position: 0 -287px;
+}
+
+#mobile-menu {
+  display: none;
 }
 
 .navbar-vertical {
@@ -10851,6 +10877,8 @@ ul {
  *
  */
 
+/* black background */
+
 .navbar-vertical:before {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -10863,6 +10891,8 @@ ul {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
+
+/* nav slider */
 
 .navbar-vertical {
   transition: -webkit-transform 0.2s;
@@ -10877,6 +10907,8 @@ ul {
   transform: translateX(0px);
 }
 
+/* ul slide opposite so it stays in place*/
+
 .navbar-vertical ul {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -10888,5 +10920,43 @@ ul {
 .navbar-vertical.active ul {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
+}
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+@media only screen and (max-width: 600px) {
+  .navbar-vertical:before {
+    display: none;
+  }
+
+  .navbar-vertical {
+    left: -60px;
+    transition: 0.2s all;
+  }
+
+  .navbar-vertical ul li#nav-burger {
+    display: none;
+  }
+
+  .navbar-vertical.active {
+    left: 0;
+  }
+
+  #mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 7px;
+    transition: 0.2s all;
+  }
+
+  #mobile-menu.active {
+    left: 215px;
+  }
 }
 

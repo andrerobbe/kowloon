@@ -58,7 +58,7 @@
             @include('inc.navbar')
             
             @yield('content')
-        </div>     
+        </div>
     </div>
     <!-- Scripts -->
     <!--
