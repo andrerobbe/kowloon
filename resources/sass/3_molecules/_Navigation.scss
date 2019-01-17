@@ -1,14 +1,3 @@
-/* sprite */
-.sprite 			{ background: url('/img/nav/sprite.png') no-repeat top left; width: 40px; height: 40px;  } 
-.sprite.hamburger 	{ background-position: 0 0; } 
-.sprite.search 		{ background-position: 0 -41px; } 
-.sprite.faq 		{ background-position: 0 -82px; } 
-.sprite.dog 		{ background-position: 0 -123px; } 
-.sprite.cat 		{ background-position: 0 -164px; } 
-.sprite.fish 		{ background-position: 0 -205px; } 
-.sprite.bird 		{ background-position: 0 -246px; } 
-.sprite.hamster 	{ background-position: 0 -287px; } 
-
 $nav_width: 	60px;
 $nav_extra: 	155px;
 $img_width:		40px;
@@ -27,7 +16,7 @@ $duration: 		.2s;
 	border: none;
 	border-radius: 0;
 	margin: 0;
-	background-color: $grey8;
+	background-color: $bg-nav;
 
 	ul {
 		width: 100%;
@@ -51,7 +40,7 @@ $duration: 		.2s;
 				padding-left: $nav_width - 10px;
 				text-decoration: none;
 				font-size: $nav-m;
-				color: $grey2 !important;
+				color: $nav-txt !important;
 			}
 		}
 
@@ -138,7 +127,7 @@ $duration: 		.2s;
 	width: $nav_width;
 	height: 50px;
 	content:"";
-	background-color: $grey9;
+	background-color: $bg-hamburger;
 }
 
 

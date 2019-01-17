@@ -1,9 +1,9 @@
-<!-- mobile hamburger -->
+<!-- Mobile hamburger -->
 <div id="mobile-menu" class="sprite hamburger">
     <a></a>
 </div>
-<!-- -->
 
+<!-- Vertical Navbar -->
 <nav class="navbar-vertical">
     <ul class="navbar">
         <li id="nav-burger" class="sprite hamburger">
@@ -37,7 +37,7 @@
         </div>
     </ul>
     <ul id="navbar-logo">
-        <!-- small logo -->
+        <!-- Logo Small -->
         @if     ( $_SERVER['REQUEST_URI'] === '/dogs' )
         <li><a href="/"><img src="/img/logo/logo-dogs.png" alt="Kowloon Logo"></a></li>
 
@@ -57,7 +57,7 @@
         <li><a href="/"><img src="/img/logo/logo.png" alt="Kowloon Logo"></a></li>
         @endif
 
-        <!-- long logo -->
+        <!-- Logo Big -->
         <li id="logo-long"><a href="/"><img src="/img/logo/kowloon.png" alt="Kowloon Logo" class="inactive"></a></li>
     </ul>
 </nav>

@@ -52,14 +52,13 @@
     </script>
     <div id="app">
         @include('inc.cookie')
-        <div class="fade-out">
-            <header>
-                @include('inc.navbar')
-            </header>
-            <main class="overflow">
-                @yield('content')
-            </main>
-        </div>
+        <header>
+            @include('inc.navbar')
+        </header>
+        <main class="overflow">
+            @yield('content')
+        </main>
+        
     </div>
     <!-- Scripts -->
     <!--

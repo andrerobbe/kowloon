@@ -1,14 +1,16 @@
 .btn-primary
 {
     border: none;
+    border-radius: 0;
+    font-size: $btn-m;
+    font-weight: bold;
+    padding: 20px 50px;
     
-    &:hover 
-    {
+    &:hover {
         cursor: pointer;
     }
 
-    &:focus 
-    {
+    &:focus {
         outline: none;
     }
 }

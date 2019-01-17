@@ -5,6 +5,15 @@
 	height: 100%;
 	margin-bottom: 16px;
 
+	.logo {
+		position: absolute;
+		z-index: 5;
+		transform: translateX(-50%);
+		left: 50%;
+		top: 50px;
+		img { max-width: 100%; }
+	}
+
 	.mySlides {
 		display: none;
 		width: 100%;
@@ -24,7 +33,7 @@
 			z-index: 5;
 			height: 3px;
 			width: 100%;
-			background-color: $grey2;
+			background-color: $bg-slider;
 			content:"";
 			opacity: 0.4;
 
@@ -33,12 +42,12 @@
 				height: 3px;
 				width: 100%;
 				content:"";
-				background-color: $grey7;
+				background-color: $bg-page;
 				
-				-web-kit-animation: slideShowTimer 5s linear;
-					-moz-animation: slideShowTimer 5s linear;
-					  -o-animation: slideShowTimer 5s linear;
-						 animation: slideShowTimer 5s linear;
+				-web-kit-animation: slideShowTimer 8s linear;
+					-moz-animation: slideShowTimer 8s linear;
+					  -o-animation: slideShowTimer 8s linear;
+						 animation: slideShowTimer 8s linear;
 			}
 		}
 	}
@@ -59,12 +68,10 @@
 
 			&.active,
 			&:hover{
-				background-color: $grey8;
+				background-color: $bg-nav;
 			}
 		}
 	}
-
-
 }
 
 
@@ -99,8 +106,9 @@
  *
  */
  @media only screen and (max-width: bp('small')) {
-
- 	.slide-timer { bottom: 0 !important; }
-	.slide-controls{ display: none; }
-
+	.slideshow-container {
+		.logo  { max-width: 80%; }
+		.slide-timer { bottom: 0 !important; }
+		.slide-controls{ display: none; }
+	}
 }

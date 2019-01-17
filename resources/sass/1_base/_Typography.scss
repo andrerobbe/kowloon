@@ -7,22 +7,18 @@
     url("//db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.svg#Choplin Medium-DEMO") format("svg");
 }
 
-$font1:			'Choplin Medium-DEMO';
-$font2:			'Arial', sans-serif;
+$font-title:				'Choplin Medium-DEMO';
+$font-txt:					'Arial', sans-serif;
 
-.font1 { font-family:		$font1; }
-.font2 { font-family: 		$font2; }
-
+.font-title { font-family:	$font-title; }
+.font-txt	{ font-family: 	$font-txt; }
 
 
 
 $heading-l:		40px;
 $heading-m:		20px;
-
 $nav-m:			22px;
-
 $btn-m:			18.97px;
-
 $txt-xl:		16px;
 $txt-l:			15px;
 $txt-m:			14px;
@@ -51,7 +47,7 @@ $txt-m:			14px;
 
 
 body {
-	font-family:			$font2;
+	font-family:			$font-txt;
 	font-weight: 			normal;
 }
 

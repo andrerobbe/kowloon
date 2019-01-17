@@ -1,4 +1,7 @@
 <div class="slideshow-container">
+	
+	<!-- Logo -->
+	<div class="logo"><img src="/img/logo/kowloon-big.png"></div>
 
 	<!-- Full-width images -->
 	<div class="mySlides active">
