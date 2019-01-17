@@ -4,7 +4,7 @@
     border-radius: 0;
     font-size: $btn-m;
     font-weight: bold;
-    padding: 20px 50px;
+    text-align: center;
     
     &:hover {
         cursor: pointer;
@@ -14,3 +14,5 @@
         outline: none;
     }
 }
+
+.btn-m      { font-size:    $btn-m; }

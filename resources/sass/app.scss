@@ -30,22 +30,26 @@
 @import '2_atoms/_Heading.scss';
 @import '2_atoms/_Link.scss';
 @import '2_atoms/_Lists.scss';
+@import '2_atoms/_Paragraph.scss';
 @import '2_atoms/_Sprite.scss';
 @import '2_atoms/_Wrapper.scss';
 
 
 
-
 // Molecules
 @import '3_molecules/_Item.scss';
+@import '3_molecules/_Msg.scss';
 
 
 
 // Organisms
+@import '4_organisms/index/_Category.scss';
+@import '4_organisms/index/_Slideshow.scss';
+@import '4_organisms/index/_Subscribe.scss';
+
 @import '4_organisms/_Cookie.scss';
 @import '4_organisms/_HotItems.scss';
 @import '4_organisms/_Navbar.scss';
-@import '4_organisms/_Slideshow.scss';
 
 
 

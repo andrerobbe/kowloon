@@ -1,0 +1,116 @@
+.bg-pattern {
+	background: url('/img/content/bg_newsletter.jpg');
+	width: 613px;
+	height: 185px;
+}
+
+.subscribe {
+	margin-top: 20px;
+	display: flex;
+
+	.bg-pattern{
+		h2 { 
+			display: block;
+			width: 400px;
+			margin: 40px auto 20px;
+			line-height: 40px;
+		}
+	}
+
+	.sub-form-bg{
+		background-color: $bg-divider;
+		width: 347px;
+		 
+		 .sub-form{
+		 	display: table;
+			margin: 0 auto;
+			padding-top: 40px;
+			p { color: $sub-txt; }
+		 }
+		
+		input{ height: 45px; }
+		input[type="text"] {
+			padding: 5px 10px;
+			border: 1px solid $nav-txt;
+			margin-right: -3px;
+			outline: none;
+		}
+		input[type="submit"] {
+			background-color: $bg-nav;
+			border: 1px solid $bg-nav;
+		}
+	}
+}
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.subscribe {
+		display: inline;
+
+		.bg-pattern{
+			width: 100%;
+			h2, p { 
+				position: relative;
+				top: 30px;
+				margin-top: 0;
+			}
+		}
+
+		.sub-form-bg{
+			width: 100%;
+			height: 185px;
+		}
+	}
+}
+
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	.subscribe {
+		width: 560px;
+
+		.bg-pattern { 
+			width: 300px;
+			h2 { font-size: $heading-ml; width: 280px;}
+		}
+	}
+}
+
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	.subscribe {
+		width: 700px;
+
+		.bg-pattern { 
+			width: 500px;
+			h2 { font-size: $heading-l; }
+		}
+	}
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	
+}

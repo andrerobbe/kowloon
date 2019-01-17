@@ -7,19 +7,20 @@
 ### Voor zowel uitwerking frontend als backend
 
 - <s>Toon de eerste keer dat je op de site komt een cookie melding</s>
-- Als je je email adres ingeeft bij subscribe to newsletter, wordt dit in een DB opgeslagen
-- Je volgt de regels van de kunst ivm PerformanceJe zorgt voor een SEO optimised website
+- <s>Als je je email adres ingeeft bij subscribe to newsletter, wordt dit in een DB opgeslagen</s>
+- <s>Je volgt de regels van de kunst ivm Performance</s>
+- <s>Je zorgt voor een SEO optimised website</s>
 - <s>Je implementeerd google analytics op je site</s>
 
 
 ### Voor uitwerking frontend
 - Je zorgt voor een Frontend styleguide
 
-- Homepage (Home_01.03_B.jpg)
+- <s>Homepage (Home_01.03_B.jpg)</s>
    - <s>Carousel foto's bovenaan</s>
    - <s>Hover over de dieren (wit icon, grijze achtergrond)</s>
-   - Hover over de hot items
-   - Visueel duidelijke dat er meerdere foto's bij een product zitten
+   - <s>Hover over de hot items</s>
+   - <s>Visueel duidelijke dat er meerdere foto's bij een product zitten</s>
 
 - About us (About_01.01.jpg)
    - Komt links in de menu onder FAQ icon met een mail icoontje

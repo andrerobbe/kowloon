@@ -5,11 +5,7 @@
     margin:         0;
     display:        inline-block;
 
-    &.h-l {
-        font-size: $heading-l;
-    }
-
-    &.h-m {
-        font-size: $heading-m;
-    }
+    &.h-xl{ font-size: $heading-xl; }
+    &.h-l { font-size: $heading-l; }
+    &.h-m { font-size: $heading-m; }
 }

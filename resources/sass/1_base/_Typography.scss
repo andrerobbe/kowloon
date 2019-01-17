@@ -13,9 +13,9 @@ $font-txt:					'Arial', sans-serif;
 .font-title { font-family:	$font-title; }
 .font-txt	{ font-family: 	$font-txt; }
 
-
-
+$heading-xl:	44px;
 $heading-l:		40px;
+$heading-ml:	28px;
 $heading-m:		20px;
 $nav-m:			22px;
 $btn-m:			18.97px;
@@ -24,14 +24,15 @@ $txt-l:			15px;
 $txt-m:			14px;
 
 
-.heading-l 	{ font-size: 	$heading-l; }
-.heading-m 	{ font-size: 	$heading-m; }
 .nav-m 		{ font-size: 	$nav-m; }
-.btn-m 		{ font-size: 	$btn-m; }
-.txt-xl 	{ font-size: 	$txt-xl; }
-.txt-l 		{ font-size: 	$txt-l; }
-.txt-m 		{ font-size: 	$txt-m; }
 
+
+body {
+	font-family:			$font-txt;
+	font-weight: 			normal;
+}
+
+.align-center { text-align: center;}
 
 .weight-100 { font-weight: 	100; }
 .weight-200 { font-weight: 	200; }
@@ -44,47 +45,3 @@ $txt-m:			14px;
 .weight-800 { font-weight: 	800; }
 .weight-n { font-weight: 	normal; }
 .weight-bold { font-weight: bold; }
-
-
-body {
-	font-family:			$font-txt;
-	font-weight: 			normal;
-}
-
-
-
-
-/*
-
-breadcrumbs
-arial 14px
-
-h1 
-choplin 40px
-
-h2
-choplin 20px
-
-
-txt
-arial 14px
-
-
-
-field
-arial 20px
-placeholder - arial 16px
-
-
-send btn 237 x 42
-arial 18.97px BOLD
-
-
-more questions?
-choplin 15px
-underline
-right outline
-
-faq arial 20 bold
-arial 14
-*/

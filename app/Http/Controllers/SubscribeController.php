@@ -12,33 +12,29 @@ class SubscribeController extends Controller
         //$this->middleware('auth');
     }
 
-    public function index(){
-    	return view('index', ["sub"=>$mail]);
-	}
+	public function submit(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|string|email|max:255',
+        ]);
 
-	public function submit(Request $request){
-    	$this->validate($request, [
-    		'email' => 'required|string|email|max:255',
-    	]);
+        $msg        = '';
+        $msg_body   = '';
 
-
-        $msg = '';
-        $msg_body = '';
-
-        //if already set in db, error msg, else create new
-        if(Subscriber::find($request)){ 
+        if (Subscriber::where('email', '=', $request->input('email') )->exists()) {
+            // email found
             $msg        = 'error';
-            $msg_body   = 'U bent al geabboneerd op onze nieuwsbrief!';
+            $msg_body   = "You're already subscribed to our newsletter!";
         }
         else{
-            $msg        = 'succes';
-            $msg_body   = 'U heeft zich succesvol aangemeld voor onze nieuwsbrief!';
-
+            // create new Subscriber
             $sub        = new Subscriber;
             $sub->email = $request->input('email');
             $sub->save();
+            $msg        = 'succes';
+            $msg_body   = "You've succesfully subscribed to our newsletter. Thank you!";
         }
-    	
-        return redirect('/index')->with($msg, $msg_body);
+
+        return redirect('/')->with($msg, $msg_body);
     }
 }

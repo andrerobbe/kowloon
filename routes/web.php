@@ -12,12 +12,7 @@
 */
 
 
-Route::get('/', 							'HomeController@index');
-
-Route::get('/subscribe/', 					'SubscribeController@index');
-Route::post('/subscribe/submit', 			'SubscribeController@subscribe');
-Route::post('/subscribe/delete', 			'SubscribeController@unsubscribe');
-Route::post('/subscribe/confirm-delete',	'SubscribeController@UnsubscribeConfirm');
-
+Route::get('/', 			'HomeController@index');
+Route::post('/subscribe/', 	'SubscribeController@submit');
 
 Auth::routes(['register' => false],['login' => false]);
