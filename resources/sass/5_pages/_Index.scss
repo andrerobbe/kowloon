@@ -9,7 +9,6 @@ $img_size: (40px + 5px) * $img_scale;
 	ul {
 		display: grid;
 		grid-template-columns: repeat(11, 1fr);
-		grid-column-gap: auto;
 		grid-row-gap: 65px;
 		margin: 30px auto 70px;
 
@@ -28,6 +27,7 @@ $img_size: (40px + 5px) * $img_scale;
 				font-family: $font-title;
 				color: $white;
 				text-align: center;
+				text-transform: uppercase;
 			}
 
 			&.divider-vertical { cursor: default; }

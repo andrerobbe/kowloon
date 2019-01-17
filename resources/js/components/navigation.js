@@ -21,9 +21,9 @@ function hamburgerMenu(){
 }
 
 function eventHandlerNavigation(){
-	var navbar = document.getElementById('nav-burger');
-	navbar.addEventListener("click", hamburgerMenu);
-	var mobileNav		= document.getElementById('mobile-menu');
+	var navbar 		= document.getElementById('nav-burger');
+	var mobileNav 	= document.getElementById('mobile-menu');
+	navbar.addEventListener("click", hamburgerMenu);	
 	mobileNav.addEventListener("click", hamburgerMenu);
 }
 

@@ -58,22 +58,6 @@
 	.slide-controls{
 		text-align: center;
 		margin-top: -40px;
-
-		.dot {
-			cursor: pointer;
-			height: 15px;
-			width: 15px;
-			margin: 0 10px;
-			background-color: $white;
-			border-radius: 50%;
-			display: inline-block;
-			transition: .6s all ease;
-
-			&.active,
-			&:hover{
-				background-color: $bg-nav;
-			}
-		}
 	}
 }
 

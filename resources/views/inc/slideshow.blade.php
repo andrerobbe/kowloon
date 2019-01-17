@@ -19,8 +19,8 @@
 
 	<!-- The dots/circles -->
 	<div class="slide-controls">
-		<span id="dot-1" class="dot active"></span> 
-		<span id="dot-2" class="dot"></span> 
-		<span id="dot-3" class="dot"></span> 
+		<span id="dot-1" class="dot dot-slides active"></span> 
+		<span id="dot-2" class="dot dot-slides"></span> 
+		<span id="dot-3" class="dot dot-slides"></span> 
 	</div>
 </div>

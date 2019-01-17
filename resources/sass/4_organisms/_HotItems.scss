@@ -1,0 +1,63 @@
+.hot-items {
+	padding-bottom: 20px; //visit store link
+	margin-bottom: 20px;
+
+	ul {
+		display: flex;		
+
+		li { margin: 5px; }
+		li:first-child { margin-left: 0; }
+		li:last-child { margin-right: 0; }
+	}
+	a { float: right; }
+}
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.hot-items {
+		width: 515px;
+		max-width: 95%;
+
+		ul li { margin: 2px; }
+		figcaption { display: none; }
+		.item-dots { display: none; }
+	}
+}
+
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	.hot-items { width: 560px; figcaption { font-size: 11px; } }
+}
+
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	.hot-items { width: 700px; }
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	.hot-items { width: 900px; }
+}

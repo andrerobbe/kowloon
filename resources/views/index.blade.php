@@ -4,6 +4,8 @@
 
 @include('inc.slideshow')
 <div class="wrapper">
+
+	<!-- Navigation -->
 	<div class="navigation">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dicta cumque est quas reiciendis officiis iste consequatur sequi delectus autem asperiores veniam recusandae commodi, adipisci dolorum voluptas provident, rem quae!</p>
 		<ul>
@@ -21,13 +23,19 @@
 		</ul>
 	</div>
 
+	<!-- Hot Items -->
 	<div class="hot-items">
-		<h1>Hot Items</h1>
-		<section>
-			<img src="" alt="">
-			<p>Cooling Mat</p>
-		</section>
+		<h1 class="heading h-l">Hot Items.</h1>
+		<ul>
+			<li>@include('inc.item')</li>
+			<li>@include('inc.item')</li>
+			<li>@include('inc.item')</li>
+			<li>@include('inc.item')</li>
+		</ul>
+		<a href="">Visit the store</a>
 	</div>
+
+	<!-- Subscribe -->
 	<div class="subscribe">
 		<div class="bg-pattern">
 			<h2>Discover amazing Kowloon deals!</h2>
@@ -42,9 +50,8 @@
 				{{Form::text('email', '', ['class' => '', 'placeholder' => "example@name.com", 'required', 'email'])}}
 				{{Form::submit('OK', ['class' => ''])}}
 			{!! Form::close() !!}
-
 		</div>
 	</div>
-</div>
 
+</div>
 @endsection

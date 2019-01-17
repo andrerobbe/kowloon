@@ -11,7 +11,7 @@ var seconds;			// Global timer, reset on clicking another slide
 
 function showNextSlide() {
 	var slides = document.getElementsByClassName("mySlides");
-	var dots = document.getElementsByClassName("dot");
+	var dots = document.getElementsByClassName("dot-slides");
 
 	//active class on slides and dots
 	for ( var i = 0; i < slides.length; i++ ) {
@@ -25,7 +25,7 @@ function showNextSlide() {
 	if (slideIndex > slides.length) {slideIndex = 1} 
 }
 
-function changeSlide(e){
+function changeSlide(){
 	//change id and reset timer
 	slideIndex = this.id.substring(4);
 	seconds = 0;
@@ -46,8 +46,7 @@ function startSlideShow(n){
 
 function eventHandlerSlideShow(){
 	 startSlideShow();
-
-	 var dots = document.getElementsByClassName("dot");
+	 var dots = document.getElementsByClassName("dot-slides");
 	 for ( var i = 0; i < dots.length; i++ ) {
 		dots[i].addEventListener("click", changeSlide);
 	}

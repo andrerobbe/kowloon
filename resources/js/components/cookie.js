@@ -178,7 +178,6 @@ function closeCookiePopup(){
 function eventHandlerCookie(){
 	var btnAccept = document.getElementById('accept-cookie');
 	var btnIgnore = document.getElementById('ignore-cookie');
-
 	btnAccept.addEventListener("click", setCookie);
 	btnIgnore.addEventListener("click", closeCookiePopup);
 }

@@ -11718,6 +11718,8 @@ var app = new Vue({
 
 __webpack_require__(/*! ./components/cookie */ "./resources/js/components/cookie.js");
 
+__webpack_require__(/*! ./components/item */ "./resources/js/components/item.js");
+
 __webpack_require__(/*! ./components/navigation */ "./resources/js/components/navigation.js");
 
 __webpack_require__(/*! ./components/slideShow */ "./resources/js/components/slideShow.js");
@@ -11893,6 +11895,48 @@ cookiePopup();
 
 /***/ }),
 
+/***/ "./resources/js/components/item.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/item.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ *
+ * Item
+ *
+ */
+function showHover() {
+  var itemHover = this.getElementsByClassName('item-hover');
+
+  for (var i = 0; i < itemHover.length; i++) {
+    itemHover[i].classList.add('active');
+  }
+}
+
+function hideHover() {
+  var itemHover = document.getElementsByClassName('item-hover');
+
+  for (var i = 0; i < itemHover.length; i++) {
+    itemHover[i].classList.remove('active');
+  }
+}
+
+function eventHandlerItem() {
+  var itemSection = document.getElementsByClassName('item-section');
+  var itemImg = document.getElementsByClassName('item-img');
+
+  for (var i = 0; i < itemSection.length; i++) {
+    itemImg[i].addEventListener("mouseover", hideHover);
+    itemImg[i].addEventListener("mouseover", showHover);
+  }
+}
+
+eventHandlerItem();
+
+/***/ }),
+
 /***/ "./resources/js/components/navigation.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/navigation.js ***!
@@ -11921,8 +11965,8 @@ function hamburgerMenu() {
 
 function eventHandlerNavigation() {
   var navbar = document.getElementById('nav-burger');
-  navbar.addEventListener("click", hamburgerMenu);
   var mobileNav = document.getElementById('mobile-menu');
+  navbar.addEventListener("click", hamburgerMenu);
   mobileNav.addEventListener("click", hamburgerMenu);
 }
 
@@ -11950,7 +11994,7 @@ var seconds; // Global timer, reset on clicking another slide
 
 function showNextSlide() {
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot"); //active class on slides and dots
+  var dots = document.getElementsByClassName("dot-slides"); //active class on slides and dots
 
   for (var i = 0; i < slides.length; i++) {
     slides[i].classList.remove('active');
@@ -11966,7 +12010,7 @@ function showNextSlide() {
   }
 }
 
-function changeSlide(e) {
+function changeSlide() {
   //change id and reset timer
   slideIndex = this.id.substring(4);
   seconds = 0;
@@ -11986,7 +12030,7 @@ function startSlideShow(n) {
 
 function eventHandlerSlideShow() {
   startSlideShow();
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("dot-slides");
 
   for (var i = 0; i < dots.length; i++) {
     dots[i].addEventListener("click", changeSlide);

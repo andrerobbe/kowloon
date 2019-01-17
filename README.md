@@ -17,7 +17,7 @@
 
 - Homepage (Home_01.03_B.jpg)
    - <s>Carousel foto's bovenaan</s>
-   - Hover over de dieren (wit icon, grijze achtergrond)
+   - <s>Hover over de dieren (wit icon, grijze achtergrond)</s>
    - Hover over de hot items
    - Visueel duidelijke dat er meerdere foto's bij een product zitten
 

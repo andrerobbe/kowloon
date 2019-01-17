@@ -10718,6 +10718,22 @@ arial 14
   background-color: #616161;
 }
 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s all ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #323232;
+}
+
 .heading {
   color: #fff;
   font-family: "Choplin Medium-DEMO";
@@ -10731,6 +10747,17 @@ arial 14
 
 .heading.h-m {
   font-size: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  font-family: "Choplin Medium-DEMO";
+  font-size: 15px;
+}
+
+a:hover {
+  color: #fff;
 }
 
 ul {
@@ -10811,13 +10838,13 @@ ul {
   margin: 40px auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .wrapper {
-    margin: 40px 10px;
+    margin: 40px 7px;
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 630px) and (max-width: 768px) {
   .wrapper {
     width: 710px;
     max-width: 80%;
@@ -10841,6 +10868,124 @@ ul {
 @media only screen and (min-width: 1140px) {
   .wrapper {
     width: 960px;
+  }
+}
+
+.item-section {
+  cursor: pointer;
+  background-color: #565656;
+  padding: 5px;
+  border: 1px solid #717171;
+  width: 232px;
+}
+
+.item-section img {
+  width: 220px;
+}
+
+.item-section figcaption {
+  margin-top: 1px;
+}
+
+.item-section figcaption span:first-child {
+  margin-left: 5px;
+}
+
+.item-section figcaption span:last-child {
+  margin-right: 5px;
+  float: right;
+}
+
+.item-section .item-dots {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.item-section .item-dots .dot {
+  margin: 0 2px;
+}
+
+.item-section .item-hover {
+  position: relative;
+  height: 0;
+  display: none;
+}
+
+.item-section .item-hover.active {
+  display: block;
+}
+
+.item-section .item-hover span {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+@media only screen and (max-width: 630px) {
+  .item-section {
+    padding: 2px;
+    max-width: 126px;
+  }
+
+  .item-section img {
+    max-width: 120px;
+  }
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: 630px) and (max-width: 768px) {
+  .item-section {
+    max-width: 132px;
+  }
+
+  .item-section img {
+    max-width: 120px;
+  }
+}
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .item-section {
+    max-width: 167px;
+  }
+
+  .item-section img {
+    max-width: 155px;
+  }
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: 1024px) and (max-width: 1140px) {
+  .item-section {
+    max-width: 217px;
+  }
+
+  .item-section img {
+    max-width: 205px;
   }
 }
 
@@ -10922,7 +11067,7 @@ ul {
  *
  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .cookie .cookie-content {
     width: 100%;
     margin: 5px auto;
@@ -10947,7 +11092,7 @@ ul {
  *
  */
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 630px) and (max-width: 1024px) {
   .cookie .cookie-content .cookie-img {
     position: absolute;
     bottom: 30px;
@@ -10966,9 +11111,99 @@ ul {
  *
  */
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 630px) and (max-width: 768px) {
   .cookie .cookie-content .cookie-txt {
     width: 500px;
+  }
+}
+
+.hot-items {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.hot-items ul {
+  display: flex;
+}
+
+.hot-items ul li {
+  margin: 5px;
+}
+
+.hot-items ul li:first-child {
+  margin-left: 0;
+}
+
+.hot-items ul li:last-child {
+  margin-right: 0;
+}
+
+.hot-items a {
+  float: right;
+}
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+@media only screen and (max-width: 630px) {
+  .hot-items {
+    width: 515px;
+    max-width: 95%;
+  }
+
+  .hot-items ul li {
+    margin: 2px;
+  }
+
+  .hot-items figcaption {
+    display: none;
+  }
+
+  .hot-items .item-dots {
+    display: none;
+  }
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: 630px) and (max-width: 768px) {
+  .hot-items {
+    width: 560px;
+  }
+
+  .hot-items figcaption {
+    font-size: 11px;
+  }
+}
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .hot-items {
+    width: 700px;
+  }
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: 1024px) and (max-width: 1140px) {
+  .hot-items {
+    width: 900px;
   }
 }
 
@@ -11196,7 +11431,7 @@ ul {
  *
  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .navbar-vertical:before {
     display: none;
   }
@@ -11294,22 +11529,6 @@ ul {
   margin-top: -40px;
 }
 
-.slideshow-container .slide-controls .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: 0.6s all ease;
-}
-
-.slideshow-container .slide-controls .dot.active,
-.slideshow-container .slide-controls .dot:hover {
-  background-color: #323232;
-}
-
 @-web-kit-keyframes slideShowTimer {
   from {
     width: 0;
@@ -11346,7 +11565,7 @@ ul {
  *
  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .slideshow-container .logo {
     max-width: 80%;
   }
@@ -11372,7 +11591,6 @@ ul {
 .wrapper .navigation ul {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-column-gap: auto;
   grid-row-gap: 65px;
   margin: 30px auto 70px;
 }
@@ -11393,6 +11611,7 @@ ul {
   font-family: "Choplin Medium-DEMO";
   color: #fff;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .wrapper .navigation ul li.divider-vertical {
@@ -11434,7 +11653,7 @@ ul {
  *
  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .wrapper .navigation ul {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -11450,7 +11669,7 @@ ul {
  *
  */
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 630px) and (max-width: 768px) {
   .wrapper .navigation ul {
     grid-template-columns: repeat(5, 1fr);
   }

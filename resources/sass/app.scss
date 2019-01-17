@@ -26,7 +26,9 @@
 // Atoms
 @import '2_atoms/_Button.scss';
 @import '2_atoms/_Divider.scss';
+@import '2_atoms/_Dot.scss';
 @import '2_atoms/_Heading.scss';
+@import '2_atoms/_Link.scss';
 @import '2_atoms/_Lists.scss';
 @import '2_atoms/_Sprite.scss';
 @import '2_atoms/_Wrapper.scss';
@@ -35,14 +37,15 @@
 
 
 // Molecules
-@import '3_molecules/_Cookie.scss';
-@import '3_molecules/_Navigation.scss';
-@import '3_molecules/_Slideshow.scss';
+@import '3_molecules/_Item.scss';
 
 
 
 // Organisms
-@import '4_organisms/_Header.scss';
+@import '4_organisms/_Cookie.scss';
+@import '4_organisms/_HotItems.scss';
+@import '4_organisms/_Navbar.scss';
+@import '4_organisms/_Slideshow.scss';
 
 
 

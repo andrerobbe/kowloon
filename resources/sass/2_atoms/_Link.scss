@@ -1,0 +1,10 @@
+a {
+	color: $white;
+	text-decoration: underline;
+	font-family: $font-title;
+	font-size: $txt-l;
+
+	&:hover{
+		color: $white;
+	}
+}
