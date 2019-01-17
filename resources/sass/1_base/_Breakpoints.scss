@@ -20,16 +20,15 @@ $bps: (
 
 /*
  *
- * Usage
+ * Example
  *
  *
 
-@media only screen and (max-width: bp('small')) {
-    div {
-        width: 100%;
+    @media only screen and (max-width: bp('small')) {
+        div {
+            width: 100%;
+        }
     }
-}
-
 
  *
  */
@@ -41,7 +40,7 @@ $bps: (
 
 /*
  *
- * Variables in queries, using @content
+ * Includes
  *
  */
 
@@ -49,34 +48,36 @@ $bps: (
     @if $media == phone {
         @media only screen and (max-width: bp('small')) { @content; }
     }
-    @else if $media == tablet-portrait {
-        @media only screen and (min-width: bp('small')) and (max-width: bp('medium') -1 ) { @content; }
+    @else if $media == tabletPortrait {
+        @media only screen and (min-width: bp('small')) and (max-width: bp('medium')) { @content; }
     }
-    @else if $media == tablet-landscape {
-        @media only screen and (min-width: bp('medium')) and (max-width: bp('large') -1 ) { @content; }
+    @else if $media == tabletLandscape {
+        @media only screen and (min-width: bp('medium')) and (max-width: bp('large')) { @content; }
     }
     @else if $media == desktop {
-        @media only screen and (min-width: bp('large')) { @content; }
+        @media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')) { @content; }
+    }
+    @else if $media == desktopL {
+        @media only screen and (min-width: bp('xlarge')) { @content; }
     }
 }
 
 
  /*
  *
- * Usage
+ * Example
  *
  *
 
-div {
-    width: 250px;
-    height: 100px;
+    .wrapper {
+        margin: 40px auto;
 
-    @include respond-to(phone) { width: 100% ;}
-    @include respond-to(tablet-portrait) { width: 125px; }
-    @include respond-to(tablet-landscape) { width: 200px; }
-    @include respond-to(desktop) { height: auto; }
-}
-
+        @include respond-to(phone) { margin: 40px 10px;}
+        @include respond-to(tabletPortrait) { width: 710px; max-width: 80%; padding: 0 5px;}
+        @include respond-to(tabletLandscape) { width: 765px; max-width: 80%; }
+        @include respond-to(desktop) { width: 900px; }
+        @include respond-to(desktopL) { width: 960px; }
+    }
 
 *
 */

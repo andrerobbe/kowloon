@@ -1,0 +1,75 @@
+$img_scale: 1.5;
+$img_size: (40px + 5px) * $img_scale;
+
+.wrapper .navigation {
+	padding: 30px 0;
+
+	p { text-align: center; color: $bg-search-icon }
+
+	ul {
+		display: grid;
+		grid-template-columns: repeat(11, 1fr);
+		grid-column-gap: auto;
+		grid-row-gap: 65px;
+		margin: 30px auto 70px;
+
+		li {
+			cursor: pointer;
+			background-size: 130%;
+			width: $img_size;
+			height: 95px;
+			margin: 0 auto;
+
+			a {
+				display: block;
+				padding-top: 100px;
+				text-decoration: none;
+				font-size: $heading-m;
+				font-family: $font-title;
+				color: $white;
+				text-align: center;
+			}
+
+			&.divider-vertical { cursor: default; }
+
+			&.sprite:hover { filter: brightness(10) saturate(0); } //white
+		}
+
+		.sprite.dog 		{ background-position: -7.5px -370px; }
+		.sprite.cat 		{ background-position: -7.5px -465px; } 
+		.sprite.fish 		{ background-position: -7.5px -560px; } 
+		.sprite.bird 		{ background-position: -7.5px -655px; } 
+		.sprite.hamster		{ background-position: -7.5px -750px; } 
+		.sprite.plus 		{ background-position: -7.5px -840px; } 
+	}
+}
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.wrapper .navigation {
+		ul{
+			grid-template-columns: repeat(3, 1fr);
+			li:nth-child(4n) { display: none; }
+		}
+	}
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	.wrapper .navigation {
+		ul {
+			grid-template-columns: repeat(5, 1fr);
+			li:nth-child(6n) { display: none; }
+		}
+	}
+}

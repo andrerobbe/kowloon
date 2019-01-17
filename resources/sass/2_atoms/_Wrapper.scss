@@ -3,10 +3,11 @@
 }
 
 .wrapper {
-	margin: 0 auto;
+	margin: 40px auto;
 
-	@include respond-to(phone) { width: 100% ;}
-	//@include respond-to(tablet-portrait) { width: ; }
-	//@include respond-to(tablet-landscape) { width: ; }
-	@include respond-to(desktop) { width: 960px; }
+	@include respond-to(phone) { margin: 40px 10px;}
+	@include respond-to(tabletPortrait) { width: 710px; max-width: 80%; padding: 0 5px;}
+	@include respond-to(tabletLandscape) { width: 765px; max-width: 80%; }
+	@include respond-to(desktop) { width: 900px; }
+	@include respond-to(desktopL) { width: 960px; }
 }

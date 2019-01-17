@@ -1,0 +1,15 @@
+.divider-horizontal{
+	position: relative;
+	width: 100%;
+	height: 1px !important;
+	content:"";
+	background-color: $bg-divider;
+}
+
+.divider-vertical {
+	position: relative;
+	width: 1px !important;
+	height: 100%;
+	content:"";
+	background-color: $bg-divider;
+}

@@ -38,7 +38,7 @@
    - Actieve foto = full color thumb, andere zijn 'grayed out'Side scrollers bij gerelateerde producten
    - FAQ open/closeMenu
 
-- Menu (Navigation_01_02.jpg)
+- <s>Menu (Navigation_01_02.jpg)</s>
    - <s>Animatie voor slide open</s>
    - <s>Mind the K -> Kowloon onderaan</s>
    - <s>Mind the text bij Search & FAQ</s>
@@ -52,9 +52,9 @@
    - Load more on scroll (mag dummy/statische data zijn)
 
 
-
+<br><br>
 Je stuurt me per mail:
 - De link van je git project
 - De URL van een versie die online toegankelijk is op een publieke hosting.
 
-Geen bestanden als e-mail attachment
+<b>Geen bestanden als e-mail attachment</b>

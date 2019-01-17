@@ -10517,48 +10517,47 @@ body {
 
 /*
  *
- * Usage
+ * Example
  *
  *
 
-@media only screen and (max-width: bp('small')) {
-    div {
-        width: 100%;
+    @media only screen and (max-width: bp('small')) {
+        div {
+            width: 100%;
+        }
     }
-}
-
 
  *
  */
 
 /*
  *
- * Variables in queries, using @content
+ * Includes
  *
  */
 
 /*
  *
- * Usage
+ * Example
  *
  *
 
-div {
-    width: 250px;
-    height: 100px;
+    .wrapper {
+        margin: 40px auto;
 
-    @include respond-to(phone) { width: 100% ;}
-    @include respond-to(tablet-portrait) { width: 125px; }
-    @include respond-to(tablet-landscape) { width: 200px; }
-    @include respond-to(desktop) { height: auto; }
-}
-
+        @include respond-to(phone) { margin: 40px 10px;}
+        @include respond-to(tabletPortrait) { width: 710px; max-width: 80%; padding: 0 5px;}
+        @include respond-to(tabletLandscape) { width: 765px; max-width: 80%; }
+        @include respond-to(desktop) { width: 900px; }
+        @include respond-to(desktopL) { width: 960px; }
+    }
 
 *
 */
 
 body {
   background-color: #454545;
+  color: #fff;
 }
 
 @font-face {
@@ -10703,6 +10702,22 @@ arial 14
   outline: none;
 }
 
+.divider-horizontal {
+  position: relative;
+  width: 100%;
+  height: 1px !important;
+  content: "";
+  background-color: #616161;
+}
+
+.divider-vertical {
+  position: relative;
+  width: 1px !important;
+  height: 100%;
+  content: "";
+  background-color: #616161;
+}
+
 .heading {
   color: #fff;
   font-family: "Choplin Medium-DEMO";
@@ -10793,16 +10808,37 @@ ul {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 @media only screen and (max-width: 600px) {
   .wrapper {
-    width: 100%;
+    margin: 40px 10px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .wrapper {
+    width: 710px;
+    max-width: 80%;
+    padding: 0 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    width: 765px;
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1140px) {
+  .wrapper {
+    width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
   .wrapper {
     width: 960px;
   }
@@ -10972,11 +11008,11 @@ ul {
 }
 
 .navbar-vertical ul li {
-  margin: 10px;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
   cursor: pointer;
+  margin: 10px;
+  line-height: 40px;
+  height: 40px;
+  width: calc(100% - ($nav_width - $img_width));
 }
 
 .navbar-vertical ul li a {
@@ -11002,6 +11038,20 @@ ul {
 .navbar-vertical ul li#nav-search:hover a,
 .navbar-vertical ul li#nav-faq:hover a {
   color: #fff !important;
+}
+
+.navbar-vertical ul li#nav-divider {
+  height: 3px !important;
+  cursor: default;
+}
+
+.navbar-vertical ul li#nav-divider .divider {
+  background-color: #535353;
+  width: calc(100% - ($nav_width - $img_width));
+}
+
+.navbar-vertical ul .nav-animals {
+  margin-top: 10px;
 }
 
 .navbar-vertical ul .nav-animals li {
@@ -11214,6 +11264,7 @@ ul {
 
 .slideshow-container .mySlides img {
   width: 100%;
+  max-height: 480px;
 }
 
 .slideshow-container .mySlides .slide-timer {
@@ -11305,6 +11356,106 @@ ul {
   }
 
   .slideshow-container .slide-controls {
+    display: none;
+  }
+}
+
+.wrapper .navigation {
+  padding: 30px 0;
+}
+
+.wrapper .navigation p {
+  text-align: center;
+  color: #ededed;
+}
+
+.wrapper .navigation ul {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-column-gap: auto;
+  grid-row-gap: 65px;
+  margin: 30px auto 70px;
+}
+
+.wrapper .navigation ul li {
+  cursor: pointer;
+  background-size: 130%;
+  width: 67.5px;
+  height: 95px;
+  margin: 0 auto;
+}
+
+.wrapper .navigation ul li a {
+  display: block;
+  padding-top: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Choplin Medium-DEMO";
+  color: #fff;
+  text-align: center;
+}
+
+.wrapper .navigation ul li.divider-vertical {
+  cursor: default;
+}
+
+.wrapper .navigation ul li.sprite:hover {
+  -webkit-filter: brightness(10) saturate(0);
+          filter: brightness(10) saturate(0);
+}
+
+.wrapper .navigation ul .sprite.dog {
+  background-position: -7.5px -370px;
+}
+
+.wrapper .navigation ul .sprite.cat {
+  background-position: -7.5px -465px;
+}
+
+.wrapper .navigation ul .sprite.fish {
+  background-position: -7.5px -560px;
+}
+
+.wrapper .navigation ul .sprite.bird {
+  background-position: -7.5px -655px;
+}
+
+.wrapper .navigation ul .sprite.hamster {
+  background-position: -7.5px -750px;
+}
+
+.wrapper .navigation ul .sprite.plus {
+  background-position: -7.5px -840px;
+}
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+@media only screen and (max-width: 600px) {
+  .wrapper .navigation ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrapper .navigation ul li:nth-child(4n) {
+    display: none;
+  }
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .wrapper .navigation ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .wrapper .navigation ul li:nth-child(6n) {
     display: none;
   }
 }

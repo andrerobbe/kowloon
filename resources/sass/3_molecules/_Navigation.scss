@@ -28,11 +28,13 @@ $duration: 		.2s;
 		}
 
 		li {
-			margin: ($nav_width - $img_width)/2;
-			width: 100%;
-			height: $img_width;
-			line-height: $img_width;
 			cursor: pointer;
+			margin: ($nav_width - $img_width)/2;
+			line-height: $img_width;
+			height: $img_width;
+			width: -webkit-calc(100% - ($nav_width - $img_width));
+			width:    -moz-calc(100% - ($nav_width - $img_width));
+			width: 		   calc(100% - ($nav_width - $img_width));
 
 			a {
 				display: block;
@@ -55,9 +57,22 @@ $duration: 		.2s;
 				a { color: $white !important; }
 			}
 		}
+
+		li#nav-divider {
+			height: 3px !important;
+			cursor: default;
+
+			.divider {
+				background-color: $bg-divider2;
+				width: -webkit-calc(100% - ($nav_width - $img_width));
+				width:    -moz-calc(100% - ($nav_width - $img_width));
+				width: 		   calc(100% - ($nav_width - $img_width));
+			}
+		}
 		
 		/* filter animals */
 		.nav-animals {
+			margin-top: 10px;
 			li 			{ filter: brightness(10) saturate(0); } //white
 			li.active,
 			li:hover 	{ filter: none; }

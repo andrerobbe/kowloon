@@ -15,8 +15,8 @@
         <li id="nav-faq" class="sprite faq">
             <a>FAQ</a>
         </li>
-        <li>
-            <div class="divider"></div>
+        <li id="nav-divider">
+            <div class="divider-horizontal"></div>
         </li>
         <div class="nav-animals">
             <li class="sprite dog {{ $_SERVER['REQUEST_URI'] === '/dogs' ? 'active' : '' }}">
