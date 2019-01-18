@@ -1,36 +1,15 @@
-.fade-out {
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.4); /* 0.4 = 40% opacity */
-	z-index: 50;
-	top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-	display: none;
-    &.active{
-    	display: block;
-    }
-}
-
 .cookie {
 	position: fixed;
-	z-index: 100;
+	z-index: 5;
 	width: 100%;
 	background-color: $bg-cookie;
 	padding: 10px;
 	padding-bottom: 0;
-	//box-shadow: 0 10px $bg-page;
 	
 	display: none;
 	
 	&.active{
 		display: block;
-	}
-
-	.cookie-close-btn {
-		position: absolute;
-		right: 12px;
 	}
 
 	.cookie-content {
@@ -48,6 +27,7 @@
 		.cookie-txt{
 			width: 7100px;
 			max-width: 100%;
+			p { margin-bottom: 1rem; color:$bg-page; }
 			.btn {
 				background-color: $bg-btn-cookie;
 				font-size: $nav-m !important;
@@ -59,7 +39,7 @@
 	&:after{
 		position: absolute;
 		left: 0;
-		z-index: 50;
+		z-index: 5;
 		width: 100%;
 		height: 45px;
 		content:"";

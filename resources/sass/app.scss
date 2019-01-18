@@ -1,18 +1,8 @@
-
-// Fonts
-@import url(//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO);
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-/*
-@import '1_base/_*.scss';
-@import '2_atoms/_*.scss';
-@import '3_molecules/_*.scss';
-@import '4_organisms/_*.scss';
-@import '5_pages/_*.scss';
-*/
-
+// Fonts
+@import url(//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO);
 
 
 //Base
@@ -22,11 +12,11 @@
 @import '1_base/_Typography.scss';
 
 
-
 // Atoms
 @import '2_atoms/_Button.scss';
 @import '2_atoms/_Divider.scss';
 @import '2_atoms/_Dot.scss';
+@import '2_atoms/_Input.scss';
 @import '2_atoms/_Heading.scss';
 @import '2_atoms/_Link.scss';
 @import '2_atoms/_Lists.scss';
@@ -35,22 +25,22 @@
 @import '2_atoms/_Wrapper.scss';
 
 
-
 // Molecules
 @import '3_molecules/_Item.scss';
 @import '3_molecules/_Msg.scss';
-
+@import '3_molecules/_Overlay.scss';
 
 
 // Organisms
+@import '4_organisms/_overlays/_Cookie.scss';
+@import '4_organisms/_overlays/_Fade.scss';
+@import '4_organisms/_overlays/_Faq.scss';
+@import '4_organisms/_overlays/_Search.scss';
 @import '4_organisms/index/_Category.scss';
 @import '4_organisms/index/_Slideshow.scss';
-@import '4_organisms/index/_Subscribe.scss';
-
-@import '4_organisms/_Cookie.scss';
+@import '4_organisms/_Subscribe.scss';
 @import '4_organisms/_HotItems.scss';
 @import '4_organisms/_Navbar.scss';
-
 
 
 // Pages

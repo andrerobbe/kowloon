@@ -39,4 +39,5 @@ const app = new Vue({
 require('./components/cookie');
 require('./components/item');
 require('./components/navigation');
+require('./components/overlay');
 require('./components/slideShow');

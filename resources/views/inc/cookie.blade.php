@@ -1,6 +1,6 @@
 <div class="cookie">
 	<!-- Close btn -->
-	<div class="cookie-close-btn">
+	<div class="close-btn">
 		<button id="ignore-cookie" class="btn sprite esc"></button>
 	</div>
 

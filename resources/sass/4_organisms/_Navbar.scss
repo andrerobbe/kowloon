@@ -9,7 +9,7 @@ $duration: 		.2s;
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 10;
+	z-index: 2;
 	height: 100%;
 	width: $nav_width + $nav_extra;
 	overflow: hidden;
@@ -52,6 +52,7 @@ $duration: 		.2s;
 		}
 		li#nav-search,
 		li#nav-faq {
+			//&.active { background-color: $white; }
 			&:hover{
 				filter: brightness(10) saturate(0);
 				a { color: $white !important; }
@@ -235,7 +236,7 @@ $duration: 		.2s;
 	#mobile-menu {
 		display: block;
 		position: fixed;
-		z-index: 10;
+		z-index: 2;
 		top: 0;
 		left: 0;
 		margin: 7px;

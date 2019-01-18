@@ -47,7 +47,7 @@
 
 - Filter (Home_01.04_C_search_BASIC.jpg (en ook D_search_ADVANCED))
    - Price range slider
-   - Visueel openklappen van advanced filter
+   - <s>Visueel openklappen van advanced filter</s>
 
 - FAQ (Home_01.04_F_FAQ.jpg)
    - Load more on scroll (mag dummy/statische data zijn)

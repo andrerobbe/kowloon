@@ -4,8 +4,6 @@
  *
  */
 
-var currentLogo = '';
-
 function hamburgerMenu(){
 	var navbar 			= document.getElementsByClassName('navbar-vertical')[0];
 	var navbarLogo 	 	= document.getElementById('navbar-logo').getElementsByTagName('img')[0];

@@ -15,4 +15,17 @@
     }
 }
 
+.close-btn {
+    position: absolute;
+    right: 12px;
+
+    span {
+        position: relative;
+        top: 22px;
+        left: -3px;
+        color: $nav-txt;
+    }
+}
+
+
 .btn-m      { font-size:    $btn-m; }

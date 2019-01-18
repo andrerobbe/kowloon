@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     
     <link rel="dns-prefetch" href="db.onlinewebfonts.com">
-    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
 
     <!-- Fonts -->
     <link href="//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>
@@ -39,7 +38,6 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
 </head>
 <body class="{{ $_SERVER['REQUEST_URI'] === '/' ? 'index' : '' }}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -56,14 +54,14 @@
             @include('inc.navbar')
         </header>
         <main class="overflow">
+            @include('inc.overlaySearch')
+            @include('inc.overlayFaq')
+            
             @yield('content')
         </main>
         
     </div>
     <!-- Scripts -->
-    <!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
