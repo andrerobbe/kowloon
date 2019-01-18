@@ -20,21 +20,8 @@
 			<p>Don’t find what you’re looking for?</p>
 			<p>You can always contact our <a href="">customer service</a>. We're happy to help you!</p>
 		</div>
-
-		<!-- infinite scroll -->
-		<div class="question-feed">
-		<!-- .questions will be added to .questions-feed -->
-			@include('inc.questionsImport')
-		</div>
-
-		<!-- status elements -->
-		<div class="scroller-status">
-			<div class="infinite-scroll-request loader-ellips"></div>
-			<p class="infinite-scroll-last">End of content</p>
-			<p class="infinite-scroll-error">No more questions to load</p>
-		</div>
-		<!-- pagination has path -->
-		<a class="pagination__next" href="/questions/1">Next</a>
+		
+		@include('inc.faq')
 
 	</div>
 </div>

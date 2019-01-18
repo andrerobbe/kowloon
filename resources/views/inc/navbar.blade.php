@@ -41,7 +41,7 @@
                 <a href="/small-animals">Small Animal</a>
             </li>
             <li class="sprite plus {{ $_SERVER['REQUEST_URI'] === '/other' ? 'active' : '' }}" id="nav-other">
-                <a href="/small-animals">Other</a>
+                <a href="/other">Other</a>
             </li>
         </div>
     </ul>
