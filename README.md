@@ -23,7 +23,7 @@
    - <s>Visueel duidelijke dat er meerdere foto's bij een product zitten</s>
 
 - About us (About_01.01.jpg)
-   - Komt links in de menu onder FAQ icon met een mail icoontje
+   - <s>Komt links in de menu onder FAQ icon met een mail icoontje</s>
    - Custom frontend javascript validatie
    - FAQ open/close
 

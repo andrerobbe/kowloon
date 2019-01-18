@@ -10566,17 +10566,41 @@ body {
   font-family: "Arial", sans-serif !important;
 }
 
-.nav-m {
-  font-size: 22px;
-}
-
 body {
   font-family: "Arial", sans-serif;
   font-weight: normal;
 }
 
+.nav-m {
+  font-size: 22px;
+}
+
+.txt-xxl {
+  font-size: 20px;
+}
+
+.txt-xl {
+  font-size: 16px;
+}
+
+.txt-l {
+  font-size: 15px;
+}
+
+.txt-m {
+  font-size: 14px;
+}
+
 .align-center {
   text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .weight-100 {
@@ -10655,71 +10679,6 @@ body {
   font-size: 18.97px;
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.categories .checkbox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  margin-right: 20px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Hide the browser's default checkbox */
-  /* Create a custom checkbox */
-  /* show checkmark on hover or checked  */
-}
-
-.categories .checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.categories .checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #fff;
-  border: 1px solid #323232;
-  /* the actual checkmark */
-}
-
-.categories .checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.categories .checkbox input:checked ~ .checkmark,
-.categories .checkbox:hover input ~ .checkmark {
-  background-color: #ff6f9e;
-}
-
-.categories .checkbox input:checked ~ .checkmark:after,
-.categories .checkbox:hover input ~ .checkmark:after {
-  display: block;
-}
-
 .divider-horizontal {
   position: relative;
   width: 100%;
@@ -10752,10 +10711,6 @@ body {
   background-color: #323232;
 }
 
-input {
-  outline: none;
-}
-
 .heading {
   color: #fff;
   font-family: "Choplin Medium-DEMO";
@@ -10775,6 +10730,10 @@ input {
   font-size: 20px;
 }
 
+input {
+  outline: none;
+}
+
 a {
   color: #fff;
   text-decoration: underline;
@@ -10792,109 +10751,14 @@ ul {
   padding: 0;
 }
 
+.alert {
+  border-radius: 0;
+}
+
 p {
   color: #fff;
   font-family: "Arial", sans-serif;
   margin: 0;
-}
-
-.txt-xxl {
-  font-size: 20px;
-}
-
-.txt-xl {
-  font-size: 16px;
-}
-
-.txt-l {
-  font-size: 15px;
-}
-
-.txt-m {
-  font-size: 14px;
-}
-
-section.range-slider {
-  position: relative;
-  width: 300px;
-  height: 62px;
-  text-align: center;
-}
-
-section.range-slider span.values {
-  position: relative;
-  top: 30px;
-}
-
-section.range-slider span.values span {
-  padding: 10px 30px;
-  border: 1px solid #323232;
-}
-
-section.range-slider span.values span.rangeValue-1 {
-  margin-right: 10px;
-}
-
-section.range-slider span.values span.rangeValue-2 {
-  margin-left: 10px;
-}
-
-section.range-slider input {
-  pointer-events: none;
-  position: absolute;
-  overflow: hidden;
-  left: 0;
-  top: 0;
-  -webkit-appearance: none;
-  outline: none;
-  width: 300px;
-  height: 10px;
-  margin: 0;
-  padding: 0;
-  background: #d3d3d3;
-}
-
-section.range-slider input::-webkit-slider-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  outline: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  background: #323232;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-}
-
-section.range-slider input::-moz-range-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  -moz-appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-}
-
-section.range-slider input::-moz-range-track {
-  position: relative;
-  z-index: -1;
-  background-color: #323232;
-  border: 0;
-}
-
-section.range-slider input:last-of-type::-moz-range-track {
-  -moz-appearance: none;
-  background: #323232;
-  border: 0;
-}
-
-section.range-slider input[type=range]::-moz-focus-outer {
-  border: 0;
 }
 
 .sprite {
@@ -11004,6 +10868,128 @@ section.range-slider input[type=range]::-moz-focus-outer {
   .wrapper {
     width: 960px;
   }
+}
+
+.breadcrumb {
+  /*reset bootstrap */
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.breadcrumb div,
+.breadcrumb span {
+  margin: 2.5px 0;
+}
+
+.breadcrumb span {
+  font-size: 14px;
+  padding: 0 15px;
+  background-color: #323232;
+  line-height: 25px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 12.5px solid #323232;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-top: 12.5px solid #323232;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-left: 12.5px solid #323232;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-right: 12.5px solid #323232;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories .checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* show checkmark on hover or checked  */
+}
+
+.categories .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.categories .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #323232;
+  /* the actual checkmark */
+}
+
+.categories .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.categories .checkbox input:checked ~ .checkmark,
+.categories .checkbox:hover input ~ .checkmark {
+  background-color: #ff6f9e;
+}
+
+.categories .checkbox input:checked ~ .checkmark:after,
+.categories .checkbox:hover input ~ .checkmark:after {
+  display: block;
 }
 
 #filter-arrow {
@@ -11226,10 +11212,6 @@ section.range-slider input[type=range]::-moz-focus-outer {
   }
 }
 
-.alert {
-  border-radius: 0;
-}
-
 .overlay {
   background-color: #fff;
   position: absolute;
@@ -11319,6 +11301,89 @@ section.range-slider input[type=range]::-moz-focus-outer {
  * Desktop small
  *
  */
+
+section.range-slider {
+  position: relative;
+  width: 300px;
+  height: 62px;
+  text-align: center;
+}
+
+section.range-slider span.values {
+  position: relative;
+  top: 30px;
+}
+
+section.range-slider span.values span {
+  padding: 10px 30px;
+  border: 1px solid #323232;
+}
+
+section.range-slider span.values span.rangeValue-1 {
+  margin-right: 10px;
+}
+
+section.range-slider span.values span.rangeValue-2 {
+  margin-left: 10px;
+}
+
+section.range-slider input {
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-appearance: none;
+  outline: none;
+  width: 300px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  background: #d3d3d3;
+}
+
+section.range-slider input::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #323232;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+section.range-slider input::-moz-range-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+}
+
+section.range-slider input::-moz-range-track {
+  position: relative;
+  z-index: -1;
+  background-color: #323232;
+  border: 0;
+}
+
+section.range-slider input:last-of-type::-moz-range-track {
+  -moz-appearance: none;
+  background: #323232;
+  border: 0;
+}
+
+section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
 
 .cookie {
   position: fixed;
@@ -11549,106 +11614,6 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
   .overlay-search .search-results .search-label {
     top: -60px;
-  }
-}
-
-.wrapper .navigation {
-  padding: 30px 0;
-}
-
-.wrapper .navigation p {
-  text-align: center;
-  color: #ededed;
-}
-
-.wrapper .navigation ul {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-row-gap: 65px;
-  margin: 30px auto 70px;
-}
-
-.wrapper .navigation ul li {
-  cursor: pointer;
-  background-size: 130%;
-  width: 67.5px;
-  height: 95px;
-  margin: 0 auto;
-}
-
-.wrapper .navigation ul li a {
-  display: block;
-  padding-top: 100px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: "Choplin Medium-DEMO";
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.wrapper .navigation ul li.divider-vertical {
-  cursor: default;
-}
-
-.wrapper .navigation ul li.sprite:hover {
-  -webkit-filter: brightness(10) saturate(0);
-          filter: brightness(10) saturate(0);
-}
-
-.wrapper .navigation ul .sprite.dog {
-  background-position: -7.5px -370px;
-}
-
-.wrapper .navigation ul .sprite.cat {
-  background-position: -7.5px -465px;
-}
-
-.wrapper .navigation ul .sprite.fish {
-  background-position: -7.5px -560px;
-}
-
-.wrapper .navigation ul .sprite.bird {
-  background-position: -7.5px -655px;
-}
-
-.wrapper .navigation ul .sprite.hamster {
-  background-position: -7.5px -750px;
-}
-
-.wrapper .navigation ul .sprite.plus {
-  background-position: -7.5px -840px;
-}
-
-/*
- *
- * Mobile
- *
- */
-
-@media only screen and (max-width: 630px) {
-  .wrapper .navigation ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .wrapper .navigation ul li:nth-child(4n) {
-    display: none;
-  }
-}
-
-/*
- *
- * Tablet portrait
- *
- */
-
-@media only screen and (min-width: 630px) and (max-width: 768px) {
-  .wrapper .navigation ul {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .wrapper .navigation ul li:nth-child(6n) {
-    display: none;
   }
 }
 
@@ -12252,6 +12217,104 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
   #mobile-menu.active {
     left: 215px;
+  }
+}
+
+.wrapper .navigation {
+  padding: 30px 0;
+}
+
+.wrapper .navigation p {
+  text-align: center;
+  color: #ededed;
+}
+
+.wrapper .navigation ul {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-row-gap: 65px;
+  margin: 30px auto 70px;
+}
+
+.wrapper .navigation ul li {
+  cursor: pointer;
+  background-size: 130%;
+  width: 67.5px;
+  height: 95px;
+  margin: 0 auto;
+}
+
+.wrapper .navigation ul li a {
+  display: block;
+  padding-top: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Choplin Medium-DEMO";
+  color: #fff;
+}
+
+.wrapper .navigation ul li.divider-vertical {
+  cursor: default;
+}
+
+.wrapper .navigation ul li.sprite:hover {
+  -webkit-filter: brightness(10) saturate(0);
+          filter: brightness(10) saturate(0);
+}
+
+.wrapper .navigation ul .sprite.dog {
+  background-position: -7.5px -370px;
+}
+
+.wrapper .navigation ul .sprite.cat {
+  background-position: -7.5px -465px;
+}
+
+.wrapper .navigation ul .sprite.fish {
+  background-position: -7.5px -560px;
+}
+
+.wrapper .navigation ul .sprite.bird {
+  background-position: -7.5px -655px;
+}
+
+.wrapper .navigation ul .sprite.hamster {
+  background-position: -7.5px -750px;
+}
+
+.wrapper .navigation ul .sprite.plus {
+  background-position: -7.5px -840px;
+}
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+@media only screen and (max-width: 630px) {
+  .wrapper .navigation ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrapper .navigation ul li:nth-child(4n) {
+    display: none;
+  }
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: 630px) and (max-width: 768px) {
+  .wrapper .navigation ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .wrapper .navigation ul li:nth-child(6n) {
+    display: none;
   }
 }
 

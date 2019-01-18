@@ -13,6 +13,9 @@ $font-txt:					'Arial', sans-serif;
 .font-title { font-family:	$font-title !important; }
 .font-txt	{ font-family: 	$font-txt !important; }
 
+body 		{ font-family:	$font-txt; font-weight:	normal; }
+
+
 $heading-xl:	44px;
 $heading-l:		40px;
 $heading-ml:	28px;
@@ -23,16 +26,15 @@ $txt-xl:		16px;
 $txt-l:			15px;
 $txt-m:			14px;
 
+.nav-m 			{ font-size: 	$nav-m; }
+.txt-xxl		{ font-size: $heading-m; }
+.txt-xl 		{ font-size: $txt-xl; }
+.txt-l 			{ font-size: $txt-l; }
+.txt-m 			{ font-size: $txt-m; }
 
-.nav-m 		{ font-size: 	$nav-m; }
-
-
-body {
-	font-family:			$font-txt;
-	font-weight: 			normal;
-}
-
-.align-center { text-align: center;}
+.align-center 	{ text-align: center;}
+.uppercase 		{ text-transform: uppercase; }
+.lowercase 		{ text-transform: lowercase; }
 
 .weight-100 { font-weight: 	100; }
 .weight-200 { font-weight: 	200; }

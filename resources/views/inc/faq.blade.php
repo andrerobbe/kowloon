@@ -12,5 +12,5 @@
 		<p class="infinite-scroll-error">No more questions to load</p>
 	</div>
 	<!-- pagination has path -->
-	<a class="pagination__next" href="/questions/1">Next</a>
+	<a class="pagination__next" href="/questions/1"></a>
 </div>

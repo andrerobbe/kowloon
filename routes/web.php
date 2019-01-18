@@ -13,13 +13,20 @@
 
 
 Route::get('/', 				'HomeController@index');
-Route::get('/dogs', 			'HomeController@dogs');
 Route::get('/contact', 			'HomeController@contact');
-Route::get('/questions/{id}',	'HomeController@questions'); //used for FAQ
+Route::get('/dogs', 			'HomeController@dogs');
+Route::get('/cats', 			'HomeController@cats');
+Route::get('/fish', 			'HomeController@fish');
+Route::get('/birds', 			'HomeController@birds');
+Route::get('/small-animals', 	'HomeController@smallAnimals');
+Route::get('/other', 			'HomeController@other');
+
+//FAQ endless scroll
+Route::get('/questions/{id}',	'HomeController@questions'); 
 
 //Post
 Route::post('/subscribe/', 		'SubscribeController@submit');
 
 
-
+//disable accounts if installed
 Auth::routes(['register' => false],['login' => false]);

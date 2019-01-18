@@ -34,7 +34,7 @@
             <li class="sprite fish {{ $_SERVER['REQUEST_URI'] === '/fish' ? 'active' : '' }}">
                 <a href="/fish">Fish</a>
             </li>
-            <li class="sprite bird {{ $_SERVER['REQUEST_URI'] === '/bird' ? 'active' : '' }}">
+            <li class="sprite bird {{ $_SERVER['REQUEST_URI'] === '/birds' ? 'active' : '' }}">
                 <a href="/birds">Birds</a>
             </li>
             <li class="sprite hamster {{ $_SERVER['REQUEST_URI'] === '/small-animals' ? 'active' : '' }}">
