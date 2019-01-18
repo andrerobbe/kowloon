@@ -1,17 +1,11 @@
 .overlay-search{
-	.description { margin-top: -35px; }
 	h2 { margin-bottom: 20px; width: 290px; cursor: pointer; }
 	h2 span { position: relative; top: 10px; }
 
 	.advanced-filter {
-		.price-slider{
-			text-align: right;
-			margin: 0 auto 0 auto;
-			h3 { text-align: left; }
-		}
+		.price-slider{ margin: 0 auto 0 auto; }
 
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: auto;
 		&.active { display: grid; }
 	}
 
@@ -20,3 +14,53 @@
 
 
 
+
+/*
+ *
+ * Mobile to Tablet landscape
+ *
+ */
+
+ @media only screen and (max-width: bp('large')) {
+.overlay-search{
+		.advanced-filter {
+			.price-slider{ margin: 10px 0 0; }
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.search-results h1,
+		.search-results input { font-size: $heading-m; }
+		.search-results .search-label { top: -60px; }
+	}
+}
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.overlay-search{
+		.advanced-filter {
+			.price-slider{ margin: 10px 0 0; }
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+}
+
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	.overlay-search{
+		.search-results h1,
+		.search-results input { font-size: $heading-m; }
+		.search-results .search-label { top: -60px; }
+	}
+}

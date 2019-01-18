@@ -12,7 +12,8 @@
 */
 
 
-Route::get('/', 			'HomeController@index');
-Route::post('/subscribe/', 	'SubscribeController@submit');
+Route::get('/', 				'HomeController@index');
+Route::get('/questions/{id}',	'HomeController@questions');
+Route::post('/subscribe/', 		'SubscribeController@submit');
 
 Auth::routes(['register' => false],['login' => false]);

@@ -37,6 +37,7 @@ const app = new Vue({
  *
  */
 require('./components/cookie');
+require('./components/infiniteScroll');
 require('./components/item');
 require('./components/navigation');
 require('./components/overlay');

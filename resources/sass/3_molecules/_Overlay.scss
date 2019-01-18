@@ -1,19 +1,22 @@
 .overlay {
 	background-color: $white;
-	position: fixed;
+	position: absolute;
 	width: 100%;
-	height: 100%;
 	z-index: 1;
 	color: $black;
 	
 	display: none;
 	&.active { display: block; }
 
+
 	h2 span,
 	h1 span { display: inline-block; }
 
 	h1 { color: $bg-btn-cookie; font-family: $font-txt; }
 	p, p a { color: $bg-divider2; }
+	
+	.description { margin: -40px 0 40px; }
+	.description p { max-width: 85%; }
 
 	.search-results {
 		input {
@@ -40,4 +43,48 @@
 		margin-top: -50px;
 		span { margin-left: 20px; }
 	}
+}
+
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	
+}
+
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	
+}
+
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	
 }

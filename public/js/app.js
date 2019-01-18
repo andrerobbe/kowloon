@@ -11718,6 +11718,8 @@ var app = new Vue({
 
 __webpack_require__(/*! ./components/cookie */ "./resources/js/components/cookie.js");
 
+__webpack_require__(/*! ./components/infiniteScroll */ "./resources/js/components/infiniteScroll.js");
+
 __webpack_require__(/*! ./components/item */ "./resources/js/components/item.js");
 
 __webpack_require__(/*! ./components/navigation */ "./resources/js/components/navigation.js");
@@ -11898,6 +11900,22 @@ function eventHandlerCookie() {
 
 eventHandlerCookie();
 cookiePopup();
+
+/***/ }),
+
+/***/ "./resources/js/components/infiniteScroll.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/infiniteScroll.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var elem = document.querySelector('.question-feed');
+var infScroll = new InfiniteScroll(elem, {
+  // options
+  path: '.pagination__next',
+  append: '.question'
+});
 
 /***/ }),
 
@@ -12118,10 +12136,11 @@ window.onload = function () {
  *
  */
 function searchHandler() {
+  checkInput();
   var searchInput = document.getElementsByClassName("search-input")[0];
   var faqInput = document.getElementsByClassName("search-input")[1];
   var searchOverlay = document.getElementsByClassName("overlay-search")[0];
-  var faqOverlay = document.getElementsByClassName("overlay-faq")[0];
+  var faqOverlay = document.getElementsByClassName("overlay-faq")[0]; //focus input field if overlay is active
 
   if (searchOverlay.classList.contains('active')) {
     searchInput.focus();
@@ -12133,27 +12152,31 @@ function searchHandler() {
 }
 
 function checkInput() {
-  var searchBtn = document.getElementsByClassName("search-label");
-  var searchInput = document.getElementsByClassName("search-input")[0]; //check input every 200ms
+  var searchLabel = document.getElementsByClassName("search-label");
+  var searchInput = document.getElementsByClassName("search-input"); //if empty show label
 
   setInterval(function () {
-    //if empty show label
-    for (var i = 0; i < searchBtn.length; i++) {
-      if (searchInput.value == '') {
-        searchBtn[i].classList.add('active');
-      } else {
-        searchBtn[i].classList.remove('active');
-      }
+    //check value of Search Page
+    if (searchInput[0].value == '') {
+      searchLabel[0].classList.add('active');
+    } else if (searchInput[0].value != '') {
+      searchLabel[0].classList.remove('active');
+    } //check value of Faq Page
+
+
+    if (searchInput[1].value == '') {
+      searchLabel[1].classList.add('active');
+    } else if (searchInput[1].value != '') {
+      searchLabel[1].classList.remove('active');
     }
-  }, 400);
+  }, 300); //check input every 300ms
 }
 
 function eventHandlerSearch() {
-  checkInput();
-  var searchBtn = document.getElementsByClassName("search-label");
+  var searchLabel = document.getElementsByClassName("search-label");
 
-  for (var i = 0; i < searchBtn.length; i++) {
-    searchBtn[i].addEventListener("click", searchHandler);
+  for (var i = 0; i < searchLabel.length; i++) {
+    searchLabel[i].addEventListener("click", searchHandler);
   }
 
   var search = document.getElementById("nav-search");

@@ -10,8 +10,8 @@
 $font-title:				'Choplin Medium-DEMO';
 $font-txt:					'Arial', sans-serif;
 
-.font-title { font-family:	$font-title; }
-.font-txt	{ font-family: 	$font-txt; }
+.font-title { font-family:	$font-title !important; }
+.font-txt	{ font-family: 	$font-txt !important; }
 
 $heading-xl:	44px;
 $heading-l:		40px;

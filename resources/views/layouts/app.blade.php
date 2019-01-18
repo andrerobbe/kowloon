@@ -10,6 +10,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     
     <link rel="dns-prefetch" href="db.onlinewebfonts.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
 
     <!-- Fonts -->
     <link href="//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>
@@ -62,6 +64,7 @@
         
     </div>
     <!-- Scripts -->
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
