@@ -1,0 +1,70 @@
+#filter-arrow {
+	transform: rotate(0deg);
+	-web-kit-animation: turnArrowCounterClockwards 0.2s ease-in-out;
+		-moz-animation: turnArrowCounterClockwards 0.2s ease-in-out;
+		  -o-animation: turnArrowCounterClockwards 0.2s ease-in-out;
+			 animation: turnArrowCounterClockwards 0.2s ease-in-out;
+	
+
+	&.active {
+		-web-kit-animation: turnArrowClockwards 0.2s ease-in-out;
+			-moz-animation: turnArrowClockwards 0.2s ease-in-out;
+			  -o-animation: turnArrowClockwards 0.2s ease-in-out;
+				 animation: turnArrowClockwards 0.2s ease-in-out;
+		transform: rotate(90deg);
+	}
+}
+
+.advanced-filter{
+	display: none;
+	&.active{ display: block;}
+}
+
+
+/*
+ *
+ * Animation
+ *
+ */
+
+@-web-kit-keyframes turnArrowClockwards {
+	from { transform: rotate(0); }
+	to { transform: rotate(90deg); }
+}
+
+@-moz-keyframes turnArrowClockwards {
+	from { transform: rotate(0); }
+	to { transform: rotate(90deg); }
+}
+
+@-o-keyframes turnArrowClockwards {
+	from { transform: rotate(0); }
+	to { transform: rotate(90deg); }
+}
+
+@keyframes turnArrowClockwards {
+	from { transform: rotate(0); }
+	to { transform: rotate(90deg); }
+}
+
+
+
+@-web-kit-keyframes turnArrowCounterClockwards {
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0); }
+}
+
+@-moz-keyframes turnArrowCounterClockwards {
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0); }
+}
+
+@-o-keyframes turnArrowCounterClockwards {
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0); }
+}
+
+@keyframes turnArrowCounterClockwards {
+	from { transform: rotate(90deg); }
+	to { transform: rotate(0); }
+}

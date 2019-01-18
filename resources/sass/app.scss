@@ -14,6 +14,7 @@
 
 // Atoms
 @import '2_atoms/_Button.scss';
+@import '2_atoms/_Checkbox.scss';
 @import '2_atoms/_Divider.scss';
 @import '2_atoms/_Dot.scss';
 @import '2_atoms/_Input.scss';
@@ -21,11 +22,13 @@
 @import '2_atoms/_Link.scss';
 @import '2_atoms/_Lists.scss';
 @import '2_atoms/_Paragraph.scss';
+@import '2_atoms/_PriceSlider.scss';
 @import '2_atoms/_Sprite.scss';
 @import '2_atoms/_Wrapper.scss';
 
 
 // Molecules
+@import '3_molecules/_Filter.scss';
 @import '3_molecules/_Item.scss';
 @import '3_molecules/_Msg.scss';
 @import '3_molecules/_Overlay.scss';

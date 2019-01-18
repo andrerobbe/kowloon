@@ -10655,6 +10655,70 @@ body {
   font-size: 18.97px;
 }
 
+.categories {
+  display: flex;
+}
+
+.categories .checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* show checkmark on hover or checked  */
+}
+
+.categories .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.categories .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #323232;
+  /* the actual checkmark */
+}
+
+.categories .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.categories .checkbox input:checked ~ .checkmark,
+.categories .checkbox:hover input ~ .checkmark {
+  background-color: #ff6f9e;
+}
+
+.categories .checkbox input:checked ~ .checkmark:after,
+.categories .checkbox:hover input ~ .checkmark:after {
+  display: block;
+}
+
 .divider-horizontal {
   position: relative;
   width: 100%;
@@ -10731,7 +10795,6 @@ p {
   color: #fff;
   font-family: "Arial", sans-serif;
   margin: 0;
-  display: inline-block;
 }
 
 .txt-xxl {
@@ -10748,6 +10811,89 @@ p {
 
 .txt-m {
   font-size: 14px;
+}
+
+section.range-slider {
+  position: relative;
+  width: 300px;
+  height: 62px;
+  text-align: center;
+}
+
+section.range-slider span.values {
+  position: relative;
+  top: 30px;
+}
+
+section.range-slider span.values span {
+  padding: 10px 30px;
+  border: 1px solid #323232;
+}
+
+section.range-slider span.values span.rangeValue-1 {
+  margin-right: 10px;
+}
+
+section.range-slider span.values span.rangeValue-2 {
+  margin-left: 10px;
+}
+
+section.range-slider input {
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-appearance: none;
+  outline: none;
+  width: 300px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  background: #d3d3d3;
+}
+
+section.range-slider input::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #323232;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+section.range-slider input::-moz-range-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+}
+
+section.range-slider input::-moz-range-track {
+  position: relative;
+  z-index: -1;
+  background-color: #323232;
+  border: 0;
+}
+
+section.range-slider input:last-of-type::-moz-range-track {
+  -moz-appearance: none;
+  background: #323232;
+  border: 0;
+}
+
+section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
 }
 
 .sprite {
@@ -10852,6 +10998,108 @@ p {
 @media only screen and (min-width: 1140px) {
   .wrapper {
     width: 960px;
+  }
+}
+
+#filter-arrow {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -web-kit-animation: turnArrowCounterClockwards 0.2s ease-in-out;
+  -webkit-animation: turnArrowCounterClockwards 0.2s ease-in-out;
+          animation: turnArrowCounterClockwards 0.2s ease-in-out;
+}
+
+#filter-arrow.active {
+  -web-kit-animation: turnArrowClockwards 0.2s ease-in-out;
+  -webkit-animation: turnArrowClockwards 0.2s ease-in-out;
+          animation: turnArrowClockwards 0.2s ease-in-out;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.advanced-filter {
+  display: none;
+}
+
+.advanced-filter.active {
+  display: block;
+}
+
+/*
+ *
+ * Animation
+ *
+ */
+
+@-web-kit-keyframes turnArrowClockwards {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes turnArrowClockwards {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes turnArrowClockwards {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@-web-kit-keyframes turnArrowCounterClockwards {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes turnArrowCounterClockwards {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes turnArrowCounterClockwards {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
@@ -11007,6 +11255,7 @@ p {
 }
 
 .overlay .search-results input {
+  padding-left: 53px;
   border: none;
   border-bottom: 2px solid #535353;
   width: 100%;
@@ -11014,10 +11263,15 @@ p {
   color: #e27500;
 }
 
-.overlay .search-results label {
+.overlay .search-results .search-label {
   position: relative;
-  top: -60px;
+  top: -68px;
   margin: 0;
+  opacity: 0;
+}
+
+.overlay .search-results .search-label.active {
+  opacity: 1;
 }
 
 .overlay button.clear {
@@ -11159,15 +11413,6 @@ p {
   display: block;
 }
 
-/*
-.nav-overlay {
-	position: absolute;
-	top: 60px;
-	left: 50px;
-	background-color: $bg-nav;
-}
-*/
-
 .overlay-search .description {
   margin-top: -35px;
 }
@@ -11183,110 +11428,26 @@ p {
   top: 10px;
 }
 
-.overlay-search #filter-arrow {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -web-kit-animation: turnArrowCounterClockwards 0.2s ease-in-out;
-  -webkit-animation: turnArrowCounterClockwards 0.2s ease-in-out;
-          animation: turnArrowCounterClockwards 0.2s ease-in-out;
-}
-
-.overlay-search #filter-arrow.active {
-  -web-kit-animation: turnArrowClockwards 0.2s ease-in-out;
-  -webkit-animation: turnArrowClockwards 0.2s ease-in-out;
-          animation: turnArrowClockwards 0.2s ease-in-out;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .overlay-search .advanced-filter {
-  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: auto;
+}
+
+.overlay-search .advanced-filter .price-slider {
+  text-align: right;
+  margin: 0 auto 0 auto;
+}
+
+.overlay-search .advanced-filter .price-slider h3 {
+  text-align: left;
 }
 
 .overlay-search .advanced-filter.active {
-  display: block;
+  display: grid;
 }
 
 .overlay-search .search-results {
-  margin-top: 40px;
-}
-
-/*
- *
- * Animation
- *
- */
-
-@-web-kit-keyframes turnArrowClockwards {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-
-  to {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-}
-
-@-webkit-keyframes turnArrowClockwards {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-
-  to {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-}
-
-@keyframes turnArrowClockwards {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-
-  to {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-}
-
-@-web-kit-keyframes turnArrowCounterClockwards {
-  from {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-
-  to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@-webkit-keyframes turnArrowCounterClockwards {
-  from {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-
-  to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes turnArrowCounterClockwards {
-  from {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-
-  to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
+  margin-top: 60px;
 }
 
 .wrapper .navigation {
@@ -11519,6 +11680,10 @@ p {
   line-height: 40px;
 }
 
+.subscribe .bg-pattern p {
+  text-align: center;
+}
+
 .subscribe .sub-form-bg {
   background-color: #616161;
   width: 347px;
@@ -11532,6 +11697,7 @@ p {
 
 .subscribe .sub-form-bg .sub-form p {
   color: #cecece;
+  margin-bottom: 1rem;
 }
 
 .subscribe .sub-form-bg input {

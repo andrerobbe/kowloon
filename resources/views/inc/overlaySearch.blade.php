@@ -1,10 +1,7 @@
 <div class="overlay overlay-search">
-
-	<!-- Nav overlay -->
-	<!--<div class="nav-overlay sprite search"></div>-->
-
 	<div class="wrapper">
-		<!-- Close btn -->
+
+		<!-- Close btn  -->
 		<div class="close-btn">
 			<button id="close-search" class="btn sprite esc"><span>esc</span></button>
 		</div>
@@ -14,47 +11,52 @@
 		<div class="filter advanced-filter">
 
 			<!-- Checkboxes -->
-			<div class="categories">
+			<div>
 				<h3 class="txt-xxl">Category</h3>
-				<div class="checkbox">
-					<input type="checkbox" name="dogs">
-					<label for="dogs">Dogs</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" name="cats">
-					<label for="cats">Cats</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" name="fish">
-					<label for="fish">Fish</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" name="bird">
-					<label for="bird">Birds</label>
-				</div>
-				<div class="checkbox">
-					<input type="checkbox" name="other">
-					<label for="other">Other</label>
-				</div>				
+				<section class="categories">
+					<label class="checkbox">Dogs
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox">Cats
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox">Fish
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox">Birds
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox">Other
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>				
+				</section>
 			</div>
 
 			<!-- Price Slider -->
-			<div class="price">
+			<div class="price-slider">
 				<h3 class="txt-xxl">Price Range</h3>
-				<div class="price-slider">
-					
-				</div>
-				<div class="price-min"><span class="euro">&euro;</span><span>8,00</span></div>
-				<div class="price-max"><span class="euro">&euro;</span><span>8,00</span></div>
-			</div>
+				<section class="range-slider">
+					<input value="8" min="8" max="499" step="1" type="range">
+					<input value="499" min="8" max="499" step="1" type="range">
+					<span class="values">
+						<span class="rangeValue-1"></span> - <span class="rangeValue-2"></span>
+					</span>
+				</section>
+			</div>	
 		</div>
 		
+
 		<!-- Search Results -->
 		<div class="search-results">
-			<input type="text" name="search" placeholder="">
-			<label for="search">
+			<input type="text" name="search" placeholder="" class="search-input">
+			<button for="search" class="btn search-label active">
 				<h1 class="heading h-l"><span class="sprite search-bold"></span>Just start typing and hit <span class="sprite break"></span> to search</h1>
-			</label>
+			</button>
 		</div>
 		<button class="btn sprite clear"><span>Clear</span></button>
 		<div class="description">

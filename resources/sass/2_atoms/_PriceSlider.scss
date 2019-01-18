@@ -1,0 +1,78 @@
+section.range-slider {
+    position: relative;
+    width: 300px;
+    height: 62px;
+    text-align: center;
+    
+    span.values {
+        position: relative;
+        top: 30px;
+
+        span {
+            padding: 10px 30px;
+            border: 1px solid $bg-nav;
+
+            &.rangeValue-1 { margin-right: 10px; }
+            &.rangeValue-2 { margin-left: 10px; }
+        }
+    }
+
+    input  {
+        pointer-events: none;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        
+        -webkit-appearance: none;
+        outline: none;
+        width: 300px;
+        height: 10px;
+        margin: 0;
+        padding: 0;
+        background: #d3d3d3;
+    }
+    
+    input::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+
+        cursor: pointer;
+        outline: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        background: $bg-nav;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    input::-moz-range-thumb{
+        pointer-events: all;
+        position: relative;
+        z-index: 2;
+
+        cursor: pointer;
+        -moz-appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50;
+    }
+    
+    input::-moz-range-track {
+        position: relative;
+        z-index: -1;
+        background-color: $bg-nav;
+        border: 0;
+    }
+    input:last-of-type::-moz-range-track {
+        -moz-appearance: none;
+        background: $bg-nav;
+        border: 0;
+    }
+
+    input[type=range]::-moz-focus-outer {
+        border: 0;
+    }
+}
