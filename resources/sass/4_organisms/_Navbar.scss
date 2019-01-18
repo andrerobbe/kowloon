@@ -50,16 +50,21 @@ $duration: 		.2s;
 			margin-top: 5px;
 			margin-bottom: 5px + 10px;
 		}
+		li.sprite.plus {
+			opacity: 0;
+			transition: 0.8s all;
+			&.active { opacity: 1;}
+		}
 		li#nav-search,
-		li#nav-faq {
-			//&.active { background-color: $white; }
+		li#nav-faq,
+		li.sprite.mail {
 			&:hover{
 				filter: brightness(10) saturate(0);
 				a { color: $white !important; }
 			}
 		}
 
-		li#nav-divider {
+		li.nav-divider {
 			height: 3px !important;
 			cursor: default;
 

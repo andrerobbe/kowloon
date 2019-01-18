@@ -13,7 +13,13 @@
 
 
 Route::get('/', 				'HomeController@index');
-Route::get('/questions/{id}',	'HomeController@questions');
+Route::get('/dogs', 			'HomeController@dogs');
+Route::get('/contact', 			'HomeController@contact');
+Route::get('/questions/{id}',	'HomeController@questions'); //used for FAQ
+
+//Post
 Route::post('/subscribe/', 		'SubscribeController@submit');
+
+
 
 Auth::routes(['register' => false],['login' => false]);

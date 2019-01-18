@@ -1,4 +1,4 @@
-.sprite 			{ background: url('/img/nav/_sprite.png') no-repeat top left; width: 40px; height: 40px;  } 
+.sprite 			{ background: url('/img/nav/sprite.png') no-repeat top left; width: 40px; height: 40px;  } 
 
 .sprite.hamburger 	{ background-position: 0 0; } 
 .sprite.search 		{ background-position: 0 -45px; } 
@@ -14,3 +14,4 @@
 .sprite.break 		{ background-position: 0 -495px; width: 42px; height: 42px; } 
 .sprite.clear 		{ background-position: 0 -542px; } 
 .sprite.esc 		{ background-position: 0 -587px; } 
+.sprite.mail 		{ background-position: 0 -632px; }

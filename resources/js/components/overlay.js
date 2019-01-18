@@ -76,8 +76,11 @@ function closeHamburgerMenu(){
 	var navbar 			= document.getElementsByClassName('navbar-vertical')[0];
 	var navbarLogo 	 	= document.getElementById('navbar-logo').getElementsByTagName('img')[0];
 	var navbarLogoLong	= document.getElementById('logo-long').getElementsByTagName('img')[0];
+	var navbarOther 	= document.getElementById('nav-other');
 	
 	navbar.classList.remove('active');
+	navbarOther.classList.remove('active');
+	
 	navbarLogo.classList.remove('inactive');
 	navbarLogoLong.classList.add('inactive');
 

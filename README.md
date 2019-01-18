@@ -45,12 +45,12 @@
    - <s>Mind the text bij Search & FAQ</s>
    - <s>Logo kleurtjes on hover and active</s>
 
-- Filter (Home_01.04_C_search_BASIC.jpg (en ook D_search_ADVANCED))
-   - Price range slider
+- <s>Filter (Home_01.04_C_search_BASIC.jpg (en ook D_search_ADVANCED))</s>
+   - <s>Price range slider</s>
    - <s>Visueel openklappen van advanced filter</s>
 
-- FAQ (Home_01.04_F_FAQ.jpg)
-   - Load more on scroll (mag dummy/statische data zijn)
+- <s>FAQ (Home_01.04_F_FAQ.jpg)</s>
+   - <s>Load more on scroll (mag dummy/statische data zijn)</s>
 
 
 <br><br>

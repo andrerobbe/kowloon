@@ -15,7 +15,13 @@
         <li id="nav-faq" class="sprite faq">
             <a>FAQ</a>
         </li>
-        <li id="nav-divider">
+        <li class="nav-divider">
+            <div class="divider-horizontal"></div>
+        </li>
+        <li class="sprite mail {{ $_SERVER['REQUEST_URI'] === '/contact' ? 'active' : '' }}">
+                <a href="/contact">Contact</a>
+        </li>
+        <li class="nav-divider">
             <div class="divider-horizontal"></div>
         </li>
         <div class="nav-animals">
@@ -33,6 +39,9 @@
             </li>
             <li class="sprite hamster {{ $_SERVER['REQUEST_URI'] === '/small-animals' ? 'active' : '' }}">
                 <a href="/small-animals">Small Animal</a>
+            </li>
+            <li class="sprite plus {{ $_SERVER['REQUEST_URI'] === '/other' ? 'active' : '' }}" id="nav-other">
+                <a href="/small-animals">Other</a>
             </li>
         </div>
     </ul>

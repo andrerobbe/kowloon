@@ -10898,7 +10898,7 @@ section.range-slider input[type=range]::-moz-focus-outer {
 }
 
 .sprite {
-  background: url("/img/nav/_sprite.png") no-repeat top left;
+  background: url("/img/nav/sprite.png") no-repeat top left;
   width: 40px;
   height: 40px;
 }
@@ -10959,6 +10959,10 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
 .sprite.esc {
   background-position: 0 -587px;
+}
+
+.sprite.mail {
+  background-position: 0 -632px;
 }
 
 .overflow {
@@ -11456,6 +11460,11 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
 .overlay-faq .question p {
   padding-left: 30px;
+}
+
+.overlay-search {
+  position: fixed;
+  height: 100%;
 }
 
 .overlay-search h2 {
@@ -12035,23 +12044,34 @@ section.range-slider input[type=range]::-moz-focus-outer {
   margin-bottom: 15px;
 }
 
+.navbar-vertical ul li.sprite.plus {
+  opacity: 0;
+  transition: 0.8s all;
+}
+
+.navbar-vertical ul li.sprite.plus.active {
+  opacity: 1;
+}
+
 .navbar-vertical ul li#nav-search:hover,
-.navbar-vertical ul li#nav-faq:hover {
+.navbar-vertical ul li#nav-faq:hover,
+.navbar-vertical ul li.sprite.mail:hover {
   -webkit-filter: brightness(10) saturate(0);
           filter: brightness(10) saturate(0);
 }
 
 .navbar-vertical ul li#nav-search:hover a,
-.navbar-vertical ul li#nav-faq:hover a {
+.navbar-vertical ul li#nav-faq:hover a,
+.navbar-vertical ul li.sprite.mail:hover a {
   color: #fff !important;
 }
 
-.navbar-vertical ul li#nav-divider {
+.navbar-vertical ul li.nav-divider {
   height: 3px !important;
   cursor: default;
 }
 
-.navbar-vertical ul li#nav-divider .divider {
+.navbar-vertical ul li.nav-divider .divider {
   background-color: #535353;
   width: calc(100% - ($nav_width - $img_width));
 }
