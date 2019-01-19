@@ -12167,7 +12167,7 @@ function toggleSearchOverlay() {
   search.classList.toggle('active');
   searchIcon.classList.toggle('active'); //Close Nav & FAQ
 
-  closeFaqHandler();
+  closeFaq();
   closeNavigation();
 }
 
@@ -12177,7 +12177,7 @@ function toggleFaqOverlay() {
   faq.classList.toggle('active');
   faqIcon.classList.toggle('active'); //Close Nav & Search
 
-  closeSearchHandler();
+  closeSearch();
   closeNavigation();
 }
 

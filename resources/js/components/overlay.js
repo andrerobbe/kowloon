@@ -32,7 +32,7 @@ function toggleSearchOverlay(){
 	searchIcon.classList.toggle('active');
 
 	//Close Nav & FAQ
-	closeFaqHandler();
+	closeFaq();
 	closeNavigation();
 }
 
@@ -44,7 +44,7 @@ function toggleFaqOverlay(){
 	faqIcon.classList.toggle('active');
 
 	//Close Nav & Search
-	closeSearchHandler();
+	closeSearch();
 	closeNavigation();
 }
 

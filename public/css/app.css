@@ -12277,8 +12277,21 @@ section.range-slider input[type=range]::-moz-focus-outer {
     max-width: 100%;
   }
 
-  .about-content .contact-form {
-    margin-bottom: 40px;
+  .about-content .about-wrapper .contact-form {
+    margin: 40px 0;
+  }
+
+  .about-content .about-wrapper .contact-form input {
+    width: 100%;
+  }
+
+  .about-content .about-wrapper .contact-form button[type=submit] {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .about-content .about-wrapper .contact-form label {
+    margin: 10px auto 0;
   }
 
   .about-content .contact-info {
