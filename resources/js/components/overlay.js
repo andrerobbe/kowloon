@@ -4,28 +4,37 @@
  *
  */
 
-function closeSearch(){
+/*
+ *
+ * BUGG FIX NOTE:
+ * 
+ * closeSearch() and closeFaq() are for some reason not defined as eventListener.
+ * Any other function name works ..
+ *
+ */
+
+function closeSearchHandler(){
 	var search = document.getElementsByClassName("overlay-search")[0];
 	search.classList.remove('active');
 }
 
-function closeFaq(){
+function closeFaqHandler(){
 	var faq = document.getElementsByClassName("overlay-faq")[0];
 	faq.classList.remove('active');
 }
 
-function searchHandler(){
+function toggleSearchOverlay(){
 	var search 		= document.getElementsByClassName("overlay-search")[0];
 	var searchIcon 	= document.getElementById('nav-search');
 	search.classList.toggle('active');
 	searchIcon.classList.toggle('active');
 
 	//Close Nav & FAQ
-	closeFaq();
+	closeFaqHandler();
 	closeNavigation();
 }
 
-function faqHandler(){
+function toggleFaqOverlay(){
 	var faq 		= document.getElementsByClassName("overlay-faq")[0];
 	var faqIcon 	= document.getElementById('nav-faq');
 	
@@ -33,11 +42,11 @@ function faqHandler(){
 	faqIcon.classList.toggle('active');
 
 	//Close Nav & Search
-	closeSearch();
+	closeSearchHandler();
 	closeNavigation();
 }
 
-function toggleFilter(){
+function toggleAdvancedFilter(){
 	var filter 		= document.getElementsByClassName('advanced-filter')[0];
 	var filterArrow = document.getElementById('filter-arrow');
 	filter.classList.toggle('active');
@@ -50,18 +59,19 @@ function toggleFilter(){
 	}
 }
 
+
 function eventHandlerOverlay(){
 	 var search 		= document.getElementById("nav-search");
 	 var closeSearch 	= document.getElementById("close-search");
-	 var faq 			= document.getElementById("nav-faq");
 	 var closeFaq 		= document.getElementById("close-faq");
+	 var faq 			= document.getElementById("nav-faq");
 	 var filter			= document.getElementById('adv-filter');
 	 
-	 search.addEventListener("click", searchHandler);
-	 closeSearch.addEventListener("click", closeSearch);
-	 faq.addEventListener("click", faqHandler);
-	 closeFaq.addEventListener("click", closeFaq);
-	 filter.addEventListener("click", toggleFilter);
+	 search.addEventListener("click", toggleSearchOverlay);
+	 closeSearch.addEventListener("click", closeSearchHandler);
+	 closeFaq.addEventListener("click", closeFaqHandler);
+	 faq.addEventListener("click", toggleFaqOverlay);
+	 filter.addEventListener("click", toggleAdvancedFilter);
 }
 
 eventHandlerOverlay();

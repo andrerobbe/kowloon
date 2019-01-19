@@ -10,7 +10,7 @@
 	<div class="navigation">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dicta cumque est quas reiciendis officiis iste consequatur sequi delectus autem asperiores veniam recusandae commodi, adipisci dolorum voluptas provident, rem quae!</p>
 		<ul>
-			<li class="sprite dog"><a href="/dog" class="align-center uppercase">Dogs</a></li>
+			<li class="sprite dog"><a href="/dogs" class="align-center uppercase">Dogs</a></li>
 			<li class="divider-vertical"></li>
 			<li class="sprite cat"><a href="/cats" class="align-center uppercase">Cats</a></li>
 			<li class="divider-vertical"></li>
