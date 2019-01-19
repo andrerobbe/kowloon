@@ -36,7 +36,9 @@ const app = new Vue({
  * Components
  *
  */
+require('./components/aboutFaq');
 require('./components/cookie');
+require('./components/formValidator');
 require('./components/infiniteScroll');
 require('./components/item');
 require('./components/navigation');

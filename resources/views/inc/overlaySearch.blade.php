@@ -7,7 +7,7 @@
 		</div>
 		
 		<!-- Advanced filter -->
-		<h2 id="adv-filter">Advanced Filter <span id="filter-arrow" class="sprite arrow"></span></h2>
+		<h2 id="adv-filter">Advanced Filter <span id="filter-arrow" class="arrow-right"></span></h2>
 		<div class="filter advanced-filter">
 
 			<!-- Checkboxes -->

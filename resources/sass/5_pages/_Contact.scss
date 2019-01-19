@@ -1,0 +1,128 @@
+.about-content{
+	display: flex;
+	flex-wrap: wrap;
+	
+	.about-wrapper {
+		max-width: 70%;
+
+		.contact-form {
+			margin: 100px 0;
+
+			span{
+				color: red;
+				padding-bottom: 5px;
+				/* gives height to span if empty */
+				&:empty:before { content: "\200b"; } 
+			}
+
+			label {
+				display: block;
+				margin: 25px 0 10px;
+				font-size: $heading-m;
+			}
+
+			input, textarea {
+				padding: 5px 10px;
+				border: 1px solid $nav-txt;
+				color: $bg-nav;
+				&:placeholder{color: $bg-placeholder; }
+			}
+
+			textarea{
+				min-height: 135px;
+				width: 100%;
+			}
+
+			button[type="submit"]{
+				margin-top: 30px;
+				background-color: $bg-btn-send;
+				font-size: $btn-m;
+				padding: 10px 90px;
+				&:hover {background-color: darken($bg-btn-send, 10%);}
+			}
+		}
+	}
+
+	.contact-info {
+		margin: 0 0 0 auto;
+		padding: 0 0 18px 18px;
+		height: 118px;
+		border-left: 1px solid $bg-divider;
+		border-bottom: 1px solid $bg-divider;
+		ul { 
+			list-style-type: disc;
+			padding-left: 18px;
+		}
+	}
+}
+
+.infinite-content{
+	h3 { margin-bottom: 15px; }
+
+	.question {
+		h2 { margin-bottom: 0; }
+		background-color: $bg-faq;
+		padding: 20px;
+		margin-bottom: 15px;
+		p { 
+			padding-top: 10px;
+			display: none;
+		}
+
+		&.active p { display: inline-block; }
+
+		.arrow-down, .arrow-right { float: right; }
+		.arrow-down { border-top-color: $white; }
+		.arrow-right { border-left-color: $white; }
+	}
+}
+
+
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.about-content{
+		display: block;
+		.about-wrapper { max-width: 100%; }
+		.contact-form { margin-bottom: 40px; }
+		.contact-info { margin-bottom: 40px; }
+	}
+}
+
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	
+}
+
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	
+}

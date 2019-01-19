@@ -1,0 +1,15 @@
+.scroller-status {
+	.loader-ellips{
+		margin: 30px auto 10px;
+		height: 35px;
+		width: 35px;
+		img { height: 35px;	width: 35px; }
+
+		&.disable { display: none;}
+	}
+	.infinite-scroll-last,
+	.infinite-scroll-error{
+		margin-top: 20px;
+	}
+}
+

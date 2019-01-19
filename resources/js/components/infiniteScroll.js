@@ -1,16 +1,35 @@
+/*
+ *
+ * InfinteScroll
+ *
+ */
+
 var navbarFaq = document.querySelectorAll('.question-feed')[0];
-var infScroll = new InfiniteScroll( navbarFaq, {
-	// options
-	path: '.pagination__next',
-	append: '.question',
-	history: false, //disables URL changes so going back a page isn't screwed
-});
+if (navbarFaq) {
+	var infScroll = new InfiniteScroll( navbarFaq, {
+		// options
+		path: '.pagination__next',
+		append: '.question',
+		history: false, //disables URL changes so going back a page isn't screwed
+	});
+}
 
 
 var contactFaq = document.querySelectorAll('.question-feed')[1];
-var infScroll = new InfiniteScroll( contactFaq, {
-	// options
-	path: '.pagination__next',
-	append: '.question',
-	history: false, //disables URL changes so going back a page isn't screwed
-});
+if (contactFaq){
+	var infScroll = new InfiniteScroll( contactFaq, {
+		// options
+		path: '.pagination__next',
+		append: '.question',
+		history: false, //disables URL changes so going back a page isn't screwed
+	});
+}
+
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // you're at the bottom of the page
+        var loadingImg = document.getElementsByClassName('infinite-scroll-request')[0];
+        loadingImg.classList.add('disable');
+    }
+};

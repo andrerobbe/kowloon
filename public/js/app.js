@@ -11716,7 +11716,11 @@ var app = new Vue({
  *
  */
 
+__webpack_require__(/*! ./components/aboutFaq */ "./resources/js/components/aboutFaq.js");
+
 __webpack_require__(/*! ./components/cookie */ "./resources/js/components/cookie.js");
+
+__webpack_require__(/*! ./components/formValidator */ "./resources/js/components/formValidator.js");
 
 __webpack_require__(/*! ./components/infiniteScroll */ "./resources/js/components/infiniteScroll.js");
 
@@ -11731,6 +11735,42 @@ __webpack_require__(/*! ./components/rangeSlider */ "./resources/js/components/r
 __webpack_require__(/*! ./components/search */ "./resources/js/components/search.js");
 
 __webpack_require__(/*! ./components/slideShow */ "./resources/js/components/slideShow.js");
+
+/***/ }),
+
+/***/ "./resources/js/components/aboutFaq.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/aboutFaq.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ *
+ * About FAQ
+ *
+ */
+function toggleQuesion() {
+  var question = this;
+  var arrow = this.querySelector('div');
+  question.classList.toggle('active');
+
+  if (arrow.classList.contains('arrow-right')) {
+    arrow.className = "arrow-down";
+  } else if (arrow.classList.contains('arrow-down')) {
+    arrow.className = "arrow-right";
+  }
+}
+
+function eventHandlerAboutFaq() {
+  var question = document.querySelectorAll(".infinite-content .question");
+
+  for (var i = 0; i < question.length; i++) {
+    question[i].addEventListener("click", toggleQuesion);
+  }
+}
+
+setInterval(eventHandlerAboutFaq, 1000); //every second check for new FAQ
 
 /***/ }),
 
@@ -11903,6 +11943,60 @@ cookiePopup();
 
 /***/ }),
 
+/***/ "./resources/js/components/formValidator.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/formValidator.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ *
+ * formValidator
+ *
+ */
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validator() {
+  var email = document.getElementById('email-field');
+  var emailError = document.getElementById('email-error');
+  var msg = document.getElementById('msg-field');
+  var msgError = document.getElementById('msg-error');
+  var isValid = validateEmail(email.value);
+  var isTxt = msg.value;
+
+  if (!isValid) {
+    emailError.innerHTML = '* Fill in a correct e-mail address.';
+  } else {
+    emailError.innerHTML = '';
+  }
+
+  if (msg.value == '') {
+    msgError.innerHTML = '* Write a message.';
+  } else {
+    msgError.innerHTML = '';
+  }
+
+  if (isValid && msg.value != '') {
+    window.location.replace("/");
+  }
+}
+
+function eventHandlerFormValidator() {
+  var sendBtn = document.getElementById('send-btn');
+
+  if (sendBtn) {
+    sendBtn.addEventListener("click", validator);
+  }
+}
+
+eventHandlerFormValidator();
+
+/***/ }),
+
 /***/ "./resources/js/components/infiniteScroll.js":
 /*!***************************************************!*\
   !*** ./resources/js/components/infiniteScroll.js ***!
@@ -11910,22 +12004,42 @@ cookiePopup();
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/*
+ *
+ * InfinteScroll
+ *
+ */
 var navbarFaq = document.querySelectorAll('.question-feed')[0];
-var infScroll = new InfiniteScroll(navbarFaq, {
-  // options
-  path: '.pagination__next',
-  append: '.question',
-  history: false //disables URL changes so going back a page isn't screwed
 
-});
+if (navbarFaq) {
+  var infScroll = new InfiniteScroll(navbarFaq, {
+    // options
+    path: '.pagination__next',
+    append: '.question',
+    history: false //disables URL changes so going back a page isn't screwed
+
+  });
+}
+
 var contactFaq = document.querySelectorAll('.question-feed')[1];
-var infScroll = new InfiniteScroll(contactFaq, {
-  // options
-  path: '.pagination__next',
-  append: '.question',
-  history: false //disables URL changes so going back a page isn't screwed
 
-});
+if (contactFaq) {
+  var infScroll = new InfiniteScroll(contactFaq, {
+    // options
+    path: '.pagination__next',
+    append: '.question',
+    history: false //disables URL changes so going back a page isn't screwed
+
+  });
+}
+
+window.onscroll = function (ev) {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    // you're at the bottom of the page
+    var loadingImg = document.getElementsByClassName('infinite-scroll-request')[0];
+    loadingImg.classList.add('disable');
+  }
+};
 
 /***/ }),
 
@@ -12054,7 +12168,12 @@ function toggleFilter() {
   var filter = document.getElementsByClassName('advanced-filter')[0];
   var filterArrow = document.getElementById('filter-arrow');
   filter.classList.toggle('active');
-  filterArrow.classList.toggle('active');
+
+  if (filterArrow.classList.contains('arrow-right')) {
+    filterArrow.className = "arrow-down";
+  } else if (filterArrow.classList.contains('arrow-down')) {
+    filterArrow.className = "arrow-right";
+  }
 }
 
 function eventHandlerOverlay() {
@@ -12100,6 +12219,11 @@ function closeHamburgerMenu() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/*
+ *
+ * rangeSliders
+ *
+ */
 function getVals() {
   // Get slider values
   var parent = this.parentNode;

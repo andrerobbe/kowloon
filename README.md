@@ -24,8 +24,8 @@
 
 - About us (About_01.01.jpg)
    - <s>Komt links in de menu onder FAQ icon met een mail icoontje</s>
-   - Custom frontend javascript validatie
-   - FAQ open/close
+   - <s>Custom frontend javascript validatie</s>
+   - <s>FAQ open/close</s>
 
 - Product list (ProductView_01.01.jpg)
    - Filter open/close

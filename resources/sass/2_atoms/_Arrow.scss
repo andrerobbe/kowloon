@@ -1,0 +1,41 @@
+$arrow_size_up: 12.5px;
+$arrow_size_down: 10px;
+$arrow_size_left: 12.5px;
+$arrow_size_right: 10px;
+
+
+.arrow-up {
+	transition: .2s all;
+	width: 0;
+	height: 0;
+	border-left: $arrow_size_up solid transparent;
+	border-right: $arrow_size_up solid transparent;
+	border-bottom: $arrow_size_up solid $bg-nav;
+}
+.arrow-down {
+	transition: .2s all;
+	width: 0;
+	height: 0;
+	border-left: $arrow_size_down solid transparent;
+	border-right: $arrow_size_down solid transparent;
+	border-top: $arrow_size_down solid $bg-nav;
+}
+
+.arrow-left {
+	transition: .2s all;
+	width: 0;
+	height: 0;
+	border-top: $arrow_size_left solid transparent;
+	border-bottom: $arrow_size_left solid transparent;
+	border-right:$arrow_size_left solid $bg-nav;
+}
+
+.arrow-right {
+	transition: .2s all;
+	width: 0;
+	height: 0;
+	border-top: $arrow_size_right solid transparent;
+	border-bottom: $arrow_size_right solid transparent;
+	border-left: $arrow_size_right solid $bg-nav;
+}
+

@@ -41,7 +41,13 @@ function toggleFilter(){
 	var filter 		= document.getElementsByClassName('advanced-filter')[0];
 	var filterArrow = document.getElementById('filter-arrow');
 	filter.classList.toggle('active');
-	filterArrow.classList.toggle('active');
+
+	if ( filterArrow.classList.contains('arrow-right') ){
+		filterArrow.className = "arrow-down";
+	}
+	else if ( filterArrow.classList.contains('arrow-down') ){
+		filterArrow.className = "arrow-right";
+	}
 }
 
 function eventHandlerOverlay(){
