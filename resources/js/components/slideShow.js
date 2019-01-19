@@ -30,6 +30,17 @@ function changeSlide(){
 	seconds = 0;
 }
 
+
+
+/*
+ *
+ * If global variable seconds hits zero, showNextSlide
+ *
+ * Check the time every 50 miliseconds
+ * If a dot is clicked, timer is reset and slideIndex is set
+ * Will showNextSlide after maximum 50 miliseconds
+ * 
+ */
 function startSlideShow(n){
 	seconds = slideTimer;	
 
@@ -41,6 +52,7 @@ function startSlideShow(n){
 		}
 	}, 50)
 }
+
 
 function eventHandlerSlideShow(){
 	 startSlideShow();

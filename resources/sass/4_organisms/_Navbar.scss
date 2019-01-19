@@ -32,9 +32,6 @@ $duration: 		.2s;
 			margin: ($nav_width - $img_width)/2;
 			line-height: $img_width;
 			height: $img_width;
-			width: -webkit-calc(100% - ($nav_width - $img_width));
-			width:    -moz-calc(100% - ($nav_width - $img_width));
-			width: 		   calc(100% - ($nav_width - $img_width));
 
 			a {
 				display: block;
@@ -70,9 +67,6 @@ $duration: 		.2s;
 
 			.divider {
 				background-color: $bg-divider2;
-				width: -webkit-calc(100% - ($nav_width - $img_width));
-				width:    -moz-calc(100% - ($nav_width - $img_width));
-				width: 		   calc(100% - ($nav_width - $img_width));
 			}
 		}
 		
