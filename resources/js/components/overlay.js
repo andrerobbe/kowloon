@@ -11,14 +11,16 @@
  * closeSearch() and closeFaq() are for some reason not defined as eventListener.
  * Any other function name works ..
  *
+ * Update: turns out I had the same variable names as function names ..
+ *
  */
 
-function closeSearchHandler(){
+function closeSearch(){
 	var search = document.getElementsByClassName("overlay-search")[0];
 	search.classList.remove('active');
 }
 
-function closeFaqHandler(){
+function closeFaq(){
 	var faq = document.getElementsByClassName("overlay-faq")[0];
 	faq.classList.remove('active');
 }
@@ -62,14 +64,14 @@ function toggleAdvancedFilter(){
 
 function eventHandlerOverlay(){
 	 var search 		= document.getElementById("nav-search");
-	 var closeSearch 	= document.getElementById("close-search");
-	 var closeFaq 		= document.getElementById("close-faq");
+	 var closeSearchBtn	= document.getElementById("close-search");
+	 var closeFaqBtn	= document.getElementById("close-faq");
 	 var faq 			= document.getElementById("nav-faq");
 	 var filter			= document.getElementById('adv-filter');
 	 
 	 search.addEventListener("click", toggleSearchOverlay);
-	 closeSearch.addEventListener("click", closeSearchHandler);
-	 closeFaq.addEventListener("click", closeFaqHandler);
+	 closeSearchBtn.addEventListener("click", closeSearch);
+	 closeFaqBtn.addEventListener("click", closeFaq);
 	 faq.addEventListener("click", toggleFaqOverlay);
 	 filter.addEventListener("click", toggleAdvancedFilter);
 }
