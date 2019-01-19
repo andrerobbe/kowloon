@@ -3,7 +3,6 @@
  	height: 100%;
  	
 	h2 { margin-bottom: 20px; width: 290px; cursor: pointer; }
-	h2 span { position: relative; top: 10px; }
 
 	.filter { display: none; }
 
@@ -13,13 +12,9 @@
 		grid-template-columns: repeat(2, 1fr);
 		&.active { display: grid; }
 	}
-	#filter-arrow {
-		position: relative;
-		top: 0;
-	}
+
 	.search-results { margin-top: 60px; }
 }
-
 
 
 

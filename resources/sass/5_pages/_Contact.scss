@@ -35,10 +35,8 @@
 
 			button[type="submit"]{
 				margin-top: 30px;
-				background-color: $bg-btn-send;
 				font-size: $btn-m;
 				padding: 10px 90px;
-				&:hover {background-color: darken($bg-btn-send, 10%);}
 			}
 		}
 	}

@@ -10683,16 +10683,35 @@ body {
   border-left: 10px solid #323232;
 }
 
+.article-arrow {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  left: 5px;
+  border-top-width: 8px;
+  border-left-width: 8px;
+}
+
+.article-arrow.arrow-right {
+  border-bottom-width: 8px;
+}
+
+.article-arrow.arrow-down {
+  border-right-width: 8px;
+}
+
 .btn-primary {
   border: none;
   border-radius: 0;
   font-size: 18.97px;
   font-weight: bold;
   text-align: center;
+  background-color: #ff6f9e;
 }
 
 .btn-primary:hover {
   cursor: pointer;
+  background-color: #ff3c7c;
 }
 
 .btn-primary:focus {
@@ -10787,7 +10806,8 @@ body {
 }
 
 input,
-textarea {
+textarea,
+select {
   outline: none;
 }
 
@@ -10950,10 +10970,38 @@ p {
 .breadcrumb span {
   font-size: 14px;
   padding: 0 15px;
+  margin-right: 3px;
   background-color: #323232;
   line-height: 25px;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.breadcrumb .dot {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 11px 0 11px 45px;
+}
+
+.breadcrumb .dot.dogs {
+  background-color: #ff709e;
+}
+
+.breadcrumb .dot.cat {
+  background-color: #8787ff;
+}
+
+.breadcrumb .dot.fish {
+  background-color: #ffb93f;
+}
+
+.breadcrumb .dot.birds {
+  background-color: #7aff82;
+}
+
+.breadcrumb .dot.small-animal {
+  background-color: #7ce3ff;
 }
 
 .categories {
@@ -11143,7 +11191,7 @@ p {
   background-color: #fff;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   color: #000;
   display: none;
 }
@@ -11243,7 +11291,9 @@ section.range-slider span.values {
 
 section.range-slider span.values span {
   padding: 10px 30px;
-  border: 1px solid #323232;
+  border: 1px solid #828282;
+  background-color: #fff;
+  color: #323232;
 }
 
 section.range-slider span.values span.rangeValue-1 {
@@ -11314,7 +11364,7 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
 .cookie {
   position: fixed;
-  z-index: 5;
+  z-index: 15;
   width: 100%;
   background-color: #e6cfb9;
   padding: 10px;
@@ -11353,10 +11403,14 @@ section.range-slider input[type=range]::-moz-focus-outer {
   color: #454545;
 }
 
-.cookie .cookie-content .cookie-txt .btn {
+.cookie .cookie-content .cookie-txt .btn-primary {
   background-color: #e27500;
   font-size: 22px !important;
   padding: 20px 50px;
+}
+
+.cookie .cookie-content .cookie-txt .btn-primary:hover {
+  background-color: #ff8f16;
 }
 
 .cookie:after {
@@ -11429,7 +11483,7 @@ section.range-slider input[type=range]::-moz-focus-outer {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.4);
   /* 0.4 = 40% opacity */
-  z-index: 4;
+  z-index: 10;
   top: 0;
   left: 0;
   bottom: 0;
@@ -11465,11 +11519,6 @@ section.range-slider input[type=range]::-moz-focus-outer {
   cursor: pointer;
 }
 
-.overlay-search h2 span {
-  position: relative;
-  top: 10px;
-}
-
 .overlay-search .filter {
   display: none;
 }
@@ -11484,11 +11533,6 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
 .overlay-search .advanced-filter.active {
   display: grid;
-}
-
-.overlay-search #filter-arrow {
-  position: relative;
-  top: 0;
 }
 
 .overlay-search .search-results {
@@ -11896,7 +11940,7 @@ section.range-slider input[type=range]::-moz-focus-outer {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 7;
   height: 100%;
   width: 215px;
   overflow: hidden;
@@ -12204,13 +12248,8 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
 .about-content .about-wrapper .contact-form button[type=submit] {
   margin-top: 30px;
-  background-color: #ff6f9e;
   font-size: 18.97px;
   padding: 10px 90px;
-}
-
-.about-content .about-wrapper .contact-form button[type=submit]:hover {
-  background-color: #ff3c7c;
 }
 
 .about-content .contact-info {
@@ -12316,6 +12355,55 @@ section.range-slider input[type=range]::-moz-focus-outer {
  * Desktop small
  *
  */
+
+.dog-filters {
+  padding: 0 45px 20px;
+  border-bottom: 1px solid #616161;
+}
+
+.dog-filters .price-slider {
+  margin-top: 10px;
+}
+
+.dog-filters .price-slider .range-slider {
+  width: auto;
+}
+
+.dog-filters .price-slider .range-slider .values {
+  position: static;
+  width: 200px;
+  margin-left: 190px;
+}
+
+.dog-content .filter-info {
+  margin: 10px auto 20px;
+}
+
+.dog-content .filter-info p {
+  float: right;
+  color: #cecece;
+}
+
+.dog-content .filter-info p span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.dog-content .filter-info select {
+  width: 180px;
+  font-size: 14px;
+  border: none;
+  padding: 5px 15px;
+  background-color: #616161;
+}
+
+.dog-content .filter-info select option {
+  background-color: #fff;
+}
+
+.dog-content .filter-info select option:hover {
+  background-color: #ededed;
+}
 
 .wrapper .navigation {
   padding: 30px 0;

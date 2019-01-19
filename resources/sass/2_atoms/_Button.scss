@@ -5,9 +5,11 @@
     font-size: $btn-m;
     font-weight: bold;
     text-align: center;
+    background-color: $bg-btn-send;
     
     &:hover {
         cursor: pointer;
+        background-color: darken($bg-btn-send, 10%);
     }
 
     &:focus {

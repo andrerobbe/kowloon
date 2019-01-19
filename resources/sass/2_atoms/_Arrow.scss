@@ -39,3 +39,17 @@ $arrow_size_right: 10px;
 	border-left: $arrow_size_right solid $bg-nav;
 }
 
+
+$article_arrow_size: 8px;
+
+.article-arrow {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	left: 5px;
+	border-top-width: $article_arrow_size;
+	border-left-width: $article_arrow_size;
+	
+	&.arrow-right{ border-bottom-width: $article_arrow_size; }
+	&.arrow-down { border-right-width: $article_arrow_size; }
+}

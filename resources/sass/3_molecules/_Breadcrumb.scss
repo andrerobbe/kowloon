@@ -8,9 +8,23 @@
 	span {
 		font-size: $txt-m;
 		padding: 0 15px;
+		margin-right: 3px;
 		background-color: $bg-nav;
 		line-height: 25px;
 		border-bottom-right-radius: 4px;
 		border-top-right-radius: 4px;
+	}
+
+	.dot{
+		position: absolute;
+		height: 8px;
+		width: 8px;
+		margin: 11px 0 11px 45px;
+
+		&.dogs 			{ background-color: $dog; }
+		&.cat 			{ background-color: $cat; }
+		&.fish 			{ background-color: $fish; }
+		&.birds 		{ background-color: $bird; }
+		&.small-animal 	{ background-color: $hamster; }
 	}
 }

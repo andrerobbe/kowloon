@@ -10,7 +10,9 @@ section.range-slider {
 
         span {
             padding: 10px 30px;
-            border: 1px solid $bg-nav;
+            border: 1px solid $bg-slider;
+            background-color: $white;
+            color: $bg-nav;
 
             &.rangeValue-1 { margin-right: 10px; }
             &.rangeValue-2 { margin-left: 10px; }

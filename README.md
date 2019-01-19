@@ -22,7 +22,7 @@
    - <s>Hover over de hot items</s>
    - <s>Visueel duidelijke dat er meerdere foto's bij een product zitten</s>
 
-- About us (About_01.01.jpg)
+- <s>About us (About_01.01.jpg)</s>
    - <s>Komt links in de menu onder FAQ icon met een mail icoontje</s>
    - <s>Custom frontend javascript validatie</s>
    - <s>FAQ open/close</s>

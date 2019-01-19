@@ -1,0 +1,40 @@
+.dog-filters {
+	padding: 0 45px 20px;
+	border-bottom: 1px solid $bg-divider;
+	
+	.price-slider {
+		margin-top: 10px;
+		.range-slider{
+			width: auto;
+			.values {
+				position: static;
+				width: 200px;
+				margin-left: 190px;
+			}
+		}	
+	}
+}
+
+.dog-content {
+	.filter-info{
+		margin: 10px auto 20px;
+		p {
+			float:right;
+			color: $sub-txt;
+			span { color: $white; font-weight: bold; }
+		}
+		select {
+			width: 180px;
+			font-size: $txt-m;
+			border: none;
+			padding: 5px 15px;
+			background-color: $bg-divider;
+			option{
+
+				background-color: $white;
+				&:hover { background-color: $bg-search-icon; } 
+
+			}
+		}
+	}
+}

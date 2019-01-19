@@ -41,7 +41,7 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 </head>
-<body class="{{ $_SERVER['REQUEST_URI'] === '/' ? 'index' : '' }}">
+<body class="{{ $_SERVER['REQUEST_URI'] }}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132426979-1"></script>
     <script>
@@ -61,8 +61,8 @@
             
             @yield('content')
         </main>
-        
     </div>
+    
     <!-- Scripts -->
     <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
