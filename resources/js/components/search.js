@@ -4,10 +4,7 @@
  *
  */
 
-
 function searchHandler(){
-	checkInput();
-
 	var searchInput = document.getElementsByClassName("search-input")[0];
 	var faqInput = document.getElementsByClassName("search-input")[1];
 	var searchOverlay = document.getElementsByClassName("overlay-search")[0];
@@ -22,7 +19,7 @@ function checkInput(){
 	var searchLabel = document.getElementsByClassName("search-label");
 	var searchInput = document.getElementsByClassName("search-input");
 
-	//if empty show label
+	//if input is empty, show the label
 	setInterval(function(){
 	 	//check value of Search Page
 	 	if 		(searchInput[0].value == '') { searchLabel[0].classList.add('active'); }
@@ -34,16 +31,17 @@ function checkInput(){
 }
 
 function eventHandlerSearch(){
-	var searchLabel = document.getElementsByClassName("search-label");
-
-	for (var i = 0; i < searchLabel.length; i++){
-		searchLabel[i].addEventListener("click", searchHandler);
-	}
+	checkInput();
 
 	var search 		= document.getElementById("nav-search");
 	var faq 		= document.getElementById("nav-faq");
 	search.addEventListener("click", searchHandler);
 	faq.addEventListener("click", searchHandler);
+	
+	var searchLabel = document.getElementsByClassName("search-label");
+	for (var i = 0; i < searchLabel.length; i++){
+		searchLabel[i].addEventListener("click", searchHandler);
+	}	
 }
 
 eventHandlerSearch();

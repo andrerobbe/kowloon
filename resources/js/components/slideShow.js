@@ -5,9 +5,8 @@
  */
 
 var slideIndex = 2; 	// Slide 1 is active on start
-var slideTimer = 800;	// Time between slides in ms, ms so clicking feels responsive
+var slideTimer = 800;	// Time between slides, using miliseconds so clicking feels responsive
 var seconds;			// Global timer, reset on clicking another slide
-
 
 function showNextSlide() {
 	var slides = document.getElementsByClassName("mySlides");
@@ -40,9 +39,8 @@ function startSlideShow(n){
 			showNextSlide();
 			seconds = slideTimer;
 		}
-	}, 10)
+	}, 50)
 }
-
 
 function eventHandlerSlideShow(){
 	 startSlideShow();

@@ -14,7 +14,6 @@ if (navbarFaq) {
 	});
 }
 
-
 var contactFaq = document.querySelectorAll('.question-feed')[1];
 if (contactFaq){
 	var infScroll = new InfiniteScroll( contactFaq, {
@@ -25,7 +24,7 @@ if (contactFaq){
 	});
 }
 
-
+//hide loading img when at bottom
 window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         // you're at the bottom of the page

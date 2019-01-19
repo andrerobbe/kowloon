@@ -4,8 +4,7 @@
  *
  */
 
-
-function getVals(){
+function getValues(){
 	// Get slider values
 	var parent = this.parentNode;
 	var sliders = parent.getElementsByTagName("input");
@@ -21,6 +20,7 @@ function getVals(){
 	displayValTwo.innerHTML = '&euro; ' + slide2;
 }
 
+//
 window.onload = function(){
 	var sliderSections = document.getElementsByClassName("range-slider");
 	for( var i = 0; i < sliderSections.length; i++ ){
@@ -29,7 +29,7 @@ window.onload = function(){
 
         for( var y = 0; y < sliders.length; y++ ){
 			if( sliders[y].type ==="range" ){
-				sliders[y].oninput = getVals;
+				sliders[y].oninput = getValues;
 				// Manually trigger event first time to display values
 				sliders[y].oninput();
 			}

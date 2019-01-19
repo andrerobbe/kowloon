@@ -20,9 +20,9 @@ function searchHandler(){
 	search.classList.toggle('active');
 	searchIcon.classList.toggle('active');
 
-	//close
+	//Close Nav & FAQ
 	closeFaq();
-	closeHamburgerMenu();
+	closeNavigation();
 }
 
 function faqHandler(){
@@ -32,9 +32,9 @@ function faqHandler(){
 	faq.classList.toggle('active');
 	faqIcon.classList.toggle('active');
 
-	//close
+	//Close Nav & Search
 	closeSearch();
-	closeHamburgerMenu();
+	closeNavigation();
 }
 
 function toggleFilter(){
@@ -78,7 +78,7 @@ eventHandlerOverlay();
  */
 
 
-function closeHamburgerMenu(){
+function closeNavigation(){
 	var navbar 			= document.getElementsByClassName('navbar-vertical')[0];
 	var navbarLogo 	 	= document.getElementById('navbar-logo').getElementsByTagName('img')[0];
 	var navbarLogoLong	= document.getElementById('logo-long').getElementsByTagName('img')[0];

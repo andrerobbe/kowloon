@@ -18,8 +18,8 @@ function hideHover(){
 	}
 }
 
-
 function eventHandlerItem(){
+	hideHover();
 	var itemSection = document.getElementsByClassName('item-section');
 	var itemImg = document.getElementsByClassName('item-img');
 
@@ -29,4 +29,5 @@ function eventHandlerItem(){
 	}
 }
 
+setInterval(hideHover, 2000); //remove hovers every 2 sec
 eventHandlerItem();

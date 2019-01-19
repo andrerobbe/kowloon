@@ -11932,6 +11932,7 @@ function closeCookiePopup() {
 }
 
 function eventHandlerCookie() {
+  cookiePopup();
   var btnAccept = document.getElementById('accept-cookie');
   var btnIgnore = document.getElementById('ignore-cookie');
   btnAccept.addEventListener("click", setCookie);
@@ -11939,7 +11940,6 @@ function eventHandlerCookie() {
 }
 
 eventHandlerCookie();
-cookiePopup();
 
 /***/ }),
 
@@ -11966,19 +11966,21 @@ function validator() {
   var msg = document.getElementById('msg-field');
   var msgError = document.getElementById('msg-error');
   var isValid = validateEmail(email.value);
-  var isTxt = msg.value;
+  var isTxt = msg.value; //Email error msg
 
   if (!isValid) {
     emailError.innerHTML = '* Fill in a correct e-mail address.';
   } else {
     emailError.innerHTML = '';
-  }
+  } //Textarea error msg
+
 
   if (msg.value == '') {
     msgError.innerHTML = '* Write a message.';
   } else {
     msgError.innerHTML = '';
-  }
+  } //if valid, browse to homepage
+
 
   if (isValid && msg.value != '') {
     window.location.replace("/");
@@ -12031,7 +12033,8 @@ if (contactFaq) {
     history: false //disables URL changes so going back a page isn't screwed
 
   });
-}
+} //hide loading img when at bottom
+
 
 window.onscroll = function (ev) {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -12072,6 +12075,7 @@ function hideHover() {
 }
 
 function eventHandlerItem() {
+  hideHover();
   var itemSection = document.getElementsByClassName('item-section');
   var itemImg = document.getElementsByClassName('item-img');
 
@@ -12080,6 +12084,8 @@ function eventHandlerItem() {
     itemImg[i].addEventListener("mouseover", showHover);
   }
 }
+
+setInterval(hideHover, 2000); //remove hovers every 2 sec
 
 eventHandlerItem();
 
@@ -12097,7 +12103,7 @@ eventHandlerItem();
  * Navigation
  *
  */
-function hamburgerMenu() {
+function toggleNavigation() {
   var navbar = document.getElementsByClassName('navbar-vertical')[0];
   var navbarLogo = document.getElementById('navbar-logo').getElementsByTagName('img')[0];
   var navbarLogoLong = document.getElementById('logo-long').getElementsByTagName('img')[0];
@@ -12114,8 +12120,8 @@ function hamburgerMenu() {
 function eventHandlerNavigation() {
   var navbar = document.getElementById('nav-burger');
   var mobileNav = document.getElementById('mobile-menu');
-  navbar.addEventListener("click", hamburgerMenu);
-  mobileNav.addEventListener("click", hamburgerMenu);
+  navbar.addEventListener("click", toggleNavigation);
+  mobileNav.addEventListener("click", toggleNavigation);
 }
 
 eventHandlerNavigation();
@@ -12148,20 +12154,20 @@ function searchHandler() {
   var search = document.getElementsByClassName("overlay-search")[0];
   var searchIcon = document.getElementById('nav-search');
   search.classList.toggle('active');
-  searchIcon.classList.toggle('active'); //close
+  searchIcon.classList.toggle('active'); //Close Nav & FAQ
 
   closeFaq();
-  closeHamburgerMenu();
+  closeNavigation();
 }
 
 function faqHandler() {
   var faq = document.getElementsByClassName("overlay-faq")[0];
   var faqIcon = document.getElementById('nav-faq');
   faq.classList.toggle('active');
-  faqIcon.classList.toggle('active'); //close
+  faqIcon.classList.toggle('active'); //Close Nav & Search
 
   closeSearch();
-  closeHamburgerMenu();
+  closeNavigation();
 }
 
 function toggleFilter() {
@@ -12196,7 +12202,7 @@ eventHandlerOverlay();
  *
  */
 
-function closeHamburgerMenu() {
+function closeNavigation() {
   var navbar = document.getElementsByClassName('navbar-vertical')[0];
   var navbarLogo = document.getElementById('navbar-logo').getElementsByTagName('img')[0];
   var navbarLogoLong = document.getElementById('logo-long').getElementsByTagName('img')[0];
@@ -12224,7 +12230,7 @@ function closeHamburgerMenu() {
  * rangeSliders
  *
  */
-function getVals() {
+function getValues() {
   // Get slider values
   var parent = this.parentNode;
   var sliders = parent.getElementsByTagName("input");
@@ -12241,7 +12247,8 @@ function getVals() {
   var displayValTwo = parent.getElementsByClassName("rangeValue-2")[0];
   displayValOne.innerHTML = '&euro; ' + slide1;
   displayValTwo.innerHTML = '&euro; ' + slide2;
-}
+} //
+
 
 window.onload = function () {
   var sliderSections = document.getElementsByClassName("range-slider");
@@ -12251,7 +12258,7 @@ window.onload = function () {
 
     for (var y = 0; y < sliders.length; y++) {
       if (sliders[y].type === "range") {
-        sliders[y].oninput = getVals; // Manually trigger event first time to display values
+        sliders[y].oninput = getValues; // Manually trigger event first time to display values
 
         sliders[y].oninput();
       }
@@ -12274,7 +12281,6 @@ window.onload = function () {
  *
  */
 function searchHandler() {
-  checkInput();
   var searchInput = document.getElementsByClassName("search-input")[0];
   var faqInput = document.getElementsByClassName("search-input")[1];
   var searchOverlay = document.getElementsByClassName("overlay-search")[0];
@@ -12291,7 +12297,7 @@ function searchHandler() {
 
 function checkInput() {
   var searchLabel = document.getElementsByClassName("search-label");
-  var searchInput = document.getElementsByClassName("search-input"); //if empty show label
+  var searchInput = document.getElementsByClassName("search-input"); //if input is empty, show the label
 
   setInterval(function () {
     //check value of Search Page
@@ -12311,16 +12317,16 @@ function checkInput() {
 }
 
 function eventHandlerSearch() {
+  checkInput();
+  var search = document.getElementById("nav-search");
+  var faq = document.getElementById("nav-faq");
+  search.addEventListener("click", searchHandler);
+  faq.addEventListener("click", searchHandler);
   var searchLabel = document.getElementsByClassName("search-label");
 
   for (var i = 0; i < searchLabel.length; i++) {
     searchLabel[i].addEventListener("click", searchHandler);
   }
-
-  var search = document.getElementById("nav-search");
-  var faq = document.getElementById("nav-faq");
-  search.addEventListener("click", searchHandler);
-  faq.addEventListener("click", searchHandler);
 }
 
 eventHandlerSearch();
@@ -12341,7 +12347,7 @@ eventHandlerSearch();
  */
 var slideIndex = 2; // Slide 1 is active on start
 
-var slideTimer = 800; // Time between slides in ms, ms so clicking feels responsive
+var slideTimer = 800; // Time between slides, using miliseconds so clicking feels responsive
 
 var seconds; // Global timer, reset on clicking another slide
 
@@ -12378,7 +12384,7 @@ function startSlideShow(n) {
       showNextSlide();
       seconds = slideTimer;
     }
-  }, 10);
+  }, 50);
 }
 
 function eventHandlerSlideShow() {

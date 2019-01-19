@@ -4,7 +4,7 @@
  *
  */
 
-function hamburgerMenu(){
+function toggleNavigation(){
 	var navbar 			= document.getElementsByClassName('navbar-vertical')[0];
 	var navbarLogo 	 	= document.getElementById('navbar-logo').getElementsByTagName('img')[0];
 	var navbarLogoLong	= document.getElementById('logo-long').getElementsByTagName('img')[0];
@@ -24,8 +24,8 @@ function hamburgerMenu(){
 function eventHandlerNavigation(){
 	var navbar 		= document.getElementById('nav-burger');
 	var mobileNav 	= document.getElementById('mobile-menu');
-	navbar.addEventListener("click", hamburgerMenu);	
-	mobileNav.addEventListener("click", hamburgerMenu);
+	navbar.addEventListener("click", toggleNavigation);	
+	mobileNav.addEventListener("click", toggleNavigation);
 }
 
 eventHandlerNavigation();

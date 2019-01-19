@@ -9,7 +9,6 @@ function validateEmail(email) {
 	return re.test(email);
 }
 
-
 function validator(){
 	var email 		= document.getElementById('email-field');
 	var emailError 	= document.getElementById('email-error');
@@ -19,12 +18,14 @@ function validator(){
 	var isValid = validateEmail(email.value);
 	var isTxt	= msg.value;
 
+	//Email error msg
 	if ( !isValid ){
 		emailError.innerHTML = '* Fill in a correct e-mail address.'
 	} else {
 		emailError.innerHTML = '';
 	}
 
+	//Textarea error msg
 	if (msg.value == ''){
 		msgError.innerHTML = '* Write a message.'
 	}
@@ -32,11 +33,11 @@ function validator(){
 		msgError.innerHTML = '';
 	}
 
+	//if valid, browse to homepage
 	if ( isValid && msg.value != ''){
 		window.location.replace("/");
 	}
 }
-
 
 
 function eventHandlerFormValidator(){
