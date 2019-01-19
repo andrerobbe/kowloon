@@ -11,7 +11,7 @@
     
     <link rel="dns-prefetch" href="db.onlinewebfonts.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Fonts -->
     <link href="//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>
