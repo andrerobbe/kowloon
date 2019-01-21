@@ -7,7 +7,7 @@
 		<span class="dot"></span>
 	</div>
 		
-	<!-- Hover -->
+	<!-- Image -->
 	<div class="item-img">
 		<!-- Hover -->
 		<div class="item-hover">

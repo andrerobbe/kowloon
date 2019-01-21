@@ -18,20 +18,31 @@ $img_pad: 5px;
 		position: absolute;
 		margin-top: 5px;
 		margin-left: 5px;
+		z-index: 1;
 		.dot { margin: 0 2px; }
 	}
 	
-	.item-hover{
+	.item-img {
 		position: relative;
-		height: 0;
-		display: none;
-		&.active { display: block; }
-		span {
+		overflow: hidden;
+
+		.item-hover{
 			position: absolute;
-			top: 105px;
-			left: 50%;
-			transform: translateX(-50%);
+			height: 0;
+			top: 100%;
+			transition: 0.1s all ease-in-out;
+
+			span {
+				position: absolute;
+				top: 105px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
+	}
+
+	&:hover .item-hover {
+		top: 0;
 	}
 }
 

@@ -33,7 +33,7 @@
 			<li>@include('inc.item')</li>
 			<li>@include('inc.item')</li>
 		</ul>
-		<a href="">Visit the store</a>
+		<a href="/dogs">Visit the store</a>
 	</div>
 
 	<!-- Subscribe -->

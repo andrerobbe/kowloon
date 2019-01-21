@@ -40,7 +40,6 @@ require('./components/aboutFaq');
 require('./components/cookie');
 require('./components/formValidator');
 require('./components/infiniteScroll');
-require('./components/item');
 require('./components/navigation');
 require('./components/overlay');
 require('./components/rangeSlider');
