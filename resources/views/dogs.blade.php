@@ -54,7 +54,7 @@
 				<input value="8" min="8" max="499" step="1" type="range">
 				<input value="499" min="8" max="499" step="1" type="range">
 				<span class="values">
-					<span class="rangeValue-1"></span> - <span class="rangeValue-2"></span>
+					<span>&euro;</span><span class="rangeValue-1"></span> - <span>&euro;</span><span class="rangeValue-2"></span>
 				</span>
 			</section>
 		</div>	

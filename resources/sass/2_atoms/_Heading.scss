@@ -9,3 +9,8 @@
     &.h-l { font-size: $heading-l; }
     &.h-m { font-size: $heading-m; }
 }
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1rem;
+}

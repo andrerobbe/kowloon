@@ -16,17 +16,27 @@ function focusInput(){
 }
 
 function checkInputToShowLabel(){
-	var searchLabel = document.getElementsByClassName("search-label");
-	var searchInput = document.getElementsByClassName("search-input");
+	var searchInput 		= document.getElementsByClassName("search-input");
+	var searchLabelMobile 	= document.getElementById("search-mobile");
+	var searchLabelDesktop  = document.getElementById("search-desktop");
+	var searchLabelFaq 		= document.getElementById("search-faq");
 
 	//if input is empty, show the label
 	setInterval(function(){
-	 	//check value of Search Page
-	 	if 		(searchInput[0].value == '') { searchLabel[0].classList.add('active'); }
-	 	else if (searchInput[0].value != '') { searchLabel[0].classList.remove('active'); }
-	 	//check value of Faq Page
-	 	if 		(searchInput[1].value == '') { searchLabel[1].classList.add('active'); }
-	 	else if (searchInput[1].value != '') { searchLabel[1].classList.remove('active'); }
+
+		//check value of Search Page
+		if 		(searchInput[0].value == '') {
+			searchLabelMobile.classList.add('active');
+			searchLabelDesktop.classList.add('active');
+		}
+		else if (searchInput[0].value != '') {
+			searchLabelMobile.classList.remove('active');
+			searchLabelDesktop.classList.remove('active');
+		}
+
+		//check value of Faq Page
+		if 		(searchInput[1].value == '') { searchLabelFaq.classList.add('active'); }
+		else if (searchInput[1].value != '') { searchLabelFaq.classList.remove('active'); }
 	}, 300); //check input every 300ms
 }
 

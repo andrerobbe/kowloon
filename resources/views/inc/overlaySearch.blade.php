@@ -33,7 +33,7 @@
 					<label class="checkbox">Other
 						<input type="checkbox">
 						<span class="checkmark"></span>
-					</label>				
+					</label>
 				</section>
 			</div>
 
@@ -43,9 +43,9 @@
 				<section class="range-slider">
 					<input value="8" min="8" max="499" step="1" type="range">
 					<input value="499" min="8" max="499" step="1" type="range">
-					<span class="values">
-						<span class="rangeValue-1"></span> - <span class="rangeValue-2"></span>
-					</span>
+					<div class="values">
+						<div class="val-1"><span class="euro-sign">&euro;</span><span class="rangeValue-1"></span></div> - <div class="val-2"><span class="euro-sign">&euro;</span><span class="rangeValue-2"></span></div>
+					</div>
 				</section>
 			</div>	
 		</div>
@@ -53,9 +53,14 @@
 
 		<!-- Search Results -->
 		<div class="search-results">
-			<input type="text" name="search" placeholder="" class="search-input">
-			<button for="search" class="btn search-label active">
+			<input type="text" name="search" class="search-input">
+			<!-- Desktop Label -->
+			<button for="search" class="btn search-label active" id="search-desktop">
 				<h1 class="heading h-l"><span class="sprite search-bold"></span>Just start typing and hit <span class="sprite break"></span> to search</h1>
+			</button>
+			<!-- Mobile Label -->
+			<button for="search" class="btn search-label active" id="search-mobile">
+				<h1 class="heading h-l"><span class="sprite search-bold"></span>Type to search</h1>
 			</button>
 		</div>
 		<button class="btn sprite clear"><span>Clear</span></button>

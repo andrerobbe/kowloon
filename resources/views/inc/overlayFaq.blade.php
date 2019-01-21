@@ -10,8 +10,8 @@
 
 		<!-- Search Results -->
 		<div class="search-results">
-			<input type="text" name="search" placeholder="" class="search-input">
-			<button for="search" class="btn search-label active">
+			<input type="text" name="search" class="search-input">
+			<button for="search" class="btn search-label active" id="search-faq">
 				<h1 class="heading h-l"><span class="sprite search-bold"></span>Search on keyword<span class="sprite break"></span></h1>
 			</button>
 		</div>

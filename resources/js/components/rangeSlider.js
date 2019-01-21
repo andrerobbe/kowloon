@@ -16,8 +16,8 @@ function getValues(){
 
 	var displayValOne = parent.getElementsByClassName("rangeValue-1")[0];
 	var displayValTwo = parent.getElementsByClassName("rangeValue-2")[0];
-	displayValOne.innerHTML = '&euro; ' + slide1;
-	displayValTwo.innerHTML = '&euro; ' + slide2;
+	displayValOne.innerHTML = slide1;
+	displayValTwo.innerHTML = slide2;
 }
 
 //

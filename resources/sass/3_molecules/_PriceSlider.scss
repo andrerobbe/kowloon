@@ -1,38 +1,58 @@
 section.range-slider {
     position: relative;
-    width: 300px;
-    height: 62px;
+    width: 400px;
+    height: 74px;
     text-align: center;
     
-    span.values {
+    div.values {
         position: relative;
         top: 30px;
+        line-height: 40px;
 
-        span {
-            padding: 10px 30px;
-            border: 1px solid $bg-slider;
+        div {
+            position: absolute;
+            display: inline-block;
+            width: 145px;
             background-color: $white;
-            color: $bg-nav;
+            border: 2px solid $bg-slider;
 
-            &.rangeValue-1 { margin-right: 10px; }
-            &.rangeValue-2 { margin-left: 10px; }
+            &.val-1 { left: 0; }
+            &.val-2 { right: 0; }
+            
+            .euro-sign { 
+                position: absolute;
+                left: 5px;
+             }                
         }
     }
 
     input  {
         pointer-events: none;
         position: absolute;
-        overflow: hidden;
         left: 0;
         top: 0;
         
-        -webkit-appearance: none;
+        -webkit-appearance: none; //removes default styling
         outline: none;
-        width: 300px;
-        height: 10px;
-        margin: 0;
-        padding: 0;
-        background: #d3d3d3;
+        width: 400px;
+        height: 5px;
+        background: $nav-txt;
+    }
+
+    input::-moz-range-track {
+        position: relative;
+        z-index: -1;
+        background-color: $nav-txt;
+        border: 0;
+    }
+    input:last-of-type::-moz-range-track {
+        -moz-appearance: none;
+        background: $nav-txt;
+        border: 0;
+    }
+
+    input[type=range]::-moz-focus-outer {
+        border: 0;
     }
     
     input::-webkit-slider-thumb {
@@ -45,10 +65,12 @@ section.range-slider {
         -webkit-appearance: none;
         appearance: none;
         background: $bg-nav;
-        width: 25px;
-        height: 25px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
+        background: $bg-nav;
     }
+
     input::-moz-range-thumb{
         pointer-events: all;
         position: relative;
@@ -56,25 +78,23 @@ section.range-slider {
 
         cursor: pointer;
         -moz-appearance: none;
-        width: 25px;
-        height: 25px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
-        background: #4CAF50;
-    }
-    
-    input::-moz-range-track {
-        position: relative;
-        z-index: -1;
-        background-color: $bg-nav;
-        border: 0;
-    }
-    input:last-of-type::-moz-range-track {
-        -moz-appearance: none;
         background: $bg-nav;
-        border: 0;
     }
+}
 
-    input[type=range]::-moz-focus-outer {
-        border: 0;
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+    section.range-slider,
+    section.range-slider input {
+        max-width: 95vw;
     }
 }

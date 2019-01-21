@@ -12202,8 +12202,8 @@ function getValues() {
 
   var displayValOne = parent.getElementsByClassName("rangeValue-1")[0];
   var displayValTwo = parent.getElementsByClassName("rangeValue-2")[0];
-  displayValOne.innerHTML = '&euro; ' + slide1;
-  displayValTwo.innerHTML = '&euro; ' + slide2;
+  displayValOne.innerHTML = slide1;
+  displayValTwo.innerHTML = slide2;
 } //
 
 
@@ -12253,22 +12253,26 @@ function focusInput() {
 }
 
 function checkInputToShowLabel() {
-  var searchLabel = document.getElementsByClassName("search-label");
-  var searchInput = document.getElementsByClassName("search-input"); //if input is empty, show the label
+  var searchInput = document.getElementsByClassName("search-input");
+  var searchLabelMobile = document.getElementById("search-mobile");
+  var searchLabelDesktop = document.getElementById("search-desktop");
+  var searchLabelFaq = document.getElementById("search-faq"); //if input is empty, show the label
 
   setInterval(function () {
     //check value of Search Page
     if (searchInput[0].value == '') {
-      searchLabel[0].classList.add('active');
+      searchLabelMobile.classList.add('active');
+      searchLabelDesktop.classList.add('active');
     } else if (searchInput[0].value != '') {
-      searchLabel[0].classList.remove('active');
+      searchLabelMobile.classList.remove('active');
+      searchLabelDesktop.classList.remove('active');
     } //check value of Faq Page
 
 
     if (searchInput[1].value == '') {
-      searchLabel[1].classList.add('active');
+      searchLabelFaq.classList.add('active');
     } else if (searchInput[1].value != '') {
-      searchLabel[1].classList.remove('active');
+      searchLabelFaq.classList.remove('active');
     }
   }, 300); //check input every 300ms
 }
