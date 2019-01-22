@@ -84,13 +84,13 @@
 		<!-- Related Products -->
 		<div class="related-products">
 			<h3 class="heading h-m uppercase">Related Products</h3>
-			<button class="btn scroll-left">Left</button>
-			<button class="btn scroll-right">Right</button>
 			<div class="product-slider">
 				@for ($i = 0; $i < 20; $i++)
 					@include('inc.items/itemDog')
 				@endfor
 			</div>
+			<div class="btn scroll-left"><div></div></div>
+			<div class="btn scroll-right"><div></div></div>
 			<a href="/dogs" class="txt-l">view more</a>
 		</div>
 

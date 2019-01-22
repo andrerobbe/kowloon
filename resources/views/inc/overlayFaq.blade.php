@@ -18,7 +18,7 @@
 		<button class="btn sprite clear"><span>Clear</span></button>
 		<div class="description">
 			<p>Don’t find what you’re looking for?</p>
-			<p>You can always contact our <a href="">customer service</a>. We're happy to help you!</p>
+			<p>You can always contact our <a href="/contact">customer service</a>. We're happy to help you!</p>
 		</div>
 		
 		

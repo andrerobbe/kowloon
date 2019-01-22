@@ -56,8 +56,35 @@
 
 .related-products { 
 	margin: 45px auto 60px;
+	position: relative;
 
 	> a { display: block; text-align: right; }
+	
+
+	> div.btn {
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		top: 50%;
+		background-color: $white;
+		border-radius: 50%;
+		cursor: pointer;
+		border: 3px solid rgba($sub-txt, 0.3);
+
+		div { 
+			height: 14px;
+			width: 14px;
+			border-left: 3px solid $bg-nav;
+			border-bottom: 3px solid $bg-nav;
+			position: absolute;
+			top: 8px;
+			left: 11px;
+		}
+
+		&.scroll-left { left: 2%; transform: translateY(-50%) rotate(45deg); }
+		&.scroll-right { right: 2%; transform: translateY(-50%) rotate(225deg); }
+	}
+
 
 	.product-slider{
 		margin-top: 15px;

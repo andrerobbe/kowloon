@@ -29,11 +29,8 @@
 			max-width: 100%;
 			p { margin-bottom: 1rem; color:$bg-page; }
 			.btn-primary {
-				background-color: $bg-btn-cookie;
 				font-size: $nav-m !important;
 				padding: 20px 50px;
-
-				&:hover { background-color: lighten($bg-btn-cookie, 10%) }
 			}
 		}
 	}

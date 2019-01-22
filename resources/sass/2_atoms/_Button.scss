@@ -23,7 +23,8 @@
     
     &:hover {
         cursor: pointer;
-        background-color: darken($bg-btn-send, 10%);
+        background-color: $white;
+        color: $bg-btn-send;
     }
 
     &:focus {
@@ -32,28 +33,36 @@
 
 
     /* catogory colours */
+    &.btn-cookie {
+        background-color: $bg-btn-cookie;
+        border: 1px solid $bg-btn-cookie;
+        &:hover {
+            background-color: transparent;
+            color: $bg-btn-cookie;
+        }
+    }
     &.dog { 
         background-color: $dog;
-        &:hover { background-color: darken($dog, 10%); }
+        &:hover { color: $dog; background-color: $white;}
     }
     &.cat { 
         background-color: $cat;
-        &:hover { background-color: darken($cat, 10%); }
+        &:hover { color: $cat; background-color: $white;}
     }
     &.fish { 
         background-color: $fish;
-        &:hover { background-color: darken($fish, 10%); }
+        &:hover { color: $fish; background-color: $white;}
     }
     &.bird { 
         background-color: $bird;
-        &:hover { background-color: darken($bird, 10%); }
+        &:hover { color: $bird; background-color: $white;}
     }
     &.hamster { 
         background-color: $hamster;
-        &:hover { background-color: darken($hamster, 10%); }
+        &:hover { color: $hamster; background-color: $white;}
     }
     &.other {
         background-color: $other;
-        &:hover { background-color: darken($other, 10%); }
+        &:hover { color: $other; background-color: $white;}
     }
 }
