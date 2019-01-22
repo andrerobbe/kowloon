@@ -39,7 +39,8 @@ $duration: 		.2s;
 				padding-left: $nav_width - 10px;
 				text-decoration: none;
 				font-size: $nav-m;
-				color: $nav-txt !important;
+
+				&:not([href]), &:not([tabindex]) { color: $nav-txt; }
 			}
 		}
 
@@ -47,17 +48,21 @@ $duration: 		.2s;
 			margin-top: 5px;
 			margin-bottom: 5px + 10px;
 		}
+
 		li.sprite.plus {
 			opacity: 0;
-			transition: 0.8s all;
+			transition: 0.4s all;
 			&.active { opacity: 1;}
+			a { color: $white; }
 		}
+
 		li#nav-search,
 		li#nav-faq,
 		li.sprite.mail {
-			&:hover{
+			&.active,
+			&:hover {
 				filter: brightness(10) saturate(0);
-				a { color: $white !important; }
+				a { color: $white; }
 			}
 		}
 
@@ -85,12 +90,13 @@ $duration: 		.2s;
 		}
 	}
 
-/*
- *
- * Logo
- *
- */
 
+	/*
+	 *
+	 * Logo
+	 *
+	 */
+	 
 	ul#navbar-logo {
 		width: 100%;
 		position: fixed;
@@ -131,6 +137,7 @@ $duration: 		.2s;
 	}
 
 }
+
 
 /*
  *

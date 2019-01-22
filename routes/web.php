@@ -15,6 +15,7 @@
 Route::get('/', 				'HomeController@index');
 Route::get('/contact', 			'HomeController@contact');
 Route::get('/dogs', 			'HomeController@dogs');
+Route::get('/dogs/details', 	'HomeController@dogsDetails');
 Route::get('/cats', 			'HomeController@cats');
 Route::get('/fish', 			'HomeController@fish');
 Route::get('/birds', 			'HomeController@birds');

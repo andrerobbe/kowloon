@@ -29,6 +29,12 @@ class HomeController extends Controller
 		return view('dogs', ["msg" => $msg, "msg_body" => $msg_body] );
 	}
 
+	public function dogsDetails(){
+		$msg 		= '';
+		$msg_body 	= '';
+		return view('details', ["msg" => $msg, "msg_body" => $msg_body] );
+	}
+
 	public function cats(){
 		$msg 		= '';
 		$msg_body 	= '';

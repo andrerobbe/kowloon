@@ -40,7 +40,7 @@
             <li class="sprite hamster {{ $_SERVER['REQUEST_URI'] === '/small-animals' ? 'active' : '' }}">
                 <a href="/small-animals">Small Animal</a>
             </li>
-            <li class="sprite plus {{ $_SERVER['REQUEST_URI'] === '/other' ? 'active' : '' }}" id="nav-other">
+            <li class="sprite plus" id="nav-other">
                 <a href="/other">Other</a>
             </li>
         </div>

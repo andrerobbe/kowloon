@@ -11754,7 +11754,7 @@ function toggleQuesion() {
 }
 
 function eventHandlerAboutFaq() {
-  var question = document.querySelectorAll(".infinite-content .question");
+  var question = document.querySelectorAll(".about-faq .question");
 
   for (var i = 0; i < question.length; i++) {
     question[i].addEventListener("click", toggleQuesion);
@@ -12108,23 +12108,25 @@ function closeFaq() {
 }
 
 function toggleSearchOverlay() {
+  closeNavigation();
+  closeFaq();
   var search = document.getElementsByClassName("overlay-search")[0];
   var searchIcon = document.getElementById('nav-search');
-  search.classList.toggle('active');
-  searchIcon.classList.toggle('active'); //Close Nav & FAQ
-
-  closeFaq();
-  closeNavigation();
+  setTimeout(function () {
+    search.classList.toggle('active');
+    searchIcon.classList.toggle('active');
+  }, 300);
 }
 
 function toggleFaqOverlay() {
+  closeNavigation();
+  closeSearch();
   var faq = document.getElementsByClassName("overlay-faq")[0];
   var faqIcon = document.getElementById('nav-faq');
-  faq.classList.toggle('active');
-  faqIcon.classList.toggle('active'); //Close Nav & Search
-
-  closeSearch();
-  closeNavigation();
+  setTimeout(function () {
+    faq.classList.toggle('active');
+    faqIcon.classList.toggle('active');
+  }, 300);
 }
 
 function toggleAdvancedFilter() {
@@ -12145,11 +12147,13 @@ function eventHandlerOverlay() {
   var closeFaqBtn = document.getElementById("close-faq");
   var faq = document.getElementById("nav-faq");
   var filter = document.getElementById('adv-filter');
+  var moreAboutQ = document.getElementById('more-about-questions');
   search.addEventListener("click", toggleSearchOverlay);
   closeSearchBtn.addEventListener("click", closeSearch);
   closeFaqBtn.addEventListener("click", closeFaq);
   faq.addEventListener("click", toggleFaqOverlay);
   filter.addEventListener("click", toggleAdvancedFilter);
+  moreAboutQ.addEventListener("click", toggleFaqOverlay);
 }
 
 eventHandlerOverlay();
@@ -12369,7 +12373,7 @@ function startSlideShow(n) {
       showNextSlide();
       seconds = slideTimer;
     }
-  }, 50);
+  }, 10);
 }
 
 function eventHandlerSlideShow() {

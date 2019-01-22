@@ -19,7 +19,7 @@ function toggleQuesion(){
 }
 
 function eventHandlerAboutFaq(){
-	var question = document.querySelectorAll(".infinite-content .question");
+	var question = document.querySelectorAll(".about-faq .question");
 
 	for ( var i = 0; i < question.length; i++ ){
 		question[i].addEventListener("click", toggleQuesion);

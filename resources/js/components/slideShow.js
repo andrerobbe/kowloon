@@ -42,7 +42,7 @@ function changeSlide(){
  * 
  */
 function startSlideShow(n){
-	seconds = slideTimer;	
+	seconds = slideTimer;
 
 	setInterval(function(){
 		seconds--;
@@ -50,7 +50,7 @@ function startSlideShow(n){
 			showNextSlide();
 			seconds = slideTimer;
 		}
-	}, 50)
+	}, 10)
 }
 
 

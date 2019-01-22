@@ -5,8 +5,9 @@
 	z-index: 5;
 	color: $black;
 	
-	display: none;
-	&.active { display: block; }
+	left: -100%;
+	transition: 0.3s all ease-in-out;
+	&.active { left: 0; }
 
 
 	h2 span,

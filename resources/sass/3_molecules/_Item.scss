@@ -2,11 +2,12 @@ $img_width: 220px;
 $img_pad: 5px;
 
 .item-section{
-	cursor: pointer;
 	background-color: $bg-prod;
 	padding: $img_pad;
 	border: 1px solid $bg-faq;
 	width: $img_width + ($img_pad * 2) + 2px;
+	text-decoration: none;
+	&:hover { text-decoration: none; }
 	
 	img { width: $img_width; }
 
@@ -19,7 +20,13 @@ $img_pad: 5px;
 		margin-top: 5px;
 		margin-left: 5px;
 		z-index: 1;
-		.dot { margin: 0 2px; }
+		.dot {
+			margin: 0 2px;
+			border: 1px solid $white;
+		}
+		.dot:nth-child(1) { background-color: $white; }
+		.dot:nth-child(2) { background-color: $bg-nav; }
+		.dot:nth-child(3) { background-color: $bg-product; }
 	}
 	
 	.item-img {

@@ -63,9 +63,12 @@
 	<!-- End of Content -->
 	
 	<!-- Infite scroller -->
-	<div class="infinite-content">
+	<div class="about-faq">
 	<h3 class="heading h-m uppercase">Frequently Asked Questions</h3>
-	@include('inc.faq')
+		@include('inc._questions')
+		@include('inc._questions')
+		@include('inc._questions')
+		<a href="#" id="more-about-questions">More Questions?</a>
 	</div>
 </div>
 @endsection
