@@ -54,8 +54,43 @@
 		/* show checkmark on hover or checked  */
 		input:checked ~ .checkmark,
 		&:hover input ~ .checkmark {
-			background-color: $bg-btn-send;
+			background-color: $bg-nav;
 			&:after {display: block;}
 		}
 	}
+}
+
+
+
+/*
+ * Checkmark bacbkground and hover colours
+ */
+.article-filters.dog .categories .checkbox input:checked ~ .checkmark,
+.article-filters.dog .categories .checkbox:hover input ~ .checkmark
+{
+	background-color: $dog;
+}
+
+.article-filters.cat .categories .checkbox input:checked ~ .checkmark,
+.article-filters.cat .categories .checkbox:hover input ~ .checkmark
+{
+	background-color: $cat;
+}
+
+.article-filters.fish .categories .checkbox input:checked ~ .checkmark,
+.article-filters.fish .categories .checkbox:hover input ~ .checkmark
+{
+	background-color: $fish;
+}
+
+.article-filters.bird .categories .checkbox input:checked ~ .checkmark,
+.article-filters.bird .categories .checkbox:hover input ~ .checkmark
+{
+	background-color: $bird;
+}
+
+.article-filters.hamster .categories .checkbox input:checked ~ .checkmark,
+.article-filters.hamster .categories .checkbox:hover input ~ .checkmark
+{
+	background-color: $hamster;
 }

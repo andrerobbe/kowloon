@@ -25,7 +25,6 @@
 @import '2_atoms/_Msg.scss';
 @import '2_atoms/_Paragraph.scss';
 @import '2_atoms/_Question.scss';
-@import '2_atoms/_Select.scss';
 @import '2_atoms/_Sprite.scss';
 @import '2_atoms/_Wrapper.scss';
 
@@ -33,6 +32,7 @@
 // Molecules
 @import '3_molecules/_Breadcrumb.scss';
 @import '3_molecules/_Checkbox.scss';
+@import '3_molecules/_HotItems.scss';
 @import '3_molecules/_Item.scss';
 @import '3_molecules/_Overlay.scss';
 @import '3_molecules/_PriceSlider.scss';
@@ -45,11 +45,10 @@
 @import '4_organisms/_overlays/_Search.scss';
 @import '4_organisms/_Slideshow.scss';
 @import '4_organisms/_Subscribe.scss';
-@import '4_organisms/_HotItems.scss';
 @import '4_organisms/_Navbar.scss';
 
 
 // Pages
+@import '5_pages/_Articles.scss';
 @import '5_pages/_Contact.scss';
-@import '5_pages/_Dogs.scss';
 @import '5_pages/_Index.scss';

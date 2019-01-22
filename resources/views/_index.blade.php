@@ -25,15 +25,15 @@
 	</div>
 
 	<!-- Hot Items -->
-	<div class="hot-items">
+	<div class="hot-items dog">
 		<h1 class="heading h-l">Hot Items.</h1>
 		<ul>
-			<li>@include('inc.item')</li>
-			<li>@include('inc.item')</li>
-			<li>@include('inc.item')</li>
-			<li>@include('inc.item')</li>
+			<li>@include('inc.items/itemDog')</li>
+			<li>@include('inc.items/itemDog')</li>
+			<li>@include('inc.items/itemDog')</li>
+			<li>@include('inc.items/itemDog')</li>
 		</ul>
-		<a href="/dogs">Visit the store</a>
+		<a href="/dogs" class="hot-items-link">Visit the store</a>
 	</div>
 
 	<!-- Subscribe -->

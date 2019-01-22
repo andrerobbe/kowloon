@@ -1,5 +1,19 @@
-.btn-primary
-{
+.close-btn {
+    position: absolute;
+    right: 12px;
+
+    span {
+        position: relative;
+        top: 22px;
+        left: -3px;
+        color: $nav-txt;
+    }
+}
+
+.btn-m      { font-size:    $btn-m; }
+
+
+.btn-primary {
     border: none;
     border-radius: 0;
     font-size: $btn-m;
@@ -15,19 +29,27 @@
     &:focus {
         outline: none;
     }
-}
 
-.close-btn {
-    position: absolute;
-    right: 12px;
 
-    span {
-        position: relative;
-        top: 22px;
-        left: -3px;
-        color: $nav-txt;
+    /* catogory colours */
+    &.dog { 
+        background-color: $dog;
+        &:hover { background-color: darken($dog, 10%); }
+    }
+    &.cat { 
+        background-color: $cat;
+        &:hover { background-color: darken($cat, 10%); }
+    }
+    &.fish { 
+        background-color: $fish;
+        &:hover { background-color: darken($fish, 10%); }
+    }
+    &.bird { 
+        background-color: $bird;
+        &:hover { background-color: darken($bird, 10%); }
+    }
+    &.hamster { 
+        background-color: $hamster;
+        &:hover { background-color: darken($hamster, 10%); }
     }
 }
-
-
-.btn-m      { font-size:    $btn-m; }

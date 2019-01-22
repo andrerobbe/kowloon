@@ -22,10 +22,10 @@
 		margin: 11px 0 11px 45px;
 		border: none;
 
-		&.dogs 			{ background-color: $dog; }
+		&.dog 			{ background-color: $dog; }
 		&.cat 			{ background-color: $cat; }
 		&.fish 			{ background-color: $fish; }
-		&.birds 		{ background-color: $bird; }
-		&.small-animal 	{ background-color: $hamster; }
+		&.bird 			{ background-color: $bird; }
+		&.hamster	 	{ background-color: $hamster; }
 	}
 }

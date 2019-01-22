@@ -1,6 +1,6 @@
 .hot-items {
 	padding-bottom: 20px; //visit store link
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 
 	ul {
 		display: flex;		
@@ -9,7 +9,7 @@
 		li:first-child { margin-left: 0; }
 		li:last-child { margin-right: 0; }
 	}
-	a { float: right; }
+	a { float: left; }
 }
 
 
@@ -23,8 +23,7 @@
 	.hot-items {
 		width: 515px;
 		max-width: 95%;
-		padding-bottom: 0; //visit store link
-		a { float: none; }
+		.hot-items-link { float: none; }
 		
 		ul li { margin: 2px; }
 		figcaption { display: none; }

@@ -29,9 +29,9 @@
 
 - Product list (ProductView_01.01.jpg)
    - Filter open/close
-   - Price range slider
+   - <s>Price range slider</s>
    - Filter/Sort realtime met javascript (dummy/statische data)
-   - Hover, category bolletje bij tags, buttons = zelfde kleur als category
+   - <s>Hover, category bolletje bij tags, buttons = zelfde kleur als category</s>
    - Endless scroll
 
 - Product detail (ProductDetail_01.01.jpg)

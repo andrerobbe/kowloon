@@ -1,4 +1,4 @@
-<a href="/dogs/details" class="item-section font-txt">
+<a href="/dogs/details" class="item-section item-small font-txt">
 	
 	<!-- The dots/circles -->
 	<div class="item-dots">
@@ -6,12 +6,12 @@
 		<span class="dot"></span>
 		<span class="dot"></span>
 	</div>
-		
+	
 	<!-- Image -->
 	<div class="item-img">
 		<!-- Hover -->
-		<div class="item-hover">
-			<img src="/img/content/dog_hover.png" alt="hover overlay">
+		<div class="item-hover dog">
+			<img src="/img/content/hover.png" alt="hover overlay">
 			<span>view details</span>
 		</div>
 

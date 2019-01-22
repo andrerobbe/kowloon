@@ -35,7 +35,6 @@ $img_pad: 6px;
 
 		.item-hover{
 			position: absolute;
-			height: 0;
 			top: 100%;
 			transition: 0.1s all ease-in-out;
 
@@ -51,6 +50,17 @@ $img_pad: 6px;
 }
 
 
+.item-section .item-img .item-hover.dog img		{ background-color: $dog; opacity: 0.86; }
+.item-section .item-img .item-hover.cat img		{ background-color: $cat; opacity: 0.86; }
+.item-section .item-img .item-hover.fish img	{ background-color: $fish; opacity: 0.86; }
+.item-section .item-img .item-hover.bird img	{ background-color: $bird; opacity: 0.86; }
+.item-section .item-img .item-hover.hamster img { background-color: $hamster; opacity: 0.86; }
+
+.featured-article .item-img .item-hover 		{ width: 100%; }
+.featured-article .item-img .item-hover span 	{ top: 175px; }
+
+
+
 /*
  *
  * Mobile
@@ -58,7 +68,7 @@ $img_pad: 6px;
  */
 
  @media only screen and (max-width: bp('small')) {
-	.item-section {
+	.item-section.item-small {
 		padding: 2px;
 		max-width: 120px + (2 * 2) + 2px;
 		img { max-width: 120px; }
@@ -73,7 +83,7 @@ $img_pad: 6px;
  */
 
 @media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
-	.item-section {
+	.item-section.item-small {
 		max-width: 120px + ($img_pad * 2) + 2px;
 		img { max-width: 120px; }
 	}
@@ -87,7 +97,7 @@ $img_pad: 6px;
  */
 
 @media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
-	.item-section {
+	.item-section.item-small {
 		max-width: 155px + ($img_pad * 2) + 2px;
 		img { max-width: 155px; }
 	}
@@ -100,7 +110,7 @@ $img_pad: 6px;
  */
 
 @media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
-	.item-section {
+	.item-section.item-small {
 		max-width: 205px + ($img_pad * 2) + 2px;
 		img { max-width: 205px; }
 	}

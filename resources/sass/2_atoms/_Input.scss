@@ -1,6 +1,32 @@
 input,
 textarea,
-select
+select,
+option
 {
 	outline: none;
+}
+
+
+select {
+	width: 180px;
+	font-size: $txt-m;
+	border: none;
+	padding: 5px 20px;
+	color: $sub-txt;
+
+	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right $bg-divider;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-position-x: 156px;
+
+	option{
+		color: $bg-page;
+		background-color: $white;
+
+		/* firefox */
+		&:hover,
+		&:checked { box-shadow: 0 0 10px 100px $bg-search-icon inset; } 
+
+	} /* chrome */
+	&focus > option:checked { background: $bg-search-icon !important; }
 }
