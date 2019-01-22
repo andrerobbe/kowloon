@@ -10857,6 +10857,34 @@ p {
   padding-left: 25px;
 }
 
+select {
+  width: 180px;
+  font-size: 14px;
+  border: none;
+  padding: 5px 20px;
+  color: #cecece;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #616161;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position-x: 156px;
+  /* chrome */
+}
+
+select option {
+  color: #454545;
+  background-color: #fff;
+  /* firefox */
+}
+
+select option:hover,
+select option:checked {
+  box-shadow: 0 0 10px 100px #ededed inset;
+}
+
+selectfocus > option:checked {
+  background: #ededed !important;
+}
+
 .sprite {
   background: url("/img/nav/sprite.png") no-repeat top left;
   width: 40px;
@@ -11113,9 +11141,9 @@ p {
 
 .item-section {
   background-color: #565656;
-  padding: 5px;
+  padding: 6px;
   border: 1px solid #717171;
-  width: 232px;
+  width: 234px;
   text-decoration: none;
 }
 
@@ -11184,7 +11212,7 @@ p {
           transform: translateX(-50%);
 }
 
-.item-section:hover .item-hover {
+.item-section .item-img:hover .item-hover {
   top: 0;
 }
 
@@ -11213,7 +11241,7 @@ p {
 
 @media only screen and (min-width: 630px) and (max-width: 768px) {
   .item-section {
-    max-width: 132px;
+    max-width: 134px;
   }
 
   .item-section img {
@@ -11229,7 +11257,7 @@ p {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .item-section {
-    max-width: 167px;
+    max-width: 169px;
   }
 
   .item-section img {
@@ -11245,7 +11273,7 @@ p {
 
 @media only screen and (min-width: 1024px) and (max-width: 1140px) {
   .item-section {
-    max-width: 217px;
+    max-width: 219px;
   }
 
   .item-section img {
@@ -12490,9 +12518,14 @@ section.range-slider input::-moz-range-thumb {
 }
 
 .dog-filters .price-slider .range-slider .values {
-  position: static;
-  width: 200px;
-  margin-left: 190px;
+  width: 350px;
+  top: -19px;
+  left: 440px;
+}
+
+.dog-filters .price-slider .range-slider .values .rangeValue-1,
+.dog-filters .price-slider .range-slider .values .rangeValue-2 {
+  color: #323232;
 }
 
 .dog-content .filter-info {
@@ -12509,20 +12542,67 @@ section.range-slider input::-moz-range-thumb {
   font-weight: bold;
 }
 
-.dog-content .filter-info select {
-  width: 180px;
+.dog-content .dog-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dog-content .dog-articles .hot-items {
+  width: 50%;
+  margin: 0;
+  padding: 0 3px 0 0;
+}
+
+.dog-content .dog-articles .hot-items a:nth-child(2n) {
+  margin-right: 6px;
+}
+
+.dog-content .dog-articles .hot-items a:nth-child(1),
+.dog-content .dog-articles .hot-items a:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.dog-featured {
+  width: 50%;
+}
+
+.dog-featured .item-section {
+  width: 100%;
+  height: 400px;
+}
+
+.dog-featured .item-section .item-img img {
+  width: 100%;
+  max-height: 267px;
+}
+
+.dog-featured .item-section .featured-dog-txt {
+  position: relative;
+}
+
+.dog-featured .item-section .featured-dog-txt h4 {
+  margin: 0;
+}
+
+.dog-featured .item-section .featured-dog-txt div {
+  margin-top: 25px;
+}
+
+.dog-featured .item-section .featured-dog-txt div p {
+  margin-top: 9px;
+}
+
+.dog-featured .item-section .featured-dog-txt div a {
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
   font-size: 14px;
-  border: none;
-  padding: 5px 15px;
-  background-color: #616161;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-.dog-content .filter-info select option {
-  background-color: #fff;
-}
-
-.dog-content .filter-info select option:hover {
-  background-color: #ededed;
+.dog-featured .item-section .featured-dog-txt div a:hover {
+  text-decoration: none;
 }
 
 .wrapper .navigation {

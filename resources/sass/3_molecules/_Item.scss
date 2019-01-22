@@ -1,5 +1,5 @@
 $img_width: 220px;
-$img_pad: 5px;
+$img_pad: 6px;
 
 .item-section{
 	background-color: $bg-prod;
@@ -46,10 +46,7 @@ $img_pad: 5px;
 				transform: translateX(-50%);
 			}
 		}
-	}
-
-	&:hover .item-hover {
-		top: 0;
+	&:hover .item-hover { top: 0; }
 	}
 }
 

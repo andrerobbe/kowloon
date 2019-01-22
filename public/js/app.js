@@ -12147,13 +12147,16 @@ function eventHandlerOverlay() {
   var closeFaqBtn = document.getElementById("close-faq");
   var faq = document.getElementById("nav-faq");
   var filter = document.getElementById('adv-filter');
-  var moreAboutQ = document.getElementById('more-about-questions');
   search.addEventListener("click", toggleSearchOverlay);
   closeSearchBtn.addEventListener("click", closeSearch);
   closeFaqBtn.addEventListener("click", closeFaq);
   faq.addEventListener("click", toggleFaqOverlay);
   filter.addEventListener("click", toggleAdvancedFilter);
-  moreAboutQ.addEventListener("click", toggleFaqOverlay);
+  var moreAboutQ = document.getElementById('more-about-questions');
+
+  if (moreAboutQ) {
+    moreAboutQ.addEventListener("click", toggleFaqOverlay);
+  }
 }
 
 eventHandlerOverlay();

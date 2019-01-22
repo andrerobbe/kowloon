@@ -53,13 +53,15 @@
 			<section class="range-slider">
 				<input value="8" min="8" max="499" step="1" type="range">
 				<input value="499" min="8" max="499" step="1" type="range">
-				<span class="values">
-					<span>&euro;</span><span class="rangeValue-1"></span> - <span>&euro;</span><span class="rangeValue-2"></span>
-				</span>
+				<div class="values">
+					<div class="val-1"><span class="euro-sign">&euro;</span><span class="rangeValue-1"></span></div> - <div class="val-2"><span class="euro-sign">&euro;</span><span class="rangeValue-2"></span></div> 
+				</div>
 			</section>
-		</div>	
+		</div>
 	</div>
 	
+
+	<!-- Dog Content -->
 	<div class="dog-content">
 		<div class="filter-info">
 			<select>
@@ -72,46 +74,50 @@
 			<p class="txt-m">Dog items: <span>5 of 56</span></p>
 		</div>
 		
-		<!-- Top 4 items -->
-		<div class="hot-items">
-			<ul>
-				<li>@include('inc.item')</li>
-				<li>@include('inc.item')</li>
-				<li>@include('inc.item')</li>
-				<li>@include('inc.item')</li>
-			</ul>
-		</div>
 
-		<!-- Featured dog article -->
-		<div class="dog-featured">
-			<section class="item-section">
-				<!-- The dots/circles -->
-				<div class="item-dots">
-					<span class="dot active"></span>
-					<span class="dot"></span>
-					<span class="dot"></span>
-				</div>
-					
-				<!-- Hover -->
-				<div class="item-img">
-					<!-- Hover -->
-					<div class="item-hover">
-						<img src="/img/content/hot_item_hover.png" alt="hover overlay">
-						<span>view details</span>
+		<div class="dog-articles">
+			<!-- Top 4 items -->
+			<div class="hot-items">
+					@include('inc.item')
+					@include('inc.item')
+					@include('inc.item')
+					@include('inc.item')
+			</div>
+
+			<!-- Featured dog article -->
+			<div class="dog-featured">
+				<section class="item-section">
+					<!-- The dots/circles -->
+					<div class="item-dots">
+						<span class="dot active"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
 					</div>
+						
+					<!-- Hover -->
+					<div class="item-img">
+						<!-- Hover -->
+						<div class="item-hover">
+							<img src="/img/content/dog_hover.png" alt="hover overlay">
+							<span>view details</span>
+						</div>
 
-					<!-- Img -->
-					<img src="/img/content/hot_item_dog.png" alt="Cooling Mat for a dog">
-				</div>
-				<div class="featured-dog-txt">
-					<h4>Cooling Mat</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat repudiandae, placeat ipsam quae ullam assumenda quidem dolorum suscipit totam laudantium minus optio tempora molestias odit architecto corporis sit similique hic.</p>
-					<p>&euro; 15,49</p>
-					<a href="/dogs/details" class="btn btn-primary">Want to know more?</a>
-			</section>
+						<!-- Img -->
+						<img src="/img/content/dog.png" alt="Cooling Mat for a dog">
+					</div>
+					<div class="featured-dog-txt">
+						<h4>Cooling Mat</h4>
+						<p class="txt-m">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat repudiandae, placeat ipsam quae ullam assumenda quidem dolorum ..</p>
+						<div>
+							<p>&euro; 15,49</p>
+							<a href="/dogs/details" class="btn btn-primary">Want to know more?</a>
+						</div>
+				</section>
+			</div>
 		</div>
 	</div>
 	<!-- End of Content -->
+
 
 	<!-- Infite scroller -->
 	<div class="infinite-content">
