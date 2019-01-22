@@ -5,9 +5,10 @@
     margin:         0;
     display:        inline-block;
 
-    &.h-xl{ font-size: $heading-xl; }
-    &.h-l { font-size: $heading-l; }
-    &.h-m { font-size: $heading-m; }
+    &.h-xl { font-size: $heading-xl; }
+    &.h-l  { font-size: $heading-l; }
+    &.h-ml { font-size: $heading-ml; }
+    &.h-m  { font-size: $heading-m; }
 }
 
 

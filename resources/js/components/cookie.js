@@ -2,7 +2,7 @@
  *
  * Create Cookies object, allowing cookies to be created, retrieved, and deleted
  *
-*/
+ */
 
 // create the Cookies object
 var Cookies = {

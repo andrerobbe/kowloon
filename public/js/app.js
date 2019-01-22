@@ -11715,6 +11715,8 @@ __webpack_require__(/*! ./components/articles */ "./resources/js/components/arti
 
 __webpack_require__(/*! ./components/cookie */ "./resources/js/components/cookie.js");
 
+__webpack_require__(/*! ./components/details */ "./resources/js/components/details.js");
+
 __webpack_require__(/*! ./components/formValidator */ "./resources/js/components/formValidator.js");
 
 __webpack_require__(/*! ./components/infiniteScroll */ "./resources/js/components/infiniteScroll.js");
@@ -11816,7 +11818,7 @@ eventHandlerArticle();
  *
  * Create Cookies object, allowing cookies to be created, retrieved, and deleted
  *
-*/
+ */
 // create the Cookies object
 var Cookies = {
   /* Sets a cookie. The parameters are:
@@ -11971,6 +11973,45 @@ function eventHandlerCookie() {
 }
 
 eventHandlerCookie();
+
+/***/ }),
+
+/***/ "./resources/js/components/details.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/details.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ *
+ * Details
+ *
+ */
+function scrollLeft() {
+  var productSlider = document.querySelector('.product-slider');
+  productSlider.scrollBy(-484, 0);
+}
+
+function scrollRight() {
+  var productSlider = document.querySelector('.product-slider');
+  productSlider.scrollBy(484, 0);
+}
+
+function eventHandlerDetails() {
+  var btnLeft = document.querySelector('.scroll-left');
+  var btnRight = document.querySelector('.scroll-right');
+
+  if (btnLeft) {
+    btnLeft.addEventListener('click', scrollLeft);
+  }
+
+  if (btnRight) {
+    btnRight.addEventListener('click', scrollRight);
+  }
+}
+
+eventHandlerDetails();
 
 /***/ }),
 

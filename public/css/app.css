@@ -10852,6 +10852,10 @@ body {
   font-size: 40px;
 }
 
+.heading.h-ml {
+  font-size: 26px;
+}
+
 .heading.h-m {
   font-size: 20px;
 }
@@ -12471,7 +12475,7 @@ section.range-slider input::-moz-range-thumb {
   }
 
   .subscribe .bg-pattern h2 {
-    font-size: 28px;
+    font-size: 26px;
     width: 280px;
   }
 }
@@ -12896,21 +12900,101 @@ h2#article-filter {
   margin-top: 180px;
 }
 
-.article-details .related-products {
+.item-overview {
+  /* Item Imgs */
+  /* Item Description */
+  /* Item Specifications */
+}
+
+.item-overview .item-content {
+  display: flex;
+}
+
+.item-overview .item-content > div {
+  width: 50%;
+}
+
+.item-overview .item-description h1,
+.item-overview .item-description h2 {
+  display: block;
+}
+
+.item-overview .item-description h3 {
+  margin: 1rem auto 5px;
+}
+
+.item-overview .item-description .figures {
+  display: flex;
+  margin-top: 15px;
+}
+
+.item-overview .item-description .figures .square,
+.item-overview .item-description .figures .circle {
+  width: 35px;
+  height: 35px;
+  background-color: #828282;
+  border: 1px solid #323232;
+}
+
+.item-overview .item-description .figures .circle {
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.item-overview .item-description .figures .triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #828282;
+}
+
+.item-overview .item-specs {
+  padding: 15px;
+  border: 1px solid #717171;
+}
+
+.item-overview .item-specs span {
+  padding-left: 25px;
+}
+
+.item-overview .item-specs h4 {
+  margin: 1rem auto 5px;
+}
+
+.related-products {
   margin: 45px auto 60px;
 }
 
-.article-details .related-products .product-slider {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
+.related-products > a {
+  display: block;
+  text-align: right;
 }
 
-.article-details .related-products .product-slider .item-section .item-dots {
+.related-products .product-slider {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.related-products .product-slider::-webkit-scrollbar {
   display: none;
 }
 
-.article-details .related-products .product-slider .item-section figcaption {
+.related-products .product-slider .item-section {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.related-products .product-slider .item-section .item-dots {
+  display: none;
+}
+
+.related-products .product-slider .item-section figcaption {
   display: none;
 }
 

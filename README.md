@@ -37,7 +37,7 @@
 - Product detail (ProductDetail_01.01.jpg)
    - Hovers en category bolletje bij tags zijn dezelfde kleur als de category
    - Actieve foto = full color thumb, andere zijn 'grayed out'Side scrollers bij gerelateerde producten
-   - FAQ open/closeMenu
+   - <s>FAQ open/closeMenu</s>
 
 - <s>Menu (Navigation_01_02.jpg)</s>
    - <s>Animatie voor slide open</s>
