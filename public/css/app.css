@@ -11256,6 +11256,7 @@ p {
 .overlay {
   background-color: #fff;
   position: absolute;
+  min-height: 110%;
   width: 100%;
   z-index: 5;
   color: #000;
@@ -11595,7 +11596,6 @@ section.range-slider input::-moz-range-thumb {
 
 .overlay-search {
   position: fixed;
-  height: 100%;
 }
 
 .overlay-search h2 {

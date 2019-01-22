@@ -1,6 +1,7 @@
 .overlay {
 	background-color: $white;
 	position: absolute;
+	min-height: 110%;
 	width: 100%;
 	z-index: 5;
 	color: $black;
