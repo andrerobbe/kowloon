@@ -92,6 +92,9 @@ class HomeController extends Controller
 	 * Infinite scroller pages
 	 */
 	public function questions($id){
-		return view('questions/question'. $id);
+		return view('infinite-questions/question'. $id);
+	}
+	public function articles($id){
+		return view('infinite-articles/article'. $id);
 	}
 }

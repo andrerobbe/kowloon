@@ -28,11 +28,11 @@
    - <s>FAQ open/close</s>
 
 - Product list (ProductView_01.01.jpg)
-   - Filter open/close
+   - <s>Filter open/close</s>
    - <s>Price range slider</s>
    - Filter/Sort realtime met javascript (dummy/statische data)
    - <s>Hover, category bolletje bij tags, buttons = zelfde kleur als category</s>
-   - Endless scroll
+   - <s>Endless scroll</s>
 
 - Product detail (ProductDetail_01.01.jpg)
    - Hovers en category bolletje bij tags zijn dezelfde kleur als de category

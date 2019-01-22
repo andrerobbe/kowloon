@@ -25,7 +25,7 @@
 			<h3 class="txt-xxl">By collection</h3>
 			<section class="categories">
 				<label class="checkbox">Splash 'n Fun
-					<input type="checkbox">
+					<input type="checkbox" checked="">
 					<span class="checkmark"></span>
 				</label>
 				<label class="checkbox">Luxury
@@ -64,7 +64,6 @@
 			</select>
 			<p class="txt-m">Dog items: <span>5 of 56</span></p>
 		</div>
-		
 
 		<div class="articles">
 			<!-- Top 4 items -->
@@ -85,8 +84,25 @@
 
 
 	<!-- Infite scroller -->
-	<div class="infinite-content">
+	<div class="infinite-articles">
+		<div class="article-feed">
+		<!-- .articles will be added to .article-feed -->
+			@for ($i = 0; $i < 16; $i++)
+				@include('inc.items/itemDog')
+			@endfor
+		</div>
+
+		<!-- status elements -->
+		<div class="scroller-status">
+			<div class="infinite-scroll-request loader-ellips"><img src="/img/content/loading.gif" alt="loading animation"></div>
+			<!--
+			<p class="infinite-scroll-last">End of content</p>
+			<p class="infinite-scroll-error">No more questions to load</p>
+			-->
+		</div>
 		
+		<!-- pagination has path -->
+		<a class="article__next" href="/article/1"></a>
 	</div>
 </div>
 @endsection

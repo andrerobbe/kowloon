@@ -5,14 +5,17 @@
  */
 
 function focusInput(){
-	var searchInput = document.getElementsByClassName("search-input")[0];
-	var faqInput = document.getElementsByClassName("search-input")[1];
-	var searchOverlay = document.getElementsByClassName("overlay-search")[0];
-	var faqOverlay = document.getElementsByClassName("overlay-faq")[0];
+	var searchInput 	= document.getElementsByClassName("search-input")[0];
+	var faqInput 		= document.getElementsByClassName("search-input")[1];
+	var searchOverlay 	= document.getElementsByClassName("overlay-search")[0];
+	var faqOverlay 		= document.getElementsByClassName("overlay-faq")[0];
 
-	//focus input field if overlay is active
-	if (searchOverlay.classList.contains('active')) { searchInput.focus();}
-	if (faqOverlay.classList.contains('active')) { faqInput.focus();}
+
+	setTimeout(function(){
+		//focus input field if overlay is active
+		if (searchOverlay.classList.contains('active')) {searchInput.focus()}
+		if (faqOverlay.classList.contains('active')) { faqInput.focus();}
+	}, 300) //300ms delay on setting active class, cus of potential closing animation
 }
 
 function checkInputToShowLabel(){

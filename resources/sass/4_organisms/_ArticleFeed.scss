@@ -1,0 +1,54 @@
+.infinite-articles { margin-top: 20px; }
+
+.article-feed {
+	display: grid;
+	grid-template-columns: repeat(4, 0fr);
+	grid-row-gap: 20px;
+	grid-column-gap: 8px;
+}
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.article-feed {
+		figcaption { display: none; }
+		.item-dots { display: none; }
+	}
+}
+
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	.article-feed { figcaption { font-size: 11px; } }
+}
+
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	
+}
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	
+}

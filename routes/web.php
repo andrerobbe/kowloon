@@ -27,8 +27,9 @@ Route::get('/small-animals/details','HomeController@smallAnimalsDetails');
 Route::get('/other', 				'HomeController@other');
 Route::get('/other/details', 		'HomeController@otherDetails');
 
-//FAQ endless scroll
-Route::get('/questions/{id}',	'HomeController@questions'); 
+//Endless scrolls
+Route::get('/question/{id}',	'HomeController@questions');
+Route::get('/article/{id}',		'HomeController@articles');
 
 //Post
 Route::post('/subscribe/', 		'SubscribeController@submit');

@@ -2,4 +2,4 @@
 	@include('inc._questions')
 @endfor
 
-<a class="pagination__next" href="/questions/8"></a>
+<a class="question__next" href="/question/9"></a>

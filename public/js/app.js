@@ -11711,6 +11711,8 @@ var app = new Vue({
 
 __webpack_require__(/*! ./components/aboutFaq */ "./resources/js/components/aboutFaq.js");
 
+__webpack_require__(/*! ./components/articles */ "./resources/js/components/articles.js");
+
 __webpack_require__(/*! ./components/cookie */ "./resources/js/components/cookie.js");
 
 __webpack_require__(/*! ./components/formValidator */ "./resources/js/components/formValidator.js");
@@ -11761,7 +11763,42 @@ function eventHandlerAboutFaq() {
   }
 }
 
-setInterval(eventHandlerAboutFaq, 1000); //every second check for new FAQ
+eventHandlerAboutFaq();
+
+/***/ }),
+
+/***/ "./resources/js/components/articles.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/articles.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ *
+ * Articles
+ *
+ */
+function toggleFilter() {
+  var filterOptions = document.querySelector('.article-filters');
+  var filterArrow = document.getElementById('article-filter-arrow');
+  filterOptions.classList.toggle('active');
+
+  if (filterArrow.classList.contains('arrow-right')) {
+    filterArrow.classList.remove('arrow-right');
+    filterArrow.classList.add('arrow-down');
+  } else if (filterArrow.classList.contains('arrow-down')) {
+    filterArrow.classList.add('arrow-right');
+    filterArrow.classList.remove('arrow-down');
+  }
+}
+
+function eventHandlerArticle() {
+  var filterTxt = document.getElementById('article-filter');
+  filterTxt.addEventListener("click", toggleFilter);
+}
+
+eventHandlerArticle();
 
 /***/ }),
 
@@ -12002,38 +12039,39 @@ eventHandlerFormValidator();
  * InfinteScroll
  *
  */
-var navbarFaq = document.querySelectorAll('.question-feed')[0];
-
-if (navbarFaq) {
-  var infScroll = new InfiniteScroll(navbarFaq, {
-    // options
-    path: '.pagination__next',
-    append: '.question',
-    history: false //disables URL changes so going back a page isn't screwed
-
-  });
-}
-
-var contactFaq = document.querySelectorAll('.question-feed')[1];
-
-if (contactFaq) {
-  var infScroll = new InfiniteScroll(contactFaq, {
-    // options
-    path: '.pagination__next',
-    append: '.question',
-    history: false //disables URL changes so going back a page isn't screwed
-
-  });
-} //hide loading img when at bottom
-
-
+//hide loading img when at bottom
 window.onscroll = function (ev) {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
     // you're at the bottom of the page
     var loadingImg = document.getElementsByClassName('infinite-scroll-request')[0];
     loadingImg.classList.add('disable');
   }
-};
+}; // FAQ overlay
+
+
+var navbarFaq = document.querySelector('.question-feed');
+
+if (navbarFaq) {
+  var infScroll = new InfiniteScroll(navbarFaq, {
+    // options
+    path: '.question__next',
+    append: '.question',
+    history: false //disables URL changes so going back a page isn't screwed
+
+  });
+}
+
+var articles = document.querySelector('.article-feed');
+
+if (articles) {
+  var infScroll = new InfiniteScroll(articles, {
+    // options
+    path: '.article__next',
+    append: '.item-small',
+    history: false //disables URL changes so going back a page isn't screwed
+
+  });
+}
 
 /***/ }),
 
@@ -12248,15 +12286,17 @@ function focusInput() {
   var searchInput = document.getElementsByClassName("search-input")[0];
   var faqInput = document.getElementsByClassName("search-input")[1];
   var searchOverlay = document.getElementsByClassName("overlay-search")[0];
-  var faqOverlay = document.getElementsByClassName("overlay-faq")[0]; //focus input field if overlay is active
+  var faqOverlay = document.getElementsByClassName("overlay-faq")[0];
+  setTimeout(function () {
+    //focus input field if overlay is active
+    if (searchOverlay.classList.contains('active')) {
+      searchInput.focus();
+    }
 
-  if (searchOverlay.classList.contains('active')) {
-    searchInput.focus();
-  }
-
-  if (faqOverlay.classList.contains('active')) {
-    faqInput.focus();
-  }
+    if (faqOverlay.classList.contains('active')) {
+      faqInput.focus();
+    }
+  }, 300); //300ms delay on setting active class, cus of potential closing animation
 }
 
 function checkInputToShowLabel() {

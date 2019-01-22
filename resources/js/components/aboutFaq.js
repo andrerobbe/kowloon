@@ -26,4 +26,4 @@ function eventHandlerAboutFaq(){
 	}
 }
 
-setInterval(eventHandlerAboutFaq, 1000); //every second check for new FAQ
+eventHandlerAboutFaq();

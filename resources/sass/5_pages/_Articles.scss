@@ -1,6 +1,9 @@
+h2#article-filter { line-height: 25px; cursor: pointer; }
+
 .article-filters {
 	padding: 0 45px 20px;
-	border-bottom: 1px solid $bg-divider;
+	display: none;
+	&.active { display: block; }
 	
 	.price-slider {
 		margin-top: 10px;
@@ -8,13 +11,16 @@
 		.range-slider{
 			input::-webkit-slider-thumb { background: $white; }
 			input::-moz-range-thumb		{ background: $white; }
-			.rangeValue-1, .rangeValue-2 { color: $bg-nav; }
+
+			.val-1, .val-2				{ color: $bg-nav; }
 		}
 	}
 }
 
 
 .content {
+	border-top: 1px solid $bg-divider;
+
 	.filter-info{
 		margin: 10px auto 20px;
 
@@ -44,6 +50,7 @@
 
 .featured-article {
 	width: 50%;
+	padding-left: 3px;
 	
 	.item-section { 
 		width: 100%;
