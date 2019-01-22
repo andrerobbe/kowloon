@@ -3,7 +3,7 @@
  * Articles
  *
  */
- 
+
 function toggleFilter(){
 	var filterOptions 	= document.querySelector('.article-filters');
 	var filterArrow 	= document.getElementById('article-filter-arrow');

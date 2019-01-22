@@ -10776,6 +10776,14 @@ body {
   background-color: #49d8ff;
 }
 
+.btn-primary.other {
+  background-color: #ff3f3f;
+}
+
+.btn-primary.other:hover {
+  background-color: #ff0c0c;
+}
+
 .divider-horizontal {
   position: relative;
   width: 100%;
@@ -11116,6 +11124,10 @@ p {
   background-color: #7ce3ff;
 }
 
+.breadcrumb .dot.other {
+  background-color: #ff3f3f;
+}
+
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -11185,29 +11197,28 @@ p {
  * Checkmark bacbkground and hover colours
  */
 
-.article-filters.dog .categories .checkbox input:checked ~ .checkmark,
-.article-filters.dog .categories .checkbox:hover input ~ .checkmark {
+.article-filters.dog .categories .checkbox input:checked ~ .checkmark {
   background-color: #ff709e;
 }
 
-.article-filters.cat .categories .checkbox input:checked ~ .checkmark,
-.article-filters.cat .categories .checkbox:hover input ~ .checkmark {
+.article-filters.cat .categories .checkbox input:checked ~ .checkmark {
   background-color: #8787ff;
 }
 
-.article-filters.fish .categories .checkbox input:checked ~ .checkmark,
-.article-filters.fish .categories .checkbox:hover input ~ .checkmark {
+.article-filters.fish .categories .checkbox input:checked ~ .checkmark {
   background-color: #ffb93f;
 }
 
-.article-filters.bird .categories .checkbox input:checked ~ .checkmark,
-.article-filters.bird .categories .checkbox:hover input ~ .checkmark {
+.article-filters.bird .categories .checkbox input:checked ~ .checkmark {
   background-color: #7aff82;
 }
 
-.article-filters.hamster .categories .checkbox input:checked ~ .checkmark,
-.article-filters.hamster .categories .checkbox:hover input ~ .checkmark {
+.article-filters.hamster .categories .checkbox input:checked ~ .checkmark {
   background-color: #7ce3ff;
+}
+
+.article-filters.other .categories .checkbox input:checked ~ .checkmark {
+  background-color: #ff3f3f;
 }
 
 .hot-items {
@@ -11402,6 +11413,11 @@ p {
 
 .item-section .item-img .item-hover.hamster img {
   background-color: #7ce3ff;
+  opacity: 0.86;
+}
+
+.item-section .item-img .item-hover.other img {
+  background-color: #ff3f3f;
   opacity: 0.86;
 }
 
@@ -12033,6 +12049,10 @@ section.range-slider input::-moz-range-thumb {
 
 .navbar-vertical ul li.sprite.plus a {
   color: #fff;
+}
+
+.navbar-vertical ul li.sprite.plus:hover a {
+  color: #ff3f3f;
 }
 
 .navbar-vertical ul li#nav-search.active,

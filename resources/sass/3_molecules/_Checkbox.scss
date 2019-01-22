@@ -65,32 +65,32 @@
 /*
  * Checkmark bacbkground and hover colours
  */
-.article-filters.dog .categories .checkbox input:checked ~ .checkmark,
-.article-filters.dog .categories .checkbox:hover input ~ .checkmark
+.article-filters.dog .categories .checkbox input:checked ~ .checkmark
 {
 	background-color: $dog;
 }
 
-.article-filters.cat .categories .checkbox input:checked ~ .checkmark,
-.article-filters.cat .categories .checkbox:hover input ~ .checkmark
+.article-filters.cat .categories .checkbox input:checked ~ .checkmark
 {
 	background-color: $cat;
 }
 
-.article-filters.fish .categories .checkbox input:checked ~ .checkmark,
-.article-filters.fish .categories .checkbox:hover input ~ .checkmark
+.article-filters.fish .categories .checkbox input:checked ~ .checkmark
 {
 	background-color: $fish;
 }
 
-.article-filters.bird .categories .checkbox input:checked ~ .checkmark,
-.article-filters.bird .categories .checkbox:hover input ~ .checkmark
+.article-filters.bird .categories .checkbox input:checked ~ .checkmark
 {
 	background-color: $bird;
 }
 
-.article-filters.hamster .categories .checkbox input:checked ~ .checkmark,
-.article-filters.hamster .categories .checkbox:hover input ~ .checkmark
+.article-filters.hamster .categories .checkbox input:checked ~ .checkmark
 {
 	background-color: $hamster;
+}
+
+.article-filters.other .categories .checkbox input:checked ~ .checkmark
+{
+	background-color: $other;
 }

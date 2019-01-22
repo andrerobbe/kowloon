@@ -52,4 +52,8 @@
         background-color: $hamster;
         &:hover { background-color: darken($hamster, 10%); }
     }
+    &.other {
+        background-color: $other;
+        &:hover { background-color: darken($other, 10%); }
+    }
 }

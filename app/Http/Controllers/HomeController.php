@@ -75,7 +75,7 @@ class HomeController extends Controller
 	public function smallAnimalsDetails(){
 		$msg 		= '';
 		$msg_body 	= '';
-		return view('smallAnimals', ["msg" => $msg, "msg_body" => $msg_body] );
+		return view('smallAnimalsDetails', ["msg" => $msg, "msg_body" => $msg_body] );
 	}
 	
 	public function other(){

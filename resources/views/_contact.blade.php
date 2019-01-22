@@ -4,7 +4,6 @@
 
 @include('inc.slideshow')
 <div class="wrapper">
-	@include('inc._msg')
 
 	<!-- Breadcrumbs -->
 	<div class="breadcrumb">

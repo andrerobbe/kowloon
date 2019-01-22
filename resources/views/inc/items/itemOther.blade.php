@@ -1,4 +1,4 @@
-<a href="/fish/details" class="item-section item-small font-txt">
+<a href="/other/details" class="item-section item-small font-txt">
 	
 	<!-- The dots/circles -->
 	<div class="item-dots">
@@ -10,7 +10,7 @@
 	<!-- Image -->
 	<div class="item-img">
 		<!-- Hover -->
-		<div class="item-hover fish">
+		<div class="item-hover other">
 			<img src="/img/content/hover.png" alt="hover overlay">
 			<span>view details</span>
 		</div>

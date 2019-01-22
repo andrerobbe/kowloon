@@ -4,7 +4,6 @@
 
 @include('inc.slideshow')
 <div class="wrapper">
-	@include('inc._msg')
 
 	<!-- Breadcrumbs -->
 	<div class="breadcrumb">
@@ -52,7 +51,7 @@
 	</div>
 	
 
-	<!-- Dog Content -->
+	<!-- Content -->
 	<div class="content">
 		<div class="filter-info">
 			<select>
@@ -74,7 +73,7 @@
 				@include('inc.items/itemDog')
 			</div>
 
-			<!-- Featured dog article -->
+			<!-- Featured article -->
 			<div class="featured-article">
 				@include('inc.items/itemDogFeatured')
 			</div>
