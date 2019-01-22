@@ -61,12 +61,12 @@
 	</div>
 	<!-- End of Content -->
 	
-	<!-- Infite scroller -->
+	<!-- FAQ -->
 	<div class="about-faq">
 	<h3 class="heading h-m uppercase">Frequently Asked Questions</h3>
-		@include('inc._questions')
-		@include('inc._questions')
-		@include('inc._questions')
+		@for ($i = 0; $i < 3; $i++)
+			@include('inc._questions')
+		@endfor
 		<a href="#" id="more-about-questions">More Questions?</a>
 	</div>
 </div>

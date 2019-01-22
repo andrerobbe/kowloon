@@ -22,7 +22,7 @@ function toggleFilter(){
 
 function eventHandlerArticle(){
 	var filterTxt = document.getElementById('article-filter');
-	filterTxt.addEventListener("click", toggleFilter);
+	if (filterTxt) { filterTxt.addEventListener("click", toggleFilter); }
 }
 
 eventHandlerArticle();

@@ -55,9 +55,12 @@ function startSlideShow(n){
 
 
 function eventHandlerSlideShow(){
-	 startSlideShow();
-	 var dots = document.getElementsByClassName("dot-slides");
-	 for ( var i = 0; i < dots.length; i++ ) {
+	//only startSlideShow on pages that have slideShowContainer
+	var slideShowContainer = document.getElementsByClassName("slideshow-container")[0];
+	if (slideShowContainer) { startSlideShow(); }
+	
+	var dots = document.getElementsByClassName("dot-slides");
+	for ( var i = 0; i < dots.length; i++ ) {
 		dots[i].addEventListener("click", changeSlide);
 	}
 }

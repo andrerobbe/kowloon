@@ -1,7 +1,7 @@
 <div class="slideshow-container">
 	
 	<!-- Logo -->
-	<div class="logo"><a href="/"><img src="/img/logo/kowloon-big.png" alt="Kowloon Logo"></a></div>
+	<div class="logo-big"><a href="/"><img src="/img/logo/kowloon-big.png" alt="Kowloon Logo"></a></div>
 
 	<!-- Full-width images -->
 	<div class="mySlides active">
@@ -19,8 +19,8 @@
 
 	<!-- The dots/circles -->
 	<div class="slide-controls">
-		<span id="dot-1" class="dot dot-slides active"></span> 
-		<span id="dot-2" class="dot dot-slides"></span> 
-		<span id="dot-3" class="dot dot-slides"></span> 
+		@for ($i = 0; $i < 3; $i++)
+			<span class="dot dot-slides {{ $i == 0 ? 'active' : '' }}" id="dot-{{ $i + 1 }}"></span>
+		@endfor
 	</div>
 </div>

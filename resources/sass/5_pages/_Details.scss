@@ -1,0 +1,21 @@
+.article-details {
+	margin-top: 180px;
+
+
+	.related-products { 
+		margin: 45px auto 60px;
+
+		.product-slider{
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: hidden;
+			margin-top: 15px;
+
+
+			.item-section {
+				.item-dots { display: none; }
+				figcaption { display: none; }
+			}
+		}
+	}
+}

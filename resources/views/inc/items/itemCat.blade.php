@@ -2,9 +2,9 @@
 	
 	<!-- The dots/circles -->
 	<div class="item-dots">
-		<span class="dot"></span>
-		<span class="dot"></span>
-		<span class="dot"></span>
+		@for ($i = 0; $i < 3; $i++)
+			<span class="dot"></span>
+		@endfor
 	</div>
 	
 	<!-- Image -->

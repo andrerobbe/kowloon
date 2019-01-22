@@ -28,10 +28,9 @@
 	<div class="hot-items dog">
 		<h1 class="heading h-l">Hot Items.</h1>
 		<ul>
-			<li>@include('inc.items/itemDog')</li>
-			<li>@include('inc.items/itemDog')</li>
-			<li>@include('inc.items/itemDog')</li>
-			<li>@include('inc.items/itemDog')</li>
+			@for ($i = 0; $i < 4; $i++)
+				<li>@include('inc.items/itemDog')</li>
+			@endfor
 		</ul>
 		<a href="/dogs" class="hot-items-link">Visit the store</a>
 	</div>

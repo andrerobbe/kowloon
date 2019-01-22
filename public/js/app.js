@@ -11795,7 +11795,10 @@ function toggleFilter() {
 
 function eventHandlerArticle() {
   var filterTxt = document.getElementById('article-filter');
-  filterTxt.addEventListener("click", toggleFilter);
+
+  if (filterTxt) {
+    filterTxt.addEventListener("click", toggleFilter);
+  }
 }
 
 eventHandlerArticle();
@@ -12420,7 +12423,13 @@ function startSlideShow(n) {
 }
 
 function eventHandlerSlideShow() {
-  startSlideShow();
+  //only startSlideShow on pages that have slideShowContainer
+  var slideShowContainer = document.getElementsByClassName("slideshow-container")[0];
+
+  if (slideShowContainer) {
+    startSlideShow();
+  }
+
   var dots = document.getElementsByClassName("dot-slides");
 
   for (var i = 0; i < dots.length; i++) {

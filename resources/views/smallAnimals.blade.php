@@ -67,10 +67,9 @@
 		<div class="articles">
 			<!-- Top 4 items -->
 			<div class="hot-items">
-				@include('inc.items/itemHamster')
-				@include('inc.items/itemHamster')
-				@include('inc.items/itemHamster')
-				@include('inc.items/itemHamster')
+				@for ($i = 0; $i < 4; $i++)
+					@include('inc.items/itemHamster')
+				@endfor
 			</div>
 
 			<!-- Featured article -->
