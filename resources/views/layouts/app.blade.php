@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     
-    <link rel="dns-prefetch" href="db.onlinewebfonts.com">
+    <link rel="dns-prefetch" href="https://db.onlinewebfonts.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
