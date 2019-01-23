@@ -1,8 +1,6 @@
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap-custom';
 
-// Fonts
-@import url(//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO);
 
 
 //Base
@@ -48,7 +46,6 @@
 @import '4_organisms/_Navbar.scss';
 @import '4_organisms/_Slideshow.scss';
 @import '4_organisms/_Subscribe.scss';
-
 
 
 // Pages

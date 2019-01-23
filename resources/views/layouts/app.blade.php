@@ -9,9 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     
-    <link rel="dns-prefetch" href="https://db.onlinewebfonts.com">
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://db.onlinewebfonts.com">      <!-- Font -->
+    <link rel="dns-prefetch" href="https://unpkg.com">                  <!-- Scroll Package -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">   <!-- G Analytics -->
 
     <!-- Fonts -->
     <link href="https://db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>

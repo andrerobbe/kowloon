@@ -16,7 +16,7 @@
 			</div>
 
 			<!-- Img -->
-			<img src="/img/content/dog.png" alt="Cooling Mat for a dog">
+			<img src="/img/content/dog.jpg" alt="Cooling Mat for a dog">
 		</a>
 	</div>
 	<div class="featured-article-txt">

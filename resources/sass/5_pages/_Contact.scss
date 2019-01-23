@@ -104,35 +104,3 @@
 	}
 	.about-faq a { text-align: center; }
 }
-
-
-/*
- *
- * Tablet portrait
- *
- */
-
-@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
-	
-}
-
-
-/*
- *
- * Tablet landscape
- *
- */
-
-@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
-	
-}
-
-/*
- *
- * Desktop small
- *
- */
-
-@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
-	
-}
