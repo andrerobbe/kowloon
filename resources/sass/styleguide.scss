@@ -4,6 +4,7 @@
 @import '1_base/_Typography.scss';
 
 @import '2_atoms/_Heading.scss';
+@import '2_atoms/_Sprite.scss';
 @import '2_atoms/_Wrapper.scss';
 
 
@@ -16,9 +17,20 @@ html {
 	margin-bottom: 80vh;
 		> div {
 		border-bottom: 1px solid $bg-divider;
-		padding: 46px 0 20px;
-		margin-bottom: 60px;
+		padding: 60px 0 60px;
 	}
+}
+
+h2 { padding-left: 10px; border-left: 5px solid $dog; margin-bottom: 2rem !important; }
+.accent h3:first-child { margin-top: 0; }
+
+.flex { display: flex; flex-wrap: wrap; }
+
+.code { 
+	background-color: $white; 
+	color: $bg-nav;
+	padding: 0 20px 10px;
+	margin-bottom: 20px;
 }
 
 /*
@@ -30,10 +42,15 @@ html {
 header { 
 	background-color: $bg-nav;
 	height: 50vh;
-	padding-top: 200px;
+	padding-top: 130px;
 
 	h1, a { display: block !important; text-align: center; }
-	h1 { margin-top: 1rem !important; }
+	h1 {
+		padding: 20px 0 10px;
+		border-bottom: 2px solid $dog;
+		width: 288px;
+		margin: 0 auto 20px !important;
+	}
 }
 
 /*
@@ -64,8 +81,7 @@ ul {
 			padding: 14px 16px;
 			text-decoration: none;
 
-			&:hover { background-color: $bg-hamburger; }
-			&.active { background-color: $dog; }
+			&:hover { background-color: $dog; }
 		}
 	}
 }
@@ -79,61 +95,49 @@ ul {
  *
  */
 
+#colors { margin-top: 43vh; }
 .colors {
-	> div {
-		display: flex;
-		flex-wrap: wrap;
-
-		div {
-			color: $bg-nav;
-			font-weight: bold;
-			text-align: center;
-			height: 100px;
-			width: 100px;
-			border: 3px solid $white;
-			padding-top: 37px;
-			margin: 0 5px 5px 0;
-			&:last-child { margin-right: 0; }
-		}
+	div div {
+		color: $bg-nav;
+		font-weight: bold;
+		text-align: center;
+		height: 100px;
+		width: 100px;
+		border: 3px solid $white;
+		padding-top: 37px;
+		margin: 0 5px 5px 0;
+		&:last-child { margin-right: 0; }
 	}
 	&.greyscale{
-		div { color: $bg-btn-cookie; }
+		div.b { color: $black; }
+		div.w { color: $white; }
 	}
+
+	.dog 			{ background-color: $dog; }
+	.cat 			{ background-color: $cat; }
+	.fish 			{ background-color: $fish; }
+	.bird 			{ background-color: $bird; }
+	.hamster 		{ background-color: $hamster; }
+	.other 			{ background-color: $other; }
+	.btn-cookie 	{ background-color: $bg-btn-cookie; }
+	.bg-cookie 		{ background-color: $bg-cookie; }
+
+	.white			{ background-color: $white; }
+	.bg-search		{ background-color: $bg-search; }
+	.bg-search-icon	{ background-color: $bg-search-icon; }
+	.sub-txt		{ background-color: $sub-txt; }
+	.bg-placeholder	{ background-color: $bg-placeholder; }
+	.nav-txt		{ background-color: $nav-txt; }
+	.bg-slider		{ background-color: $bg-slider; }
+	.bg-faq			{ background-color: $bg-faq; }
+	.bg-divider		{ background-color: $bg-divider; }
+	.bg-prod		{ background-color: $bg-prod; }
+	.bg-divider2	{ background-color: $bg-divider2; }
+	.bg-page		{ background-color: $bg-page; }
+	.bg-nav			{ background-color: $bg-nav; }
+	.bg-hamburger	{ background-color: $bg-hamburger; }
+	.black			{ background-color: $black; }
 }
-
-
-
-
-.dog 			{ background-color: $dog; }
-.cat 			{ background-color: $cat; }
-.fish 			{ background-color: $fish; }
-.bird 			{ background-color: $bird; }
-.hamster 		{ background-color: $hamster; }
-.other 			{ background-color: $other; }
-.btn-cookie 	{ background-color: $bg-btn-cookie; }
-.bg-cookie 		{ background-color: $bg-cookie; }
-
-.white			{ background-color: $white; }
-.bg-search		{ background-color: $bg-search; }
-.bg-search-icon	{ background-color: $bg-search-icon; }
-.sub-txt		{ background-color: $sub-txt; }
-.bg-placeholder	{ background-color: $bg-placeholder; }
-.nav-txt		{ background-color: $nav-txt; }
-.bg-slider		{ background-color: $bg-slider; }
-.bg-faq			{ background-color: $bg-faq; }
-.bg-divider		{ background-color: $bg-divider; }
-.bg-prod		{ background-color: $bg-prod; }
-.bg-divider2	{ background-color: $bg-divider2; }
-.bg-page		{ background-color: $bg-page; }
-.bg-nav			{ background-color: $bg-nav; }
-.bg-hamburger	{ background-color: $bg-hamburger; }
-.black			{ background-color: $black; }
-
-
-
-
-
-
 
 
 /*
@@ -142,11 +146,17 @@ ul {
  *
  */
 
+.logos {
+	div {
+		img { max-height: 90px; max-width: 290px; }
+		img.kowloon { max-height: 45px; max-width: 145px; }
 
-
-
-
-
+		&:first-child {
+			margin-bottom: 1em;
+			img:first-child{ margin: 0 90px 0 10px; }
+		}
+	}
+}
 
 
 
@@ -155,10 +165,17 @@ ul {
  * Icons
  *
  */
+.icons {
+	div { margin: 0 20px; }
+	div:first-child { margin-left: 0; }
+	div:last-child { margin-right: 0; }
 
+	&.small {
+		margin-top: 2rem;
+	}
 
-
-
+	&.filter { filter: brightness(10) saturate(0); }
+}
 
 
 
@@ -168,7 +185,10 @@ ul {
  *
  */
 
-
+#typography {
+	div { margin-top: 3em; }
+	div h3 { display: block; }
+}
 
 
 

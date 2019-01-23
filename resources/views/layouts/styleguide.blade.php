@@ -42,8 +42,8 @@
 <body>
     <div id="app">
         <header>
-            <a href="/"><img src="/img/logo/kowloon-big.png" alt="kowloon logo"></a>
             <h1 class="heading h-l">Styleguide</h1>
+            <a href="/"><img src="/img/logo/kowloon-big.png" alt="kowloon logo"></a>
         </header>
 
         <ul class="nav">
@@ -62,7 +62,7 @@
                 <div>
                     <div class="colors accent">
                         <h3>Accent Colors</h3>
-                        <div>
+                        <div class="flex">
                             <div class="dog">#ff6f9e</div>
                             <div class="cat">#8787ff</div>
                             <div class="fish">#ffb93f</div>
@@ -75,40 +75,130 @@
                     </div>
                     <div class="colors greyscale">
                         <h3>Greyscale</h3>
-                        <div>
-                            <div class="black">#000000</div>
-                            <div class="bg-hamburger">#252525</div>
-                            <div class="bg-nav">#323232</div>
-                            <div class="bg-page">#454545</div>
-                            <div class="bg-divider2">#535353</div>
-                            <div class="bg-prod">#565656</div>
-                            <div class="bg-divider">#616161</div>
-                            <div class="bg-faq">#717171</div>
-                            <div class="bg-slider">#828282</div>
-                            <div class="nav-txt">#959595</div>
-                            <div class="bg-placeholder">#b6b6b6</div>
-                            <div class="sub-txt">#cecece</div>
-                            <div class="bg-search-icon">#ededed</div>
-                            <div class="bg-search">#f6f6f6</div>
-                            <div class="white">#ffffff</div>
-
+                        <div class="flex">
+                            <div class="w black">#000000</div>
+                            <div class="w bg-hamburger">#252525</div>
+                            <div class="w bg-nav">#323232</div>
+                            <div class="w bg-page">#454545</div>
+                            <div class="w bg-divider2">#535353</div>
+                            <div class="w bg-prod">#565656</div>
+                            <div class="w bg-divider">#616161</div>
+                            <div class="w bg-faq">#717171</div>
+                            <div class="w bg-slider">#828282</div>
+                            <div class="b nav-txt">#959595</div>
+                            <div class="b bg-placeholder">#b6b6b6</div>
+                            <div class="b sub-txt">#cecece</div>
+                            <div class="b bg-search-icon">#ededed</div>
+                            <div class="b bg-search">#f6f6f6</div>
+                            <div class="b white">#ffffff</div>
                         </div>
                     </div>
-                    
                 </div>
-                
-
             </div>
             <div id="logo">
                 <h2 class="heading h-l">Logo</h2>
+                <div class="logos">
+                    <div class="flex">
+                        <img src="/img/logo/kowloon-big.png" alt="kowloon logo">
+                        <img src="/img/logo/kowloon.png" alt="kowloon logo" class="kowloon">
+                    </div>
+                    <div class="flex">
+                        <img src="/img/logo/logo.png" alt="kowloon logo">
+                        <img src="/img/logo/logo-dogs.png" alt="kowloon logo">
+                        <img src="/img/logo/logo-cats.png" alt="kowloon logo">
+                        <img src="/img/logo/logo-fish.png" alt="kowloon logo">
+                        <img src="/img/logo/logo-birds.png" alt="kowloon logo">
+                        <img src="/img/logo/logo-small-animals.png" alt="kowloon logo">
+                    </div>
+                </div>
                 
             </div>
             <div id="icons">
                 <h2 class="heading h-l">Icons</h2>
-                
+                <div class="icons flex">
+                    <div class="sprite-big dog"></div>
+                    <div class="sprite-big cat"></div>
+                    <div class="sprite-big fish"></div>
+                    <div class="sprite-big bird"></div>
+                    <div class="sprite-big hamster"></div>
+                    <div class="sprite-big plus"></div>
+                </div>
+                <div class="code">
+<xmp>
+<div class="sprite-big dog"></div>
+<div class="sprite-big cat"></div>
+<div class="sprite-big fish"></div>
+<div class="sprite-big bird"></div>
+<div class="sprite-big hamster"></div>
+<div class="sprite-big plus"></div>
+
+To make the icon white add a filter:
+<div class="sprite-big dog" style="filter: brightness(10) saturate(0);"></div>
+</xmp>
+                </div>
+                <div class="icons flex small">
+                    <div class="sprite hamburger"></div>
+                    <div class="sprite search"></div>
+                    <div class="sprite faq"></div>
+                    <div class="sprite break"></div>
+                    <div class="sprite clear"></div>
+                    <div class="sprite esc"></div>
+                    <div class="sprite mail"></div>
+                </div>                
+                <div class="code">
+<xmp>
+<div class="sprite hamburger"></div>
+<div class="sprite search"></div>
+<div class="sprite faq"></div>
+<div class="sprite break"></div>
+<div class="sprite clear"></div>
+<div class="sprite esc"></div>
+<div class="sprite mail"></div>
+</xmp>
+                </div>
             </div>
             <div id="typography">
                 <h2 class="heading h-l">Typography</h2>
+                <p class="font-title">The font used for headings is Choplin Demo</p>
+                <p class="font-txt">The font used for regular text is Arial</p>
+                <div>
+                    <h3 class="heading h-xl uppercase">H1 44 pixels</h1>
+                    <h3 class="heading h-xl">H1 44 pixels</h1>
+                    <h3 class="heading h-xl font-txt">Arial 44px</h1>
+                    <h3 class="heading h-l">H2 40px</h1>
+                    <h3 class="heading h-ml">H3 26px</h1>
+                    <h3 class="heading h-m">H1 20px</h1>
+                    <p class="nav-m align-center">Nav 22px</p>
+                    <p class="btn-m align-center">Button 18.97px</p>
+                    <p class="txt-xxl align-right">Txt 20px</p>
+                    <p class="txt-xl align-right">Txt 16px</p>
+                    <p class="txt-l align-right">Txt 15px</p>
+                    <p class="txt-m align-right">Txt 14px</p>   
+                    <p class="txt-m font-title align-right">Choplin 14px</p>   
+                </div>
+                <div class="code">
+<xmp>
+<p class="font-title">The font used for headings is Choplin Demo</p>
+<p class="font-txt">The font used for regular text is Arial</p>
+
+
+<h3 class="heading h-xl uppercase">H1 44 pixels</h1>
+<h3 class="heading h-xl">H1 44 pixels</h1>
+<h3 class="heading h-xl font-txt">Arial 44px</h1>
+<h3 class="heading h-l">H2 40px</h1>
+<h3 class="heading h-ml">H3 26px</h1>
+<h3 class="heading h-m">H1 20px</h1>
+
+<p class="nav-m align-center">Nav 22px</p>
+<p class="btn-m align-center">Button 18.97px</p>
+
+<p class="txt-xxl align-right">Txt 20px</p>
+<p class="txt-xl align-right">Txt 16px</p>
+<p class="txt-l align-right">Txt 15px</p>
+<p class="txt-m align-right">Txt 14px</p>   
+<p class="txt-m font-title align-right">Choplin 14px</p> 
+</xmp>
+                </div>
                 
             </div>
             <div id="buttons">

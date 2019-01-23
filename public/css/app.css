@@ -662,6 +662,10 @@ body {
   font-size: 22px;
 }
 
+.btn-m {
+  font-size: 18.97px;
+}
+
 .txt-xxl {
   font-size: 20px;
 }
@@ -678,8 +682,16 @@ body {
   font-size: 14px;
 }
 
+.align-left {
+  text-align: left !important;
+}
+
 .align-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
 }
 
 .uppercase {
