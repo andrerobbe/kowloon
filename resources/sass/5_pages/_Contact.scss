@@ -10,7 +10,7 @@
 			margin: 75px 0 0;
 
 			span{
-				color: red;
+				color: $bg-btn-send;
 				padding-bottom: 5px;
 				/* gives height to span if empty */
 				&:empty:before { content: "\200b"; } 

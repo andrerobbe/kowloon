@@ -46,4 +46,5 @@ require('./components/navigation');
 require('./components/overlay');
 require('./components/rangeSlider');
 require('./components/search');
+require('./components/selectBox');
 require('./components/slideShow');

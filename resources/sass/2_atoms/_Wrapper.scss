@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-	margin: 40px auto 200px;
+	margin: 40px auto 150px;
 
 	@include respond-to(phone) { margin: 40px 7px;}
 	@include respond-to(tabletPortrait) { width: 710px; max-width: 80%; padding: 0 5px;}

@@ -10826,12 +10826,13 @@ body {
   border-radius: 50%;
   display: inline-block;
   transition: 0.6s all ease;
-  border: 2px solid #959595;
+  border: 2px solid rgba(149, 149, 149, 0.5);
 }
 
 .dot.active,
 .dot:hover {
   background-color: #323232;
+  border-color: rgba(50, 50, 50, 0.7);
 }
 
 .scroller-status .loader-ellips {
@@ -10893,32 +10894,65 @@ option {
   outline: none;
 }
 
-select {
-  width: 180px;
-  font-size: 14px;
-  border: none;
-  padding: 5px 20px;
+.select-box {
+  flex-direction: row;
+  position: relative;
+  width: 175px;
+  cursor: pointer;
+  /*style the selected item (option)*/
+  /*style items (options):*/
+}
+
+.select-box select {
+  display: none;
+}
+
+.select-box .select-selected {
   color: #cecece;
-  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #616161;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-position-x: 156px;
-  /* chrome */
+  background-color: #616161;
+  padding: 8px 16px;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /*style the arrow inside the select element:*/
 }
 
-select option {
+.select-box .select-selected:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  top: 25%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("/img/nav/select.png") no-repeat center center;
+  pointer-events: none;
+}
+
+.select-box .select-items {
+  width: 175px;
   color: #454545;
+  position: absolute;
   background-color: #fff;
-  /* firefox */
+  z-index: 2;
+  /*hide the items when the select box is closed:*/
 }
 
-select option:hover,
-select option:checked {
-  box-shadow: 0 0 10px 100px #ededed inset;
+.select-box .select-items div {
+  padding: 8px 16px;
 }
 
-selectfocus > option:checked {
-  background: #ededed !important;
+.select-box .select-items div:hover,
+.select-box .select-items div .same-as-selected {
+  background-color: rgba(69, 69, 69, 0.3);
+  transition: all 0.1s;
+}
+
+.select-box .select-items.select-hide {
+  display: none;
 }
 
 a {
@@ -11055,7 +11089,7 @@ p {
 }
 
 .wrapper {
-  margin: 40px auto 200px;
+  margin: 40px auto 150px;
 }
 
 @media only screen and (max-width: 630px) {
@@ -11267,6 +11301,10 @@ p {
   float: left;
 }
 
+.hot-items a.hot-items-link {
+  float: right;
+}
+
 /*
  *
  * Mobile
@@ -11279,7 +11317,7 @@ p {
     max-width: 95%;
   }
 
-  .hot-items .hot-items-link {
+  .hot-items a.hot-items-link {
     float: none;
   }
 
@@ -12558,7 +12596,8 @@ h2#article-filter {
 }
 
 .content .filter-info p {
-  float: right;
+  text-align: right;
+  margin-top: -30px;
   color: #cecece;
 }
 
@@ -12756,7 +12795,7 @@ h2#article-filter {
 }
 
 .about-content .about-wrapper .contact-form span {
-  color: red;
+  color: #ff6f9e;
   padding-bottom: 5px;
   /* gives height to span if empty */
 }

@@ -77,7 +77,7 @@
 					<h4 class="uppercase txt-m">Titel</h4>
 					<span><b>S - </b>Here will be some technical text</span>
 				</section>
-			</div>			
+			</div>
 		</div>
 
 
@@ -85,7 +85,7 @@
 		<div class="related-products">
 			<h3 class="heading h-m uppercase">Related Products</h3>
 			<div class="product-slider">
-				@for ($i = 0; $i < 20; $i++)
+				@for ($i = 0; $i < 28; $i++)
 					@include('inc.items/itemDog')
 				@endfor
 			</div>

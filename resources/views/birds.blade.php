@@ -54,14 +54,16 @@
 	<!-- Content -->
 	<div class="content">
 		<div class="filter-info">
-			<select>
-				<option>Sort by relevance</option>
-				<option>Price: low to high</option>
-				<option>Price: high to low</option>
-				<option>Latest</option>
-				<option>Oldest</option>
-			</select>
-			<p class="txt-m">Bird items: <span>5 of 56</span></p>
+			<div class="select-box">
+				<select>
+					<option>Sort by relevance</option>
+					<option>Price: low to high</option>
+					<option>Price: high to low</option>
+					<option>Latest</option>
+					<option>Oldest</option>
+				</select>
+			</div>
+			<p class="txt-m">Dog items: <span>5 of 56</span></p>
 		</div>
 
 		<div class="articles">

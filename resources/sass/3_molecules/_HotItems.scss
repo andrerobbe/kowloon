@@ -10,6 +10,7 @@
 		li:last-child { margin-right: 0; }
 	}
 	a { float: left; }
+	a.hot-items-link { float: right; }
 }
 
 
@@ -23,7 +24,7 @@
 	.hot-items {
 		width: 515px;
 		max-width: 95%;
-		.hot-items-link { float: none; }
+		a.hot-items-link { float: none; }
 		
 		ul li { margin: 2px; }
 		figcaption { display: none; }

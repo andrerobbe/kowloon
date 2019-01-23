@@ -8,14 +8,16 @@
 		
 	<!-- Hover -->
 	<div class="item-img">
+		<a href="/small-animals/details">
 		<!-- Hover -->
-		<div class="item-hover hamster">
-			<img src="/img/content/hover.png" alt="hover overlay">
-			<span>view details</span>
-		</div>
+			<div class="item-hover hamster">
+				<img src="/img/content/hover.png" alt="hover overlay">
+				<span>view details</span>
+			</div>
 
-		<!-- Img -->
-		<img src="/img/content/dog.png" alt="Cooling Mat for a dog">
+			<!-- Img -->
+			<img src="/img/content/dog.png" alt="Cooling Mat for a dog">
+		</a>
 	</div>
 	<div class="featured-article-txt">
 		<h4>Cooling Mat</h4>

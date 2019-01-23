@@ -7,10 +7,11 @@
 	border-radius: 50%;
 	display: inline-block;
 	transition: .6s all ease;
-	border: 2px solid $nav-txt;
+	border: 2px solid rgba($nav-txt, 0.5);
 
 	&.active,
 	&:hover{
 		background-color: $bg-nav;
+		border-color: rgba($bg-nav, 0.7);
 	}
 }

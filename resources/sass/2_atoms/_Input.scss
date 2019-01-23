@@ -7,26 +7,55 @@ option
 }
 
 
-select {
-	width: 180px;
-	font-size: $txt-m;
-	border: none;
-	padding: 5px 20px;
-	color: $sub-txt;
+.select-box {
+	flex-direction: row;
+	position: relative;
+	width: 175px;
+	cursor: pointer;
+	
+	select {
+		display: none;
+	}
+	
+	/*style the selected item (option)*/
+	.select-selected {
+		color: $sub-txt;
+		background-color: $bg-divider;
+		padding: 8px 16px;
+		border: none;
+		user-select: none;
 
-	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right $bg-divider;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	background-position-x: 156px;
-
-	option{
+		/*style the arrow inside the select element:*/
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			right: 14px;
+			top: 25%;
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url("/img/nav/select.png") no-repeat center center;
+			pointer-events: none;
+		}
+	}
+	
+	/*style items (options):*/
+	.select-items {
+		width: 175px;
 		color: $bg-page;
+		position: absolute;
 		background-color: $white;
+		z-index: 2;
 
-		/* firefox */
-		&:hover,
-		&:checked { box-shadow: 0 0 10px 100px $bg-search-icon inset; } 
-
-	} /* chrome */
-	&focus > option:checked { background: $bg-search-icon !important; }
+		div { 
+			padding: 8px 16px;
+			&:hover, .same-as-selected {
+				background-color: rgba($bg-page, 0.3);
+				transition: all .1s;
+			}
+		}	
+		/*hide the items when the select box is closed:*/
+		&.select-hide { display: none; }
+	}
 }

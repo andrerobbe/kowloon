@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Fonts -->
-    <link href="//db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>
+    <link href="https://db.onlinewebfonts.com/c/f320547242a88bd9207eeb10e77b1d13?family=Choplin+Medium-DEMO" rel="stylesheet" type="text/css"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
