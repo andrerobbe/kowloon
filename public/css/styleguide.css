@@ -1,0 +1,454 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  transition: all 100ms ease-in-out;
+}
+
+/*
+ *
+ * Example
+ *
+ *
+
+    @media only screen and (max-width: bp('small')) {
+        div {
+            width: 100%;
+        }
+    }
+
+ *
+ */
+
+/*
+ *
+ * Includes
+ *
+ */
+
+/*
+ *
+ * Example
+ *
+ *
+
+    .wrapper {
+        margin: 40px auto;
+
+        @include respond-to(phone) { margin: 40px 10px;}
+        @include respond-to(tabletPortrait) { width: 710px; max-width: 80%; padding: 0 5px;}
+        @include respond-to(tabletLandscape) { width: 765px; max-width: 80%; }
+        @include respond-to(desktop) { width: 900px; }
+        @include respond-to(desktopL) { width: 960px; }
+    }
+
+*
+*/
+
+body {
+  background-color: #454545;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "Choplin Medium-DEMO";
+  src: url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.eot");
+  src: url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.woff") format("woff"), url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/f320547242a88bd9207eeb10e77b1d13.svg#Choplin Medium-DEMO") format("svg");
+}
+
+.font-title {
+  font-family: "Choplin Medium-DEMO" !important;
+}
+
+.font-txt {
+  font-family: "Arial", sans-serif !important;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.nav-m {
+  font-size: 22px;
+}
+
+.txt-xxl {
+  font-size: 20px;
+}
+
+.txt-xl {
+  font-size: 16px;
+}
+
+.txt-l {
+  font-size: 15px;
+}
+
+.txt-m {
+  font-size: 14px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.weight-100 {
+  font-weight: 100;
+}
+
+.weight-200 {
+  font-weight: 200;
+}
+
+.weight-300 {
+  font-weight: 300;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.weight-800 {
+  font-weight: 800;
+}
+
+.weight-n {
+  font-weight: normal;
+}
+
+.weight-bold {
+  font-weight: bold;
+}
+
+.heading {
+  color: #fff;
+  font-family: "Choplin Medium-DEMO";
+  margin: 0;
+  display: inline-block;
+}
+
+.heading.h-xl {
+  font-size: 44px;
+}
+
+.heading.h-l {
+  font-size: 40px;
+}
+
+.heading.h-ml {
+  font-size: 26px;
+}
+
+.heading.h-m {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+.overflow {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 40px auto 150px;
+}
+
+@media only screen and (max-width: 630px) {
+  .wrapper {
+    margin: 40px 7px;
+  }
+}
+
+@media only screen and (min-width: 630px) and (max-width: 768px) {
+  .wrapper {
+    width: 710px;
+    max-width: 80%;
+    padding: 0 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    width: 765px;
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1140px) {
+  .wrapper {
+    width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  margin-bottom: 80vh;
+}
+
+.wrapper > div {
+  border-bottom: 1px solid #616161;
+  padding: 46px 0 20px;
+  margin-bottom: 60px;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+header {
+  background-color: #323232;
+  height: 50vh;
+  padding-top: 200px;
+}
+
+header h1,
+header a {
+  display: block !important;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 1rem !important;
+}
+
+/*
+ *
+ * Navigation
+ *
+ */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #323232;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+ul li {
+  float: left;
+}
+
+ul li:last-child {
+  float: right;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #252525;
+}
+
+ul li a.active {
+  background-color: #ff6f9e;
+}
+
+/*
+ *
+ * Colors
+ *
+ */
+
+.colors > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colors > div div {
+  color: #323232;
+  font-weight: bold;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border: 3px solid #fff;
+  padding-top: 37px;
+  margin: 0 5px 5px 0;
+}
+
+.colors > div div:last-child {
+  margin-right: 0;
+}
+
+.colors.greyscale div {
+  color: #e27500;
+}
+
+.dog {
+  background-color: #ff6f9e;
+}
+
+.cat {
+  background-color: #8787ff;
+}
+
+.fish {
+  background-color: #ffb93f;
+}
+
+.bird {
+  background-color: #7aff82;
+}
+
+.hamster {
+  background-color: #7ce3ff;
+}
+
+.other {
+  background-color: #ff3f3f;
+}
+
+.btn-cookie {
+  background-color: #e27500;
+}
+
+.bg-cookie {
+  background-color: #e6cfb9;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.bg-search {
+  background-color: #f6f6f6;
+}
+
+.bg-search-icon {
+  background-color: #ededed;
+}
+
+.sub-txt {
+  background-color: #cecece;
+}
+
+.bg-placeholder {
+  background-color: #b6b6b6;
+}
+
+.nav-txt {
+  background-color: #959595;
+}
+
+.bg-slider {
+  background-color: #828282;
+}
+
+.bg-faq {
+  background-color: #717171;
+}
+
+.bg-divider {
+  background-color: #616161;
+}
+
+.bg-prod {
+  background-color: #565656;
+}
+
+.bg-divider2 {
+  background-color: #535353;
+}
+
+.bg-page {
+  background-color: #454545;
+}
+
+.bg-nav {
+  background-color: #323232;
+}
+
+.bg-hamburger {
+  background-color: #252525;
+}
+
+.black {
+  background-color: #000;
+}
+
+/*
+ *
+ * Logo
+ *
+ */
+
+/*
+ *
+ * Icons
+ *
+ */
+
+/*
+ *
+ * Typography
+ *
+ */
+
+/*
+*
+* Navigation
+*
+*/
+

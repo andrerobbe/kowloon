@@ -88,6 +88,12 @@ class HomeController extends Controller
 		return view('otherDetails', ["msg" => $msg, "msg_body" => $msg_body] );
 	}
 
+	public function styleguide(){
+		$msg 		= '';
+		$msg_body 	= '';
+		return view('layouts/styleguide');
+	}
+
 	/*
 	 * Infinite scroller pages
 	 */

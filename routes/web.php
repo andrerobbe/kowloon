@@ -27,6 +27,8 @@ Route::get('/small-animals/details','HomeController@smallAnimalsDetails');
 Route::get('/other', 				'HomeController@other');
 Route::get('/other/details', 		'HomeController@otherDetails');
 
+Route::get('/styleguide', 			'HomeController@styleguide');
+
 //Endless scrolls
 Route::get('/question/{id}',	'HomeController@questions');
 Route::get('/article/{id}',		'HomeController@articles');

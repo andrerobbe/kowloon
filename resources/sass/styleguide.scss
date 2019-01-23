@@ -1,0 +1,182 @@
+@import '1_base/_Reset.scss';
+@import '1_base/_Breakpoints.scss';
+@import '1_base/_Colors.scss';
+@import '1_base/_Typography.scss';
+
+@import '2_atoms/_Heading.scss';
+@import '2_atoms/_Wrapper.scss';
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	margin-bottom: 80vh;
+		> div {
+		border-bottom: 1px solid $bg-divider;
+		padding: 46px 0 20px;
+		margin-bottom: 60px;
+	}
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+header { 
+	background-color: $bg-nav;
+	height: 50vh;
+	padding-top: 200px;
+
+	h1, a { display: block !important; text-align: center; }
+	h1 { margin-top: 1rem !important; }
+}
+
+/*
+ *
+ * Navigation
+ *
+ */
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: $bg-nav;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+
+	li {
+		float: left;
+
+		&:last-child { float:right; }
+
+		a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+
+			&:hover { background-color: $bg-hamburger; }
+			&.active { background-color: $dog; }
+		}
+	}
+}
+
+
+
+
+/*
+ *
+ * Colors
+ *
+ */
+
+.colors {
+	> div {
+		display: flex;
+		flex-wrap: wrap;
+
+		div {
+			color: $bg-nav;
+			font-weight: bold;
+			text-align: center;
+			height: 100px;
+			width: 100px;
+			border: 3px solid $white;
+			padding-top: 37px;
+			margin: 0 5px 5px 0;
+			&:last-child { margin-right: 0; }
+		}
+	}
+	&.greyscale{
+		div { color: $bg-btn-cookie; }
+	}
+}
+
+
+
+
+.dog 			{ background-color: $dog; }
+.cat 			{ background-color: $cat; }
+.fish 			{ background-color: $fish; }
+.bird 			{ background-color: $bird; }
+.hamster 		{ background-color: $hamster; }
+.other 			{ background-color: $other; }
+.btn-cookie 	{ background-color: $bg-btn-cookie; }
+.bg-cookie 		{ background-color: $bg-cookie; }
+
+.white			{ background-color: $white; }
+.bg-search		{ background-color: $bg-search; }
+.bg-search-icon	{ background-color: $bg-search-icon; }
+.sub-txt		{ background-color: $sub-txt; }
+.bg-placeholder	{ background-color: $bg-placeholder; }
+.nav-txt		{ background-color: $nav-txt; }
+.bg-slider		{ background-color: $bg-slider; }
+.bg-faq			{ background-color: $bg-faq; }
+.bg-divider		{ background-color: $bg-divider; }
+.bg-prod		{ background-color: $bg-prod; }
+.bg-divider2	{ background-color: $bg-divider2; }
+.bg-page		{ background-color: $bg-page; }
+.bg-nav			{ background-color: $bg-nav; }
+.bg-hamburger	{ background-color: $bg-hamburger; }
+.black			{ background-color: $black; }
+
+
+
+
+
+
+
+
+/*
+ *
+ * Logo
+ *
+ */
+
+
+
+
+
+
+
+
+
+/*
+ *
+ * Icons
+ *
+ */
+
+
+
+
+
+
+
+/*
+ *
+ * Typography
+ *
+ */
+
+
+
+
+
+
+
+
+ /*
+ *
+ * Navigation
+ *
+ */
