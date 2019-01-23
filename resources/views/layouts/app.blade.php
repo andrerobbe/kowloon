@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- SEO -->
+    <meta name="author" content="Maurits Robbe">
+    <meta name="description" content="Kowloon is about products for all kind of pets">
+    <meta name="keywords" content="Kowloon, animal, pet, dog, cat, bird, fish, products">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

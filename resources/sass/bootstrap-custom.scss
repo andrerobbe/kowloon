@@ -415,14 +415,15 @@ h6,
 
 
 
+
+
+
+
 /*
  *
  * Alerts
  *
  */
-
-
-
 
 .alert {
   position: relative;
@@ -438,18 +439,10 @@ h6,
   border-color: #c3e6cb;
 }
 
-.alert-success .alert-link {
-  color: #0b2e13;
-}
-
 .alert-info {
   color: #0c5460;
   background-color: #d1ecf1;
   border-color: #bee5eb;
-}
-
-.alert-info .alert-link {
-  color: #062c33;
 }
 
 .alert-warning {
@@ -458,21 +451,11 @@ h6,
   border-color: #ffeeba;
 }
 
-.alert-warning .alert-link {
-  color: #533f03;
-}
-
 .alert-danger {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
-
-.alert-danger .alert-link {
-  color: #491217;
-}
-
-
 
 
 /*
@@ -480,8 +463,6 @@ h6,
  * Breadcrumb
  *
  */
-
-
 
 .breadcrumb {
   display: flex;
@@ -493,38 +474,12 @@ h6,
   border-radius: 0.25rem;
 }
 
-.breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  display: inline-block;
-  padding-right: 0.5rem;
-  color: #6c757d;
-  content: "/";
-}
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline;
-}
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: none;
-}
-
-.breadcrumb-item.active {
-  color: #6c757d;
-}
-
-
-
 
 /*
  *
  * Navbar
  *
  */
-
 
 .navbar {
   position: relative;
@@ -536,14 +491,11 @@ h6,
 }
 
 
-
-
 /*
  *
  * Button
  *
  */
-
 
 .btn {
   display: inline-block;
