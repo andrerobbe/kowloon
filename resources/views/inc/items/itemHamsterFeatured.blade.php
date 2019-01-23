@@ -16,14 +16,14 @@
 			</div>
 
 			<!-- Img -->
-			<img src="/img/content/dog.jpg" alt="Cooling Mat for a dog">
+			<img src="/img/content/hamster/cage-details.jpg" alt="Cage for a hamster">
 		</a>
 	</div>
 	<div class="featured-article-txt">
-		<h4>Cooling Mat</h4>
+		<h4>Hamster's Cage</h4>
 		<p class="txt-m">Lorem ipsum dolor sit amet, consectetur adipi sicing elit. Repellat repudiandae, placeat ...</p>
 		<div>
-			<p>&euro; 15,49</p>
+			<p>&euro; 19,49</p>
 			<a href="/small-animals/details" class="btn btn-primary hamster">Want to know more?</a>
 		</div>
 </section>

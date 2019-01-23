@@ -16,14 +16,14 @@
 			</div>
 
 			<!-- Img -->
-			<img src="/img/content/dog.jpg" alt="Cooling Mat for a dog">
+			<img src="/img/content/fish/fish-detail.png" alt="Fish Food">
 		</a>
 	</div>
 	<div class="featured-article-txt">
-		<h4>Cooling Mat</h4>
+		<h4>Fish Food</h4>
 		<p class="txt-m">Lorem ipsum dolor sit amet, consectetur adipi sicing elit. Repellat repudiandae, placeat ...</p>
 		<div>
-			<p>&euro; 15,49</p>
+			<p>&euro; 2,49</p>
 			<a href="/fish/details" class="btn btn-primary fish">Want to know more?</a>
 		</div>
 </section>

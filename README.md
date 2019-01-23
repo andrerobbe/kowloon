@@ -34,9 +34,9 @@
    - <s>Hover, category bolletje bij tags, buttons = zelfde kleur als category</s>
    - <s>Endless scroll</s>
 
-- Product detail (ProductDetail_01.01.jpg)
+- <s>Product detail (ProductDetail_01.01.jpg)</s>
    - <s>Hovers en category bolletje bij tags zijn dezelfde kleur als de category</s>
-   - Actieve foto = full color thumb, andere zijn 'grayed out'Side scrollers bij gerelateerde producten
+   - <s>Actieve foto = full color thumb, andere zijn 'grayed out'Side scrollers bij gerelateerde producten</s>
    - <s>FAQ open/closeMenu</s>
 
 - <s>Menu (Navigation_01_02.jpg)</s>

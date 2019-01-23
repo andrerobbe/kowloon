@@ -16,7 +16,7 @@
 		</div>
 
 		<!-- Img -->
-		<img src="/img/content/dog_thumbnail.jpg" alt="Cooling Mat for a dog">
+		<img src="/img/content/hamster/cage.jpg" alt="Cage for a hamster">
 	</div>
-	<figcaption><span>Cooling Mat</span><span>&euro; 15,49</span></figcaption>
+	<figcaption><span>Hamster's Cage</span><span>&euro; 19,49</span></figcaption>
 </a>

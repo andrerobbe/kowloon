@@ -5,20 +5,76 @@
 	
 	.item-content {
 		display: flex;
+		margin-bottom: 20px;
 		> div { width: 50%; }
 	}
 	
 	/* Item Imgs */
 	.item-images {
+		background-color: $bg-prod;
+		padding: 5px;
+		margin-right: 3px;
+		height: 100%;
 
+		.featured-img-container {
+			width: 100%;
+			height: 267px;
+			text-align: center;
+			white-space: nowrap;
+
+			.helper {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				/* solve sizing outside container */
+				float: left; /* removes aligning middle with helper.. */
+				clear: both;
+			}
+		}
+
+		.img-list {
+			display: flex;
+			padding-top: 5px;
+
+			section {
+				cursor: pointer;
+
+				&#img-list-2 { margin: 0 3px; }
+				figcaption { padding-left: 3px; }
+				img {
+					width: 153px;
+					height: 85px;
+					max-width: 100%;
+					border: 2px solid $bg-prod;
+					opacity: 0.3;
+				}
+				&.active img { border-color: $white; opacity: 1; }
+			}
+		}
 	}
+
 
 	/* Item Description */
 	.item-description {
+		margin-left: 3px;
+		padding: 0 20px;
+
 		h1,h2 { display: block; }
 		h3 { margin: 1rem auto 5px; }
 
-		
+		.item-dots .dot { 
+			margin: 0;
+			border-color: $white;
+			border-width: 1px;
+		}
+		.item-dots .dot:nth-child(2) { background-color: $white; }
+		.item-dots .dot:nth-child(3) { background-color: $bg-nav; margin: 0 5px; }
+		.item-dots .dot:nth-child(4) { background-color: $bg-product; }
+
 		.figures {
 			display: flex;
 			margin-top: 15px;
@@ -102,8 +158,82 @@
 			flex: 0 0 auto;
 			margin-right: 8px;
 			display: inline-block;
+			img { height: 154px; }
 			.item-dots { display: none; }
 			figcaption { display: none; }
 		}
 	}
+}
+
+
+
+
+/*
+ *
+ * Mobile
+ *
+ */
+
+ @media only screen and (max-width: bp('small')) {
+	.item-overview {
+		.item-content {
+			display: block;
+			> div { width: 100%; }
+		}
+		.item-images{
+			.featured-img-container {
+				height: 327px;
+			}
+			.img-list section img { width: 200px; height: 112px; }
+		}
+		.item-description { margin-top: 20px; }
+	}
+}
+
+/*
+ *
+ * Tablet portrait
+ *
+ */
+@media only screen and (min-width: bp('small')) and (max-width: bp('medium')){
+	.item-overview {
+		.item-content {
+			display: block;
+			> div { width: 100%; }
+		}
+
+		.item-images {
+			display: flex;
+
+			.featured-img-container { padding-right: 5px; height: 327px;}
+
+			.img-list { display: block;  padding-top: 0;}
+		}
+
+		.item-description {
+			margin-top: 20px;
+			position: relative;
+			.item-dots { position: absolute; top:30px; right: 0; }
+		}
+	}
+}
+
+/*
+ *
+ * Tablet landscape
+ *
+ */
+@media only screen and (min-width: bp('medium')) and (max-width: bp('large')){
+	.item-overview .item-images .featured-img-container { height: 211px; }
+}
+
+
+/*
+ *
+ * Desktop small
+ *
+ */
+
+@media only screen and (min-width: bp('large')) and (max-width: bp('xlarge')){
+	.item-overview .item-images .featured-img-container { height: 250px; }
 }

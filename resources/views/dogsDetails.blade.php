@@ -17,13 +17,23 @@
 
 				<!-- Item Imgs -->
 				<div class="item-images">
-					<div>
-						<img src="/img/content/dog.png" alt="Cooling mat for a dog">
+					<div class="featured-img-container">
+						<span class="helper"></span>
+						<img src="/img/content/dogs/dog.jpg" alt="Cooling mat for a dog" class="featured-img">
 					</div>
-					<div>
-						<img src="/img/content/dog.png" alt="Cooling mat for a dog">
-						<img src="/img/content/dog.png" alt="Cooling mat for a dog">
-						<img src="/img/content/dog.png" alt="Cooling mat for a dog">
+					<div class="img-list">
+						<section id="img-list-1" class="active">
+							<img src="/img/content/dogs/dog.jpg" alt="Cooling mat for a dog">
+							<figcaption>A cool dog is</figcaption>
+						</section>
+						<section id="img-list-2">
+							<img src="/img/content/dogs/dog-thumbnail.jpg" alt="Cooling mat for a dog">
+							<figcaption>a happy dog</figcaption>
+						</section>
+						<section id="img-list-3">
+							<img src="/img/content/dogs/cooling-mat-detail.jpg" alt="Cooling mat for a dog">
+							<figcaption>Box Cover</figcaption>
+						</section>
 					</div>
 				</div>
 
@@ -41,8 +51,9 @@
 					<h1 class="uppercase heading h-l">Cooling Mat</h1>
 					<h2 class="uppercase heading h-ml font-txt weight-bold">&euro; 15,49</h1>
 					<!-- Colours -->
-					<h3 class="txt-xxl">Colors</h3>
+					
 					<div class="item-dots">
+						<h3 class="txt-xxl">Colors</h3>
 						@for ($i = 0; $i < 3; $i++)
 							<span class="dot"></span>
 						@endfor
@@ -52,9 +63,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					consequat.</p>
 					<!-- Figures -->
 					<div class="figures">
 						<div class="square"></div>
