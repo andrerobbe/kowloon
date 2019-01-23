@@ -371,7 +371,7 @@ button {
                 </div>
                 <div class="code">
 <xmp>
-Change the class 'dog' in the div accordingly to: cat, fish, bird, hamster, .other
+Change the class 'dog' in the div accordingly to: cat, fish, bird, hamster, other
 
 <div class="article-filters dog">
     <section class="categories">

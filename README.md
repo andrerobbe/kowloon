@@ -14,7 +14,7 @@
 
 
 ### Voor uitwerking frontend
-- Je zorgt voor een Frontend styleguide
+- <s>Je zorgt voor een Frontend styleguide</s>
 
 - <s>Homepage (Home_01.03_B.jpg)</s>
    - <s>Carousel foto's bovenaan</s>
